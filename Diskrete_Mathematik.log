@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.29)  13 OCT 2011 20:33
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.29)  13 OCT 2011 21:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,12 +490,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 421--422
  []
 
 [13]
-Overfull \hbox (6.02866pt too wide) in paragraph at lines 434--434
-\OT1/cmr/m/it/10 neben $\OML/cmm/m/it/10 p[]; p[]; :::; p[]$ \OT1/cmr/m/it/10 e
-inen weit-eren Prim-fak-tor geben, dies ist ein Wider-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 455--457
 
  []
@@ -542,7 +536,7 @@ nts/cm/cmsy7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on Diskrete_Mathematik.pdf (18 pages, 191567 bytes).
+Output written on Diskrete_Mathematik.pdf (18 pages, 191572 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
