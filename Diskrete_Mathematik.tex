@@ -1,0 +1,521 @@
+%Simon Krenger: Diskrete Mathematik
+\documentclass{report}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx}
+
+\newtheorem{mydef}{Definition}
+\newtheorem{myexample}{Beispiel}
+\newtheorem{myproof}{Beweis}
+
+\title{Diskrete Mathematik}
+\author{Simon Krenger}
+
+\begin{document}
+\maketitle
+\chapter{Logik (Boolesche Algebra)}
+Nach George Bool, 1815 bis 1864, Cork (Irland)
+\section{Aussagen}
+Wir betrachten Aussagen (Sätze), die entweder wahr (1) oder falsch (0) sind.
+
+\begin{quote}Heute ist Freitag \(\to\) wahr\end{quote}
+\begin{quote}Morgen schneit es in Bern \(\to\) falsch\end{quote}
+\begin{quote}Schauen Sie einmal! \(\to\) keine Aussage\end{quote}
+Aussagen bezeichnen wir mit a, b, c, d, …
+\begin{mydef}
+Ist a eine Aussage, somit heisst  \(\lnot\)a die \underline{Negation} von a
+\end{mydef}
+\begin{myexample}a: Xaver isst gerne Kuchen
+\(\lnot\)a: Xaver isst nicht gerne Kuchen\end{myexample}
+
+\section{Konjunktion}
+Wir verbinden zwei Aussagen a, b mit Hilfe von “und” zu einer einzigen Aussage
+\begin{equation}a \land b\end{equation}
+\begin{myexample}Morgen ist Sonntag \underline{und} ich werde ausschlafen\end{myexample}
+
+Die Wahrheitstabelle von a \(\land\) b sind abhängig von denjenigen von a als auch von b. Dies stellen wir in einer \underline{Wahrheitswerttabelle} dar. Wir finden sofort die Regeln
+\begin{equation}a \land \lnot a = falsch\end{equation}
+
+
+\begin{mydef}Eine Aussage, die immer falsch ist, heisst \underline{Kontradiktion}.\end{mydef}
+
+\begin{equation}a \land 1 = a\end{equation}
+\begin{equation}a \land 0 = 0\end{equation}
+Weiter finden wir Gesetze
+\begin{quote}Kommutativgesetz (Vertauschungsgesetz)\end{quote}
+\begin{equation}a \land b = b \land a\end{equation}
+\begin{myproof}Wir beweisen mit einer Wahrheitswerttabelle
+\begin{center}\begin{tabular}{c c | c c}
+a & b & a \(\land\) b & b \(\land\) a\\
+\hline
+0 & 0 & 0 & 0  \\
+0 & 1 & 0 & 0  \\
+1 & 0 & 0 & 0 \\
+1 & 1 & 1 & 1 \\
+\end{tabular}\end{center}\end{myproof}
+\begin{quote}Assoziativgesetz (Verbindungsgesetz)\end{quote}
+\begin{equation}a \land (b \land c) = (a \land b) \land c\end{equation}
+\begin{myproof}Wir beweisen mit einer Wahrheitswerttabelle
+\begin{center}\begin{tabular}{c c c | c c}
+a & b & c & a \(\land\) (b \(\land\) c) & (a \(\land\) b) \(\land\) c\\
+\hline
+0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 1 & 0 & 0  \\
+0 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 1 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 \\
+1 & 1 & 1 & 1 & 1 \\
+\end{tabular}\end{center}\end{myproof}
+\begin{quote}Idempotenzgesetz\end{quote}
+\begin{equation}a \land a = a\end{equation}
+\section{Disjunktion}
+Zwei Aussagen a, b werden mit der Disjunktion "oder" zu einer neuen Aussage verbunden. Dafür schreiben wir:\begin{equation}a \lor b\end{equation}
+und definieren
+\begin{center}\begin{tabular}{c c | c}
+a & b & a \(\lor\) b\\
+\hline
+0 & 0 & 0  \\
+0 & 1 & 1  \\
+1 & 0 & 1 \\
+1 & 1 & 1 \\
+\end{tabular}\end{center}
+Nicht verwechseln mit "entweder oder" (XOR)! Wir finden die Regeln
+\begin{equation}a \lor 1 = 1\end{equation}
+\begin{equation}a \lor 0 = a\end{equation}
+\begin{equation}a \lor \lnot a = 1\end{equation}
+\begin{mydef}Eine Aussage, die stets wahr ist, heisst \underline{Tautologie}.\end{mydef}
+Es gelten die Gesetze
+\begin{quote}Kommutativgesetz\end{quote}
+\begin{equation}a \lor b = b \lor a\end{equation}
+\begin{quote}Assoziativgesetz\end{quote}
+\begin{equation}a \lor (b \lor c) = (a \lor b) \lor c\end{equation}
+\begin{quote}Idempotenzgesetz\end{quote}
+\begin{equation}a \lor a = a\end{equation}
+In der Algebra in \(\mathbb{R}\) gilt
+\begin{equation}a(b+c) = ab+ac\end{equation}
+was in der Logik zu
+\begin{equation} \label{eq:distributivgesetz}a \land (b \lor c) = (a \land b) \lor (a \land c)\end{equation}
+\begin{equation}a \lor (b \land c) = (a \lor b) \land (a \lor c)\end{equation}
+dem \underline{Distributivgesetz} (Verteilungsgesetz) führt. Der folgende Beweis zeigt, dass die Gleichung \ref{eq:distributivgesetz} gilt.
+\begin{myproof}Wir beweisen mit einer Wahrheitswerttabelle
+\begin{center}\begin{tabular}{c c c | c c c c c}
+a & b & c & b \(\lor\) c & a \(\land\) (b \(\lor\) c) & a \(\land\) b & a \(\land\) c & (a \(\land\) b) \(\lor\) (a \(\land\) c)  \\
+\hline
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 1 & 1 & 0 & 0 & 0 & 0  \\
+0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 1 & 1 & 1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 \\
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\end{tabular}\end{center}
+Das zweite Distributivgesetz kann analog dazu bewiesen werden.\end{myproof}
+In der Logik gibt es zu jedem Gesetz ein \underline{duales Gesetz}. Dies entsteht durch wechseln von \(\lor\) zu \(\land\) und umgekehrt. Weiter finden wir
+\begin{quote}Absorbtionsgesetz\end{quote}
+\begin{equation}a \land (a \lor b) = a\end{equation}
+\begin{equation}a \lor (a \land b) = a\end{equation}
+\begin{myproof}Wir beweisen mit einer Wahrheitswerttabelle
+\begin{center}\begin{tabular}{c c | c c}
+a & b & a \(\lor\) b & a \(\land\) (a \(\lor\) b) \\
+\hline
+0 & 0 & 0 & 0  \\
+0 & 1 & 1 & 0  \\
+1 & 0 & 1 & 1  \\
+1 & 1 & 1 & 1 \\
+\end{tabular}\end{center}\end{myproof}
+\begin{quote}Gesetz von de Morgan\end{quote}
+\begin{equation}\lnot (a \land b) = \lnot a \lor \lnot b\end{equation}
+\begin{equation}\lnot (a \lor b) = \lnot a \land \lnot b\end{equation}
+Wir verwenden die Gesetze, um die Aussagen zu vereinfachen.
+\begin{myexample}Folgende Beispiele zeigen, wie sich Aussagen mittels den oben genannten Gesetzen vereinfachen lassen.
+\begin{enumerate}
+\item $[a \land (b \lor a)] \lor \lnot a$\\
+$= a \lor \lnot a$\\
+$= 1$
+\item $[\lnot (a \land b) \lor \lnot b] \land a$\\
+$= (\lnot a \lor \lnot b \lor \lnot b) \land a$\\
+$= (\lnot a \lor \lnot b) \land a$\\
+$= (\lnot a \land a) \lor (\lnot b \land a)$\\
+$= 0 \lor (\lnot b \land a)$\\
+$= \lnot b \land a$
+\item $(a \land b) \lor \lnot b$\\
+$= (a \lor \lnot b) \land (b \lor \lnot b)$\\
+$= (a \lor \lnot b) \land 1$\\
+$= (a \lor \lnot b)$
+\item $b \land [(a \land b) \lor ( \lnot a \land b)]$\\
+$= b \land [b \land (a \lor \lnot a)]$\\
+$= b \land (b \land 1)$\\
+$= b \land b = b$
+\end{enumerate}
+\end{myexample}
+\section{Implikation}
+Mathematische Lehrsätze haben die Form "Wenn ein Dreieck rechtwinklig ist mit Hypothenuse $c$ und Katheten $a$, $b$, dann ist $c^2=a^2+b^2$"\\
+Sie bestehen also aus Voraussetzung(en):
+\begin{quote}Das Dreieck ist rechtwinklig\end{quote}
+und Behauptung
+\begin{quote}Es ist $a^2+b^2=c^2$\end{quote}
+und einem Beweis
+\begin{quote}\begin{proof}[Beweis] Gemäss "Indischer Beweis":
+\begin{eqnarray}c^2&=&4\frac{ab}{2}+(a-b)^2 \nonumber \\
+c^2&=&2ab+a^2-2ab+b^2\nonumber \\
+c^2&=&a^2+b^2\end{eqnarray}\end{proof}\end{quote}
+Im obrigen Beispiel haben wir einen direkten Beweis geführt. Von der Voraussetzung durch Rechnung zur Behauptung.\\
+Wenn wir zwei Aussagen a, b mit "wenn a, dann b" oder "wenn a so b" oder "aus a folgt b (a impliziert b)" verknüpfen, so schreiben wir dafür
+\begin{equation}a \to b\end{equation}
+und definieren
+\begin{center}\begin{tabular}{c c | c}
+a & b & a \(\to\) b\\
+\hline
+0 & 0 & 1  \\
+0 & 1 & 1  \\
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+\end{tabular}\end{center}
+Wir finden sofort, das "aus a folgt b"
+\begin{equation}a \to b = \lnot a \lor b\end{equation}
+\begin{myexample}Vereinfache
+\begin{enumerate}
+\item $(a \to b) \to b$\\
+$= (\lnot a \lor b) \to b = \lnot(\lnot a \lor b) \lor b$\\
+$= (a \land \lnot b) \lor b = (a \lor b) \land (\lnot b \lor b)$\\
+$= (a \lor b) \land 1 = (a \lor b)$
+\item $b \to (a \to b)$\\
+$= b \to (\lnot a \lor b) = \lnot b \lor (\lnot a \lor b)$\\
+$= \lnot b \lor b \lor \lnot a = 1 \lor \lnot a = 1$
+\item $[(a \lor c) \land (c \to a)] \lor (a \land \lnot b) \lor (a \land c) \lor [\lnot a \land (b \to c)]$\\
+$=[(a \lor c) \land (\lnot c \lor a)] \lor (a \land \lnot b) \lor (a \land c) \lor [\lnot a \land (\lnot b \lor c)]$\\
+$=[(a \lor c) \land (\lnot c \lor a)] \lor [a \land (\lnot v \lor c)] \lor [\lnot a \land (\lnot b \lor c)]$\\
+$=[a \lor (c \land \lnot c)] \lor [(\lnot b \lor c) \land (a \lor \lnot a)]$\\
+$=[a \lor 0] \lor [(\lnot b \lor c) \land 1]$\\
+$=a \lor (\lnot v \lor c) = a \lor \lnot b \lor c$\\
+$(=a \lor (b \to c))$
+\end{enumerate}
+\end{myexample}
+Ein mathematischer Satz besteht aus Voraussetzung $a$, Behauptung $b$ und Beweis. Der Satz wird als $a \to b$ formuliert.\\
+Der direkte Beweis ist eine Folge von Implikationen
+\begin{equation}a \to x_1 \to x_2 \to x_3 \to ... \to b\end{equation}
+\begin{myexample}Vereinfache
+\begin{enumerate}
+\item Voraussetzung: Ein Dreieck ABC mit Innenwinkel $\alpha$, $\beta$, $\gamma$\\
+Behauptung: Die Innenwinkelsumme ist $180^{\circ}$, d.h. 
+\begin{equation}\alpha+\beta+\gamma=180^{\circ}\end{equation}
+\begin{proof}[Beweis]Wir beweisen mit einer Zeichnung:\begin{center}
+\includegraphics[scale=0.5]{img/innenwinkel.png}
+\end{center}
+Wähle $p \parallel c$ durch C. Dann ist $\epsilon+\delta+\gamma=180^{\circ}$. Es ist $\alpha_1$= $\alpha_2$: Stufenwinkel an Parallelen und $\alpha_1$= $\alpha_3$: Wechselwinkel an Parallelen, eine weitere Voraussetzung.\\
+Also ist $\alpha = \epsilon$ und $\beta = \delta$
+und somit
+\begin{equation}\alpha+\beta+\gamma=180^{\circ}\end{equation}
+\end{proof}
+\item Voraussetzung: Es ist mit $n \in \mathbb{N}, a \in \mathbb{R}$
+\begin{center}$a^n := a \cdot a \cdot ... \cdot a$ (n Faktoren)\end{center}
+die Potenz definiert.
+Behauptung: \begin{equation}a^m \cdot a^n = a^{m+n}\end{equation}
+\begin{proof}[Beweis]Wir zeigen auf, dass $m$ Faktoren mit $n$ Faktoren multipliziert werden. Durch die grundlegenden Rechengesetze können wir die Klammern wegfallen lassen
+\begin{center}$a^m \cdot a^n$\\
+$= (a \cdot a \cdot a \cdot ... \cdot a)(a \cdot a \cdot ... \cdot a)$\\
+$= a \cdot a \cdot a \cdot a \cdot ... \cdot a$ (m+n Faktoren)\end{center}
+\begin{equation}= a^{m+n} = a^m \cdot a^n\end{equation}
+\end{proof}
+\item \label{item:gegenbeispiel} Voraussetzung: $x, y \in \mathbb{R}$\\
+Behauptung: \begin{equation} x^y = y^x \to x = y\end{equation} 
+Die Behauptung ist falsch. Wollen wir zeigen, dass ein Satz falsch ist, so genügt ein einziges Beispiel, dass wir \underline{Gegenbeispiel} nennen, um die Behauptung zu widerlegen.\\
+Gegenbeispiel: Für \ref{item:gegenbeispiel} ist das Gegenbeispiel $x=2, y=4$, denn $2^4 = 4^2 = 16$, aber $x \neq y$.
+\end{enumerate}
+\end{myexample}
+
+\subsection{Umkehrung, Kontraposition}
+\begin{mydef}Hat eine Aussage die Form
+\begin{equation}a \to b\end{equation}
+so heisst
+\begin{equation}b \to a\end{equation}
+die \underline{Umkehrung}.
+\end{mydef}
+Ist eine Aussage, ein Satz wahr, so muss die Umkehrung nicht wahr sein, wie zum Beispiel:
+\begin{quote}"Wenn ich Geburtstag habe, so esse ich einen Kuchen"\end{quote}
+\begin{quote}"Wenn ein Mensch glücklich ist, so trinkt er Sinalco"\end{quote}
+Wir finden aber, dass
+\begin{eqnarray}\lnot b \to \lnot a = \lnot(\lnot b) \lor \lnot a \nonumber\\
+= b \lor \lnot a = \lnot a \lor b = a \to b\end{eqnarray}
+\begin{mydef}Wir nennen
+\begin{equation}\lnot b \to \lnot a\end{equation}
+die \underline{Kontraposition} von
+\begin{equation}a \to b\end{equation}
+\end{mydef}
+Wir haben gezeigt, dass $\lnot b \to \lnot a = a \to b$ ist, was bedeutet, dass bei einem wahren Satz auch dessen Kontraposition wahr ist.
+\begin{quote}{Satz}: "Wenn es heute Freitag ist, so gehe ich ein Bier trinken."\end{quote}
+\begin{quote}{Kontraposition}: "Wenn ich nicht ein Bier trinken gehe, so ist heute Freitag"\end{quote}
+Manchmal ist der direkte Beweis eines Satzes zu schwierig oder nicht möglich, dann beweisen wir die Kontraposition.
+\begin{quote}{Satz}: Ist $n \in \mathbb{N}$ und $n^2$ eine gerade Zahl, so ist $n$ auch eine gerade Zahl.\end{quote}
+\begin{myproof}Der direkte Beweis
+\begin{eqnarray}n^2 &=& 2p \land p \in \mathbb{N} \nonumber \\
+\to n &=& \sqrt{2} \cdot \sqrt{p}\end{eqnarray}
+gelingt nicht. Grund dafür ist, dass eine irrationale Zahl ($\sqrt{2}$) per Definition ein nichtperiodischer, nichtendlicher Dezimalbruch ist.\end{myproof}
+Also beweisen wir die Kontraposition:
+\begin{quote}{Kontraposition}: "Ist $n \in \mathbb{N}$ und $n$ ungerade, so ist auch $n^2$ ungerade"\end{quote}
+\begin{myproof}\begin{eqnarray} 
+n &=& 2p + 1 \quad \land p \in \mathbb{N}_0 \nonumber \\
+\to n^2 &=& (2p + 1)^2 \nonumber \\
+n^2 &=& 4p^2 + 4p + 1 \nonumber \\
+n^2 &=& 2 (2p^2 + 2p) + 1\label{eq:nungerade} \end{eqnarray}
+Also ist $n^2$ eine ungerade Zahl.\qed\end{myproof}
+
+\section{Aequivalenz}
+Wenn zwei Aussagen gleichwertig (aequivalent) sind, wenn also
+\begin{equation}(a \to b) \land (b \to a)\end{equation}
+so schreiben wir dafür
+\begin{equation}a \iff b\end{equation}
+und finden die Wahrheitswerte
+\begin{center}\begin{tabular}{c c | c}
+a & b & a \(\iff\) b\\
+\hline
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+\end{tabular}\end{center}
+Wir finden die Umformung
+\begin{eqnarray}
+a \iff b &=& (a \to b) \land (b \to a)\nonumber \\
+&=& (\lnot a \lor b) \land (\lnot b \lor a)\nonumber \\
+&=& (\lnot a \land b) \lor (\lnot a \land a) \lor (b \land \lnot b) \lor (a \land b) \nonumber \\
+&=& (a \land b) \lor (\lnot a \land \lnot b)
+\end{eqnarray}
+Ausserdem ist 
+\begin{equation}a \iff b = \lnot (a \veebar b)\end{equation}
+also
+\begin{eqnarray}a \veebar b &=& [(a \land b) \lor (\lnot a \land \lnot b)] \nonumber \\
+&=&\lnot(a \land b) \land \lnot (\lnot a \land \lnot b) \nonumber \\
+&=&(\lnot a \lor \lnot b) \land (a \lor b)\end{eqnarray}
+\begin{myexample}Vereinfache
+\begin{enumerate}
+\item $(\lnot a \lor \lnot b) \land (a \lor b)$\\
+$=a \veebar b$ nach obriger Herleitung
+\item $(a \land \lnot b \land \lnot c) \lor (a \land b \land c)$\\
+$= a \land [(\lnot b \land \lnot c) \lor (b \land c)]$\\
+$= a \land (b \iff c)$
+\end{enumerate}
+\end{myexample}
+Wenn wir in der Mathematik einen Satz finden, dessen Umkehrung auch wahr ist, so wählen wir die Formulierung mit
+\begin{quote}"dann und nur dann" oder "genau dann"\end{quote}
+im Englischen
+\begin{quote}"if and only if" oder "iff"\end{quote}
+\begin{myexample}Folgende Beispiele zeigen solche Sätze
+\begin{enumerate}
+\item Zwei Dreiecke $ABC$ und $A_1B_1C_1$ sind \underline{genau dann} ähnlich, \underline{wenn} zwei Winkel gleich sind. TODO
+
+\item Sind $a$, $b$ reelle Zahlen, so ist das Produkt \underline{dann und nur dann} 0, \underline{wenn} $a$ oder $b$ Null ist.
+\begin{quote}{Voraussetzung}: $a, b \in \mathbb{R}$\end{quote}
+\begin{quote}{Satz}: $(a \cdot b = 0) \iff (a = 0 \lor b = 0)$\end{quote}
+\begin{quote}{Anwendung}:\begin{eqnarray}a^2 - 7x + 12 &=& 0\quad(x \in \mathbb{R}) \nonumber \\
+(x-3)(x-4)&=&0 \nonumber \\
+\to x-3=0 \quad &\lor& \quad x-4=0 \nonumber \\
+x_1 = 3 &\quad& x_2 = 4\end{eqnarray}\end{quote}
+\end{enumerate}
+\end{myexample}
+Wie zeigen wir, dass zwei Terme gleich sind?
+\begin{quote}{Behauptung}: \begin{equation}\sin{2\alpha} = 2\sin{\alpha}\cos{\alpha}\end{equation} \end{quote}
+Wir wählen die linke Seite und formen diese so lange um, bis die rechte Seite entsteht (oder umgekehrt).\\Es ist \underline{falsch}
+\begin{equation}\sin{2\alpha} = 2\sin{\alpha}\cos{\alpha}\end{equation}
+so lange umzuformen, bis eine Identität wie z.B. $1 = 1$ entsteht!
+
+\begin{myexample}Richtig ist
+\begin{eqnarray}\sin{2\alpha} &=& \sin{\alpha + \alpha} \nonumber \\
+\mbox{denn}\quad \sin{\alpha + \beta} &=& \sin{\alpha}\cos{\beta}+\sin{\beta}\cos{\alpha}\nonumber \\
+\sin{\alpha + \alpha} &=& \sin{\alpha}\cos{\alpha}+\sin{\alpha}\cos{\alpha} \nonumber \\
+&=& 2\sin{\alpha}\cos{\alpha}\end{eqnarray} \qed\end{myexample}
+Manchmal gelingt es nicht, die linke Seite in die rechte Seite umzuformen. Dann verwenden wir die Eigenschaft
+\begin{quote}"Wenn $l=x$ und $r=x$, so ist $l=r$\end{quote}
+Wir formen also die linke Seite zuerst einmal um und dann \underline{unabhängig davon} die rechte Seite und hoffen, dass wir beide Male das gleiche Resultat ($x$) erhalten.
+\begin{myexample}WIr versuchen, dieses Konzept anzuwenden:\\\\
+Voraussetzung: \begin{equation}\tan{\delta} = \frac{\sin{\delta}}{\cos{\delta}} \quad\mbox{und}\quad\cot{\delta} = \frac{1}{\tan{\delta}}\end{equation}
+Behauptung: \begin{equation}\tan{\delta} + \cot{\delta} = \frac{2}{\sin{2\delta}}\end{equation}
+Beweis: \begin{enumerate}
+\item \begin{eqnarray}& &\tan{\delta} + \frac{1}{\tan{\delta}}
+=\frac{\sin{\delta}}{\cos{\delta}} + \frac{\cos{\delta}}{\sin{\delta}} \nonumber \\
+&=&\frac{\sin^2{\delta} + \cos^2{\delta}}{\sin{\delta} \cdot \cos{\delta}} 
+=\frac{1}{\sin{\delta} \cdot \cos{\delta}}\end{eqnarray}
+\item \begin{eqnarray}& &\frac{2}{\sin{2\delta}} = \frac{2}{2\sin{\delta} \cdot \cos{\delta}}
+=\frac{1}{\sin{\delta} \cdot \cos{\delta}}\end{eqnarray}\qed
+\end{enumerate}\end{myexample}
+Genau gleich behandeln wir Behauptungen der Logik wenn es um die Aequivalenz zweier Aussagen geht.
+\begin{myexample}\begin{enumerate}
+\item Behauptung: \begin{equation}[\lnot(a \lor b) \land a] \iff [\lnot (a \lor b) \land b]\end{equation}
+Beweis:\begin{enumerate}
+\item \begin{eqnarray}\lnot (a \lor b) \land a &=& \lnot a \land \lnot b \land a \nonumber \\
+= \lnot a \land a \land \lnot b &=& 0 \land \lnot b = 0\end{eqnarray}
+\item \begin{eqnarray}\lnot (a \lor b) \land b &=& \lnot a \land \lnot b \land b \nonumber \\
+= \lnot a \land b \land \lnot b &=& \lnot a \land b = 0\end{eqnarray}\end{enumerate}Beide Terme sind aequivalent\qed
+\item Behauptung: \begin{equation}a \to (b \land c) = (a \to b) \land (a \to c)\end{equation}
+Beweis: \begin{eqnarray}\lnot a \lor (b \land c) &=& (\lnot a \lor b) \land (\lnot a \lor c) \nonumber \\
+&=& (a \to b) \land (a \to c)\end{eqnarray}\end{enumerate}\end{myexample}
+
+\section{Logische Schlüsse}
+Wir gehen aus von verschiedenen \underline{Prämissen} wie
+\begin{eqnarray}\mbox{Prämisse 1} & & p_1 = a \land b \nonumber \\
+\mbox{Prämisse 2}& & p_2 = \lnot a \nonumber \\
+\mbox{Prämisse 3}& & p_3 = a \land \lnot b\end{eqnarray}
+und ziehen daraus eine \underline{Konklusion} $k : a \lor b$. Nun fragen wir uns, ob die Konklusion bei diesen Prämissen richtig ist. Ist dies der Fall, so sprechen wir von einem logischen Schluss (wenn also das die richtige Konklusion ist).
+\\\\Es muss also
+\begin{equation}(p_1 \land p_2 \land ... \land p_n) \to k = 1\end{equation}
+eine Tautologie sein. Im Beispiel ist also
+\begin{equation}[(a \land b) \land \lnot a \land (a \land \lnot b)] \to (a \lor b)\end{equation}
+so lange umgeformt werden, bis erkenntlich ist, ob eine Tautologie vorliegt oder nicht.
+\begin{eqnarray}& &[(a \land b) \land \lnot a \land (a \land \lnot b)] \to (a \lor b) \nonumber \\
+&=&(a \land b \land \lnot a \land a \land \lnot b) \to (a \lor b) \nonumber \\
+&=&0 \to (a \lor b) \nonumber \\
+&=&\lnot 0 \lor (a \lor b) = 1 \lor (a \lor b) = 1\end{eqnarray}
+und damit liegt ein logischer Schluss vor.\\\\
+In der Logik schreiben wir Prämissen und Konklusion untereinander wie zum Beispiel
+\begin{equation}\frac{a \to b \quad\quad a \land b \to c \quad\quad c}{a}\end{equation}
+\begin{myexample}Handelt es sich hierbei um einen logischen Schluss?\begin{eqnarray}& &[(a \to b) \land \{(a \land b) \to c\} \land c] \to a \nonumber \\
+&=&[(\lnot a \lor b) \land \{\lnot (a \land b) \lor c\} \land c] \to a \nonumber \\
+&=&\lnot [(\lnot a \lor b) \land (\lnot a \lor \lnot b \lor c) \land c] \lor a \nonumber \\
+&=&\lnot [(\lnot a \lor b) \land c] \lor a \nonumber \\
+&=&\lnot [(\lnot a \land c) \lor (b \land c)] \lor a\nonumber \\
+&=&[\lnot (\lnot a \land c) \land \lnot (b \land c)] \lor a \nonumber \\
+&=&[(a \lor \lnot c) \land (\lnot b \lor \lnot c)] \lor a \nonumber \\
+&=&(a \lor \lnot c \lor a) \land (a \lor \lnot b \lor \lnot c) \nonumber \\
+&=&(\lnot c \lor a) \land (\lnot b \lor \lnot c \lor a) \nonumber \\
+&=&(\lnot c \lor a) \land \lnot b\end{eqnarray}
+Also kein logischer Schluss \qed\end{myexample}
+Verschiedene bekannte logische Schlüsse besitzen einen Namen, wie zum Beispiel die Folgdenden:
+\begin{enumerate}
+\item \underline{modus ponens} (Abtrennungsregel)
+\begin{equation}\frac{a \to b \quad\quad a}{b}\end{equation}
+ist ein logischer Schluss, denn
+\begin{eqnarray}& &[(a \to b) \land a] \to b \nonumber \\
+&=&[(\lnot a \lor b) \land a] \to b \nonumber \\
+&=&(a \land b) \to b \nonumber \\
+&=&\lnot (a \land b) \lor b \nonumber \\
+&=&\lnot a \lor \lnot b \lor b = \lnot a \lor 1 = 1\end{eqnarray}
+Es ist die Art und Weise, wie wir einen mathematischen Satz $a \to b$ anwenden.
+\begin{myexample}Beispielsweise Kosinussatz:\\
+$a \to b$: In einem Dreieck $ABC$ gilt $c^2 = a^2 + b^2 - 2ab \cdot \cos{\gamma}$ \\
+$a$: $a=10, b=7, \gamma = 70$\\
+dann tritt $b$ ein, d.h. c kann nun berechnet werden.\end{myexample}
+\item \underline{modus tollens} (Aufhebende Schlussweise)
+\begin{equation}\frac{a \to b \quad\quad \lnot b}{\lnot a}\end{equation}
+ist ein logischer Schluss, denn
+\begin{eqnarray}& &[(a \to b) \land \lnot b] \to \lnot a \nonumber \\
+&=&[(\lnot a \lor b) \land \lnot b] \to \lnot a \nonumber \\
+&=&[(b \land \lnot b) \lor (\lnot a \land \lnot b)] \to \lnot a \nonumber \\
+&=&(\lnot a \land \lnot b) \to \lnot a \nonumber \\
+&=&\lnot (\lnot a \land \lnot b) \lor \lnot a \nonumber \\
+&=&a \lor b \lor \lnot a = 1 \lor b = 1\end{eqnarray}
+\item \underline{reductio ad absurdum} (zurückführen auf einen WIderspruch)
+\begin{equation} \frac{a \to (b \land \lnot b)}{\lnot a}\end{equation}
+ist ein logischer Schluss, denn
+\begin{eqnarray}& &[a \to (b \land \lnot b)] \to \lnot a \nonumber \\
+&=&[a \to 0] \to \lnot a \nonumber \\
+&=&[\lnot a \lor 0] \to \lnot a \nonumber \\
+&=&\lnot a \to \lnot a = a \lor \lnot a = 1\end{eqnarray}
+Dieser logische Schluss führt uns zum \underline{Beweis mit Gegenannahme}.\\\\
+Wollen wir beweisen, dass ein Satz $s$ wahr ist und gelingt uns dies nicht mit einem direkten Beweis oder mit einem Beweis mit Kontraposition, so wählen wir die Gegenannahme:
+\begin{quote}$\lnot s$ ist wahr\end{quote}
+und zeigen, dass dies zu einem Widerspruch führt wie $\lnot b \land b$ oder $1 = 2$ oder ähnlich.\\\\
+Dann sagt uns die "reductio ad absurdum", dass meine Gegenannahme falsch ist und damit die Aussage $s$ wahr ist.\end{enumerate}
+\begin{myexample}\begin{enumerate}
+\item Satz: "Es gibt unendlich viele Primzahlen"\\
+Beweis mit Gegenannahme (Euklid, ca. 300 v.Chr., Alexandria):
+\begin{quote}"Es gibt nur endlich viele Primzahlen"\end{quote}
+\begin{equation}p_1 < p_2 < p_3 < ... < p_{n-1} < p_n\end{equation}
+wobei $p_n$ die Grösste sei.\\
+Nun bilden wir eine neue Zahl
+\begin{equation}z = p_1 \cdot p_2 \cdot p_3 \cdot ... \cdot p_n + 1\end{equation}
+die sicher keine der Zahlen $p_1, p_2, p_3, ..., p_n$ als Primfaktoren besitzt.\\
+Nun ist $z$ entweder
+\begin{enumerate}\item eine Primzahl, dann ist dies ein Widerspruch
+\item keine Primzahl und damit in Primfaktoren zerlegbar. Es muss also neben $p_1, p_2, ..., p_n$ einen weiteren Primfaktor geben, dies ist ein Widerspruch\end{enumerate}
+zur Gegenannahme.\\
+Also ist die Gegenannahme falsch und damit die ursprüngliche Behauptung wahr. \qed
+
+\item Behauptung: $\sqrt{2}$ ist irrational\\
+Beweis mit Gegenannahme:
+\begin{quote}$\sqrt{2}$ ist rational\end{quote}
+also ist $\sqrt{2} = \frac{p}{q} \land p, q \in \mathbb{N}$ und vollständig gekürzt. Somit
+\begin{eqnarray}2&=&\frac{p^2}{q^2} \nonumber \\
+p^2&=&2q^2 \label{eq:sqrtirrational} \end{eqnarray}
+Also ist $p^2$ eine gerade Zahl und damit auch $p$ (Beweis siehe \ref{eq:nungerade}). Somit ist $p = 2x \land p \in \mathbb{N}$, was eingesetzt in \ref{eq:sqrtirrational} zu
+\begin{equation}(2x)^2 = 2q^2\end{equation}
+führt. Weiter ist
+\begin{eqnarray}4x^2&=&2q^2 \nonumber \\
+2x^2&=&q^2\end{eqnarray}
+Also ist $q^2$ gerade und damit auch q. Somit ist
+\begin{equation}q = 2y \land y \in \mathbb{N}\end{equation}
+WIr haben also gefunden
+\begin{equation}\sqrt{2} = \frac{p}{q} = \frac{2x}{2y}\end{equation}
+und damit erhalten wir einen Widerspruch zu "vollständig gekürzt". Somit ist die Gegenannahme falsch und damit die Behauptung richtig.
+\end{enumerate}\end{myexample}
+Einen Beweis mit Gegenannahme nennen wir auch einen \underline{indirekten Beweis}. Dieses Beweisverfahren können wir auch für logische Schlüsse anwenden.\\\\
+Ist
+\begin{equation}\frac{a \land \lnot b \quad a \to b}{a \lor b}\end{equation}
+ein logischer Schluss?
+\begin{quote}Gegenannahme: Es ist liegt kein logischer Schluss vor und damit ist
+\begin{equation}[(a \land \lnot b) \land (a \to b)] \to (a \lor b) = 0\end{equation}\end{quote}
+Nun zeigen wir, dass die Gegenannahme zu einem Widerspruch führt. Wir haben die Aussage
+\begin{equation}x \to y = 0 \nonumber\end{equation}
+Also muss $x=1$ und $y=0$ sein.\\\\
+Es ist $x = p_1 \land p_2 \land ... \land p_n$ (Alle Prämissen und damit muss auch
+\begin{equation}p_1 = p_2 = ... = p_n = 1 \nonumber \end{equation}
+sein. Um den Widerspruch zu sehen, machen wir eine Tabelle:
+\begin{equation}\begin{tabular}{c | c | c | c | c |}
+& $a \land \lnot b$ & $a \to b$ & $\to$ & $a \lor b$ \\ \hline
+1) & \underline{1} & 1 & & 0 \\ \hline
+2) & & & & $a=0, b=0$ \\ \hline
+3) &\underline{$0 \land 1 = 0$} & & & \\ \hline
+\end{tabular}\end{equation}Bei den unterstrichenen Werten haben wir einen Widerspruch hergeführt. Die Gegenannahme ist falsch, also liegt ein logischer Schluss vor.
+\begin{myexample}
+\begin{enumerate}
+\item Ist
+\begin{equation}\frac{a \land \lnot d \quad \lnot a \lor c \quad (b \land \lnot c) \to a}{a \lor c \lor d}\end{equation}ein logischer Schluss?\\\\
+\underline{Gegenannahme}:
+\begin{equation}\{(a \land \lnot d) \land (\lnot a \lor c) \land [(b \land \lnot c) \to a]\} \to (b \lor c \lor d) = 0\end{equation}also
+\begin{equation}\begin{tabular}{c | c | c | c | c | c |}
+& $a \land \lnot d$ & $\lnot a \lor c$ & $(b \land \lnot c) \to a$ & $\to$ & $b \lor c \lor d$ \\ \hline
+1) & 1 & \underline{1} & 1 & & 0 \\ \hline
+2) & & & & & $b=0, c=0, d=0$ \\ \hline
+3) & $a=1$ & & & & \\ \hline
+4) & & \underline{$0 \lor 0 = 0$} & & & \\ \hline
+\end{tabular}\end{equation}Bei den unterstrichenen Werten haben wir einen Widerspruch hergeführt. Die Gegenannahme ist falsch, also liegt ein logischer Schluss vor.
+\item Wir untersuchen, ob
+\begin{equation}\frac{a \to \lnot b \quad \lnot c \to d \quad c \to a \quad e \to b}{b \to (d \lor c)}\end{equation}ein logischer Schluss ist. Gegenannahme:
+\begin{equation}[(a \to \lnot b) \land (\lnot c \to d) \land (c \to a) \land (e \to b)] \to [b \to (d \lor e)] = 0\end{equation}
+also
+\begin{equation}\begin{tabular}{c | c | c | c | c | c | p{1.8cm}|}
+& $a \to \lnot b$ & $\lnot c \to d$ & $c \to a$ & $e \to b$ & $\to$ & $b \to (d \lor e)$ \\ \hline
+1) & 1 & \underline{1} & 1 & 1 & & 0 \\ \hline
+2) & & & & & & \parbox{1.8cm}{$\\1 \to 0,\\b=1,\\d \lor e=0,\\ d=e=0$} \\ \hline
+3) & $a=0$ & & $c=0$ & & & \\ \hline
+4) & & \underline{$1 \to 0 \neq 1$} & & & & \\ \hline
+\end{tabular}\end{equation}Also liegt ein logischer Schluss vor.\end{enumerate}
+\end{myexample}
+\section{Prädikatenlogik}
+Einige Aussagen wie
+\begin{itemize}
+\item Informatiker(innen) besitzen einen Laptop
+\item Katzen schnurren
+\item Hunde bellen
+\item $a \cdot b = b \cdot a$\end{itemize}
+verlangen eine Präzisierung wie
+\begin{itemize}
+\item Nicht alle Informatiker(innen) besitzen einen Laptop
+\item Einige Katzen schnurren
+\item Alle Hunde bellen
+\item Für alle $a,b \in \mathbb{R}$ ist $a \cdot b = b \cdot a$\end{itemize}
+WIr brauchen also ein \underline{Prädikat} (Aussage) über Grössen aus einer bestimmten \underline{Menge} und einen \underline{Quantor}.
+Wir nennen $\forall$ den \underline{Allquantor}. Damit bedeutet
+\begin{quote}$x \in M: \forall x (P(x))$\\
+(Für alle $x$ gilt $P(x)$")\end{quote}
+dass alle Elemente der Menge $M$ das Prädikat $P$ besitzen.
+\begin{myexample}Prädikatenlogik
+\begin{quote}
+$M = \{x \quad|\quad x \quad \mbox{ist ein Hund}\}$ \\
+$B(x) : \mbox{x bellt}$\end{quote}
+und es ist $x \in M : \forall x (B(x))$\end{myexample}
+\end{document}
