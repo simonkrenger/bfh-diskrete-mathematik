@@ -514,8 +514,107 @@ Wir nennen $\forall$ den \underline{Allquantor}. Damit bedeutet
 (Für alle $x$ gilt $P(x)$")\end{quote}
 dass alle Elemente der Menge $M$ das Prädikat $P$ besitzen.
 \begin{myexample}Prädikatenlogik
-\begin{quote}
-$M = \{x \quad|\quad x \quad \mbox{ist ein Hund}\}$ \\
-$B(x) : \mbox{x bellt}$\end{quote}
+\begin{quote}$M = \{x \quad|\quad x \quad$ ist ein Hund$\}$ \\
+$B(x) : x$ bellt\end{quote}
 und es ist $x \in M : \forall x (B(x))$\end{myexample}
+Wählen wir
+\begin{quote}$M = \{s \quad|\quad s \quad$ ist Student(in)$\}$ \\
+$q(s): s$ ist in der Klasse I1q\end{quote}
+so können wir formulieren
+\begin{equation}s \in M : \forall s (q(s))\end{equation}
+was natürlich falsch ist. Korrekt ist
+\begin{equation}\lnot \forall s (q(s)) \quad \mbox{oder auch} \quad \not \forall s(q(s))\end{equation}
+geschrieben. Dieses "nicht alle" ist gleichbedeutend mit
+\begin{quote}"Es gibt (mindestens) ein(e)"\end{quote}
+was wir mit dem \underline{Existenzquantor $\exists$} so schreiben:
+\begin{equation}\exists s(\lnot q(s))\end{equation}
+Wir haben also
+\begin{equation}\lnot \forall x (P(x)) = \exists x ( \lnot P(x))\end{equation}
+Betrachten wir
+\begin{quote}$K = \{k\quad|\quad k \quad  $Ist eine Katze$\}$\\
+$s(k) : k$ schnurrt\end{quote}
+und
+\begin{equation}k \in K : \exists k (s(k))\end{equation}
+was "es gibt mindestens eine Katze, die schnurrt" bedeutet. Verneinen wir die Aussage
+\begin{equation}\lnot \exists k (s(k)) \quad \mbox{oder} \quad \not \exists k (s(k))\end{equation}
+so bedeutet dies: "Es gibt keine Katze, die schnurrt.", was gleichbedeutend ist mit "Alle Katzen schnurren nicht", also
+\begin{equation}\lnot \exists k (s(k)) = \forall k (\lnot s(k))\end{equation}
+Auch in der Mathematik werden die Quantoren verwendet wie zum Beispiel
+\begin{enumerate}
+\item \begin{equation}a,b \in \mathbb{R} : \forall a \forall b (ab = ba)\end{equation}
+oder auch\begin{equation}a,b \in \mathbb{R} : \forall a,b (ab = ba)\end{equation}
+\item \begin{equation}a \in \mathbb{R} \backslash \{0\}, x \in \mathbb{R}: \forall a \exists x (ax=1)\end{equation} Wir nennen $x=a^{-1}$ das zu $a$ \underline{inverse Element}.
+\end{enumerate}
+\subsection{Zwei Prädikate}
+Oft ist es einfacher, wenn eine Aussage mit Hilfe von zwei Prädikaten formuliert wird. Für
+\begin{quote}"Alle Informatik-Studierenden besitzen ein iPhone"\end{quote}
+wählen wir
+\begin{quote}$s = \{s \quad | \quad s \quad$ ist Student(in)$\}$ \\
+$i(s) : s$ studiert Informatik\\
+$p(s): s$ besitzt ein iPhone\end{quote}
+und schreiben
+\begin{equation}s \in S: \forall s (i(s) \to p(s))\end{equation}
+ist die Aussage falsch, weil nicht alle Informatik-Studierenden ein iPhone besitzen, so schreiben wir
+\begin{equation}\lnot \forall s (i(s) \to p(s))\end{equation}
+was gleichbedeutend ist mit
+\begin{equation}\exists s (\lnot [i(s) \to p(s)])\end{equation}
+Dies kann mit Hilfe der Gesetze der Logik umgeformt werden zu
+\begin{eqnarray}& & \exists s (\lnot [\lnot i(s) \lor p(s)]) \nonumber \\
+&=& \exists s (i(s) \land \lnot p(s))\end{eqnarray}
+Wir sehen also, dass der Existenzquantor eine Verbindung der Prädikate mit "und" verlangt. Wollen wir "Grosskatzen jagen und fressen Fleisch" formulieren, so wählen wir
+\begin{quote}$G = \{ g \quad | \quad g \quad$ ist eine Grosskatze $\}$\\
+$j(g) : g$ jagt\\
+$f(g) : f$ frisst Fleisch\end{quote}
+und erhalten
+\begin{equation}g \in G : \exists g (j(g) \land f(g))\end{equation}
+weil wir nicht genau wissen, ob es vegetarische Grosskatzen gibt. Negation ergibt
+\begin{eqnarray}\lnot \exists g (j(g) \land f(g)) &=& \forall g (\lnot [j(g) \land f(g)])\nonumber \\
+&=& \forall g (\lnot j(g) \lor \lnot f(g)) \nonumber \\
+&=& \forall g (j(g) \to [\lnot f(g)])\end{eqnarray}
+Wir beachten also, dass
+\begin{enumerate} \item $\forall$ verlangt Implikation ($\to$)
+\item $\exists$ verlangt Konjunktion ($\land$)\end{enumerate}
+Bei
+\begin{quote}"Es gibt Leute, die bein Torten-Essen gerne einen Kaffee dazu trinken"\end{quote}
+schreiben wir
+\begin{quote}$M = \{ m \quad | \quad m \quad$ ist ein Mensch $\}$\\
+$T(m) : m$ isst ein Stück Torte\\
+$K(m) : m$ trinkt Kaffee\end{quote}
+\begin{equation}m \in M : \exists m (T(m) \land K(m))\end{equation}
+und die Negation
+\begin{eqnarray}& &\lnot \exists m (T(m) \land K(m)) \nonumber \\
+&=& \forall m (\lnot (T(m) \land K(m))) \nonumber \\
+&=& \forall m (\lnot T(m) \lor \lnot K(m)) \nonumber \\
+&=& \forall m (T(m) \to \lnot K(m)) \quad \mbox{oder} \quad \forall m (K(m) \to \lnot T(m)) \end{eqnarray}
+\subsection{Zweiwertige Prädikate}
+Sei
+\begin{quote}$M = \{x \quad | \quad x \quad$ ist ein Mensch$\}$\end{quote}
+so lassen sich für $x,y \in M$ z.B. die zweistelligen Prädikate
+\begin{quote}$L(x,y) : x$ liebt $y$\\
+$K(x,y) : x$ kennt $y$\\
+$S(x,y) : x$ streitet mit $y$\end{quote}
+formulieren. Beachte, dass
+\begin{eqnarray}K(x,y) & \neq & K(y,x)\nonumber \\
+L(x,y) & \neq & L(y,x)\end{eqnarray}
+so bedeutet
+\begin{equation}x,y \in M : \forall x \exists y (K(x,y))\end{equation}
+dass alle Leute die Person $y$ kennen. Und
+\begin{equation}x,y \in M : \exists x \forall y (K(y,x))\end{equation}
+bedeutet "Es gibt einen Menschen $x$, der allen $y$ bekannt ist".
+
+\chapter{Mengen}
+\section{Mächtigkeit}
+Die Mengenlehre geht zurück auf Georg Cantor, 1845 bis 1918, in Halle. Heute definieren wir eine Menge, in dem wir ihre Element angeben.
+\subsection{Aufzählung}
+$A = \{ -3, a, \diamond, \sqrt{3}, x\}$\\
+$B = \{2, 2, 3, 4, 5\}$ ist nicht möglich: Jedes Element genau einmal, also ist $B = \{2, 3, 4, 5\}$\\
+$C = \{10, 14, 18, 22, ...\}$\\
+$\mathbb{N} = \{1, 2, 3, 4, ... \}$ heisst Menge der \underline{natürlichen Zahlen}.\\
+$\mathbb{Z} = \{..., -2, -1, 0, 1, 2, ...\}$ heisst Menge der \underline{ganzen Zahlen}.\\
+\subsection{Charakterisierung}
+$M = \{ m | m \in \mathbb{N} \land 8 < m < 21\}$\\
+$N = \{ x | x \in 2^{2-n} \land n \in \mathbb{N}\}$ also ist $N = \{2, 1, \frac{1}{2}, \frac{1}{4}, ...\}$\\
+$A= \{x | x \in \mathbb{R} \land x^2 = -1\}$, $A$ hat keine Elemente, die \underline{leere Menge} $\emptyset$.\\
+$\mathbb{Q} = \{x | x = \frac{a}{b} \land a,b \in \mathbb{Z} \land b \not \in 0\}$ ist die Menge der \underline{rationalen Zahlen}.\\
+$\mathbb{R} = \{ x | x \quad \mbox{ist als Dezimalbruch darstellbar}$ ist die Menge der \underline{reellen Zahlen}.
 \end{document}
