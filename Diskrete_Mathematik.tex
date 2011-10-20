@@ -617,4 +617,44 @@ $N = \{ x | x \in 2^{2-n} \land n \in \mathbb{N}\}$ also ist $N = \{2, 1, \frac{
 $A= \{x | x \in \mathbb{R} \land x^2 = -1\}$, $A$ hat keine Elemente, die \underline{leere Menge} $\emptyset$.\\
 $\mathbb{Q} = \{x | x = \frac{a}{b} \land a,b \in \mathbb{Z} \land b \not \in 0\}$ ist die Menge der \underline{rationalen Zahlen}.\\
 $\mathbb{R} = \{ x | x \quad \mbox{ist als Dezimalbruch darstellbar}$ ist die Menge der \underline{reellen Zahlen}.
+\subsection{Euler-Venn-Diagramm}
+Nach Leonard Euler, Riehen b. Basel, Petersburg, Berlin, 1707 bis 1783.
+TODO: IMAGE
+\begin{quote}\underline{algebraische Zahl}: Lösung einer (Polynom-) Gleichung \begin{equation}
+a_nx^n + a_{n-1}x^{n-1} + ... + a_2x^2 + a_1n^1 + a_0\end{equation}
+mit rationalen Koeffizienten $a_i \in \mathbb{Q}$ ($i = 0,1,...n$)\end{quote}
+\begin{quote}\underline{transzendente Zahl}: Nicht-algebraisch, aber irrational. Nach L. Euler: "quod algebrae vires transcendit" (lat. "Was die Kraft der Algebra übersteigt")\\
+$\pi$, $e$ sind transzendente Zahlen.\end{quote}
+\begin{mydef}Wir nennen die Anzahl der Elemente einer Menge $A$ die \underline{Mächtigkeit $\|A\|$}. \end{mydef}
+\begin{myexample}Wir untersuchen die Mächtigkeit der Menge $A$:
+\begin{quote}$A = \{2, 7, 12, ..., 122\}$\\
+$\to \|A\| = 24$\end{quote}\end{myexample}
+In $\mathbb{N} = \{1, 2, 3, ... \}$ hat es unendlich viele Elemente.
+\begin{mydef} Die \underline{Mächtigkeit von $\mathbb{N}$} ist $\aleph_0$ ("Aleph-null").\end{mydef}
+Welches ist nun die Mächtigkeit von $G = \{2, 4, 6, ...\}$?
+\begin{mydef}Zwei Mengen $A$ und $B$ sind \underline{gleichmächtig} $\|A\| = \|B\|$, wenn \underline{jedem} Element von $A$ genau eines von $B$ zugeordnet werden kann und umgekehrt.\end{mydef}
+Es muss also eine Funktion von $A$ nach $B$ existieren, wie umkehrbar ist.
+\begin{myexample}Wir versuchen herauszufinden, ob folgende zwei Mengen ($A$ und $B$ gleichmächtig sind:\\
+$A = \{4, 7, 10, ..., 94\}$\\
+$B = \{6, 10, 14, ..., 82\}$\\
+Mit einer Funktion $f$\\
+\begin{center}\begin{tabular}{c | c | c | c | c}4 & 7 & 10 & ... & 94\\ \hline
+6 & 10 & 14 & ... & 82\end{tabular}\end{center}
+muss $f(a) = \frac{4}{3}(a-1)+2$ sein.
+So wird $f(94) = \frac{4}{3}(93)+2 = 4 \cdot 31 + 2 = 126 \neq 82$ und somit ist $\|A\| > \|B\|$.\end{myexample}
+Gehen wir nun zurück zu $G = \{2, 4, 6, 8, ...\}$,
+\begin{center}\begin{tabular}{c | c | c | c | c | c}$\mathbb{N}$ & 1 & 2 & 3 & 4 & ...\\ \hline
+$\mathbb{G}$ & 2 & 4 & 6 & 8 & ...\end{tabular}\end{center}
+Mit $f(n) = 2n$ haben wir eine umkehrbare, eindeutige Funktion gefunden. Also ist $\|G\| = \aleph_0$\\
+Betrachten wir nun
+\begin{equation}\mathbb{Z} = \{..., -2, -1, 0, 1, 2, ...\}\end{equation}
+und versuchen eine Zuweisung mit $\mathbb{N}$ zu bilden.
+\begin{center}\begin{tabular}{c | c | c | c | c | c}$\mathbb{N}$ & 1 & 2 & 3 & 4 & 5\\ \hline
+$\mathbb{Z}$ & 0 & 1 & -1 & 2 & -2\end{tabular}\end{center}
+und finden $\|\mathbb{Z}\| = \aleph_0$ mit
+\[f(x) = \left\{ 
+\begin{array}{l l}
+  \frac{x}{2} & \quad \mbox{wenn $x$ gerade, $x \in \mathbb{N}$}\\
+  \frac{-x-1}{2} & \quad \mbox{wenn $x$ ungerade, $x \in \mathbb{N}$}\\ \end{array} \right. \]
+\begin{mydef}Eine Menge $A$ mit $\|A\| = \aleph_0$ besitzt \underline{abzählbar-unendlich} viele Elemente.\end{mydef}
 \end{document}
