@@ -9,6 +9,7 @@
 \newtheorem{mydef}{Definition}
 \newtheorem{myexample}{Beispiel}
 \newtheorem{myproof}{Beweis}
+\newtheorem{axiom}{Axiom}
 
 \title{Diskrete Mathematik}
 \author{Simon Krenger}
@@ -657,4 +658,59 @@ und finden $\|\mathbb{Z}\| = \aleph_0$ mit
   \frac{x}{2} & \quad \mbox{wenn $x$ gerade, $x \in \mathbb{N}$}\\
   \frac{-x-1}{2} & \quad \mbox{wenn $x$ ungerade, $x \in \mathbb{N}$}\\ \end{array} \right. \]
 \begin{mydef}Eine Menge $A$ mit $\|A\| = \aleph_0$ besitzt \underline{abzählbar-unendlich} viele Elemente.\end{mydef}
+Wie ist es nun mit $\mathbb{Q}$ und der Mächtigkeit? Wir versuchen das \underline{Cantorsche Diagonalverfahren}.
+\begin{center}\includegraphics[scale=0.5]{img/Cantorsches-Diagonalverfahren.png}\end{center}
+Zusätzlich definieren wir als erstes Element in der Menge die Zahl 0. Kommt eine Zahl zum
+\begin{itemize}
+\item ersten Mal vor, so zählen wir diese
+\item zweiten Mal vor, so wählen wir diese negativ.
+\item dritten, vierten Mal vor, so überspringen wir diese\end{itemize}
+Die 0 kommt an den Anfang. Also ist $\|\mathbb{Q}\| = \aleph_0$.\\\\
+Betrachten wir nun $\mathbb{R}$:
+\begin{center}Wir versuchen zu ordnen: $0.1, 0.01, 0.001, ...$\end{center}
+Es gelingt nicht, eine Funktion von $\mathbb{N}$ nach $\mathbb{R}$ zu finden.
+\begin{mydef}Die Menge $\mathbb{R}$ ist \underline{überabzählbar-unendlich} und ihre \underline{Mächtigkeit ist $\aleph_1$}.\end{mydef}
+\section{Vollständige Induktion}
+Nach Giuseppe Peano, Turin, 1858 bis 1932\\
+Peano hat gezeigt, dass die natürlichen Zahlen auf den Axiomen
+\begin{axiom}Es gibt eine kleinste Zahl\end{axiom}
+\begin{axiom}Jede Zahl besitzt einen Nachfolger\end{axiom}
+\begin{axiom}Gilt eine Aussage für $n$ und auch für $n + 1$, so gilt sie für alle $n \in \mathbb{N}$, falls sie für $n = 1$ gilt. \label{PeanoAxiom3}\end{axiom}
+beruhen (\underline{Peano-Axiome} genannt).\\\\
+Axiom (\ref{PeanoAxiom3}) führt uns zum \underline{Beweis mit vollständiger Induktion}. Dieser Beweis besteht aus drei Teilen.
+\begin{enumerate}
+\item Induktionsverankerung (Induktionsanfang)\\
+Die Behauptung stimmt für $n = 1$
+\item Induktionsschritt\\
+Unter der Voraussetzung, dass die Behauptung für $n$ gilt, ist zu zeigen, dass sie auch für $n+1$ gilt.
+\item Induktionsvererbung (Induktionsschluss)\end{enumerate}
+
+\begin{myexample}\begin{enumerate}
+\item Behauptung: $1^2 + 2^2 + 3^2 + ... + n^2 = \frac{n(n+1)(2n+1)}{6}$\\
+Beweis mit vollständiger Induktion
+\begin{enumerate}
+\item Behauptung ist für $n=1$ richtig, denn \label{induktion-beh1}
+\begin{equation}\frac{n(n+1)(2n+1)}{6} \quad \mbox{wird} \quad \frac{1 \cdot (1+1)(2 + 1)}{6} = 1\end{equation} und
+\begin{equation}1^2 = 1\end{equation}
+\item \label{induktion2} Voraussetzung: $s_n = 1^2 + 2^2 + 3^2 + ... + n^2 = \frac{n(n+1)(2n+1)}{6}$\\
+Behauptung: $s_{n+1} = 1^2 + 2^2 + 3^2 + ... + n^2 + (n+1)^2$\\
+damit \begin{equation}\frac{(n+1)((n+1)+1)(2(n+1)+1)}{6} = \frac{(n+1)(n+2)(2n+3)}{6}\end{equation}
+\begin{myproof}
+\begin{enumerate}
+\begin{eqnarray}s_{n+1} & = & 1^2 + 2^2 + 3^2 + ... + (n+1)^2\nonumber \\
+& = & s_n + (n+1)^2 \nonumber \\
+& = & \frac{1}{6} n (n+1)(2n+1)+(n+1)^2 \nonumber \\
+& = & \frac{1}{6} (n^2 + n)(2n+1) + n^2 + 2n +1 \nonumber \\
+& = & \frac{1}{6} (2n^3 + n^2 + 2n^2 + n) + n^2 + 2n + 1 \nonumber \\
+& = & \frac{1}{6} (2n^3 + 3n^2 + n + 6n^2 + 12n + 6) \nonumber \\
+& = & \frac{1}{6} (2n^3 + 9n^2 + 13n + 6)\end{eqnarray}
+und
+\item \begin{eqnarray}\frac{(n+1)(n+2)(2n+3)}{6} & = & \frac{1}{6} (n^2 + 3n + 2)(2n + 3) \nonumber \\
+& = & \frac{1}{6} (2n^3 + 6n^2 + 3n^2 + 4n + 9n +6) \nonumber \\
+& = & \frac{1}{6} (2n^3 + 9n^2 + 13n + 6)\end{eqnarray}
+\end{enumerate}\end{myproof}
+\item Nach (\ref{induktion-beh1}) gilt die Behauptung für $n = 1$ und nach (\ref{induktion2}) gilt sie für $n+1$, falls sie für $n$ gilt.\\
+Also gilt sie für $n = 2$ und nach (\ref{induktion2}) für $n+1$, ist 3 usw. Also gilt die Behauptung für alle $n \in \mathbb{N}$
+\end{enumerate}\end{enumerate}
+\end{myexample}
 \end{document}

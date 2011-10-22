@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.29)  20 OCT 2011 19:28
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.29)  21 OCT 2011 23:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -366,35 +366,36 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 \c@mydef=\count101
 \c@myexample=\count102
 \c@myproof=\count103
+\c@axiom=\count104
 
 (./Diskrete_Mathematik.aux)
 \openout1 = `Diskrete_Mathematik.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
+\scratchcounter=\count105
 \scratchdimen=\dimen114
 \scratchbox=\box28
-\nofMPsegments=\count105
-\nofMParguments=\count106
+\nofMPsegments=\count106
+\nofMParguments=\count107
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count107
+\MPscratchCnt=\count108
 \MPscratchDim=\dimen115
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
 \everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
@@ -443,12 +444,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -462,65 +463,65 @@ Chapter 1.
 File: img/innenwinkel.png Graphic file (type png)
 
 <use img/innenwinkel.png>
-Package pdftex.def Info: img/innenwinkel.png used on input line 208.
+Package pdftex.def Info: img/innenwinkel.png used on input line 209.
 (pdftex.def)             Requested size: 171.44008pt x 83.91328pt.
  [6 <./img/innenwinkel.png>] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 362--365
+Underfull \hbox (badness 10000) in paragraph at lines 363--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--375
+Underfull \hbox (badness 10000) in paragraph at lines 373--376
 
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 417--420
+Underfull \hbox (badness 10000) in paragraph at lines 418--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
 [13]
-Overfull \hbox (6.02866pt too wide) in paragraph at lines 434--434
+Overfull \hbox (6.02866pt too wide) in paragraph at lines 435--435
 \OT1/cmr/m/it/10 neben $\OML/cmm/m/it/10 p[]; p[]; :::; p[]$ \OT1/cmr/m/it/10 e
 inen weit-eren Prim-fak-tor geben, dies ist ein Wider-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--457
+Underfull \hbox (badness 10000) in paragraph at lines 456--458
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 462--465
+Underfull \hbox (badness 10000) in paragraph at lines 463--466
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--478
+Underfull \hbox (badness 10000) in paragraph at lines 477--479
 
  []
 
 [15]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 501.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 502.
 
  (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 501.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 502.
  [16]
 [17]
-Overfull \hbox (6.72275pt too wide) in paragraph at lines 578--578
+Overfull \hbox (6.72275pt too wide) in paragraph at lines 579--579
 []\OT1/cmr/m/n/10 "Es gibt Leute, die bein Torten-Essen gerne einen Kaf-fee daz
 u trinken" 
  []
@@ -528,12 +529,12 @@ u trinken"
 [18] [19]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--614
+Underfull \hbox (badness 10000) in paragraph at lines 610--615
 
  []
 
 
-Overfull \hbox (0.31546pt too wide) in paragraph at lines 621--623
+Overfull \hbox (0.31546pt too wide) in paragraph at lines 622--624
 \OT1/cmr/m/n/10 Nach Leonard Eu-ler, Riehen b. Basel, Pe-ters-burg, Berlin, 170
 7 bis 1783. TODO:
  []
@@ -541,51 +542,81 @@ Overfull \hbox (0.31546pt too wide) in paragraph at lines 621--623
 [20
 
 ]
-Overfull \hbox (36.79918pt too wide) in paragraph at lines 628--628
+Overfull \hbox (36.79918pt too wide) in paragraph at lines 629--629
 \OT1/cmr/bx/n/10 Definition 6. \OT1/cmr/m/it/10 Wir nen-nen die An-zahl der El-
 e-mente einer Menge $\OML/cmm/m/it/10 A$ \OT1/cmr/m/it/10 die $[]$. 
  []
 
 
-Overfull \hbox (0.51794pt too wide) in paragraph at lines 635--635
+Overfull \hbox (0.51794pt too wide) in paragraph at lines 636--636
 []$ \OT1/cmr/m/it/10 El-e-ment von $\OML/cmm/m/it/10 A$ \OT1/cmr/m/it/10 genau 
 eines von $\OML/cmm/m/it/10 B$ \OT1/cmr/m/it/10 zu-ge-ord-net wer-den kann und 
 umgekehrt. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--641
+Underfull \hbox (badness 10000) in paragraph at lines 638--642
 
  []
 
-[21] [22] (./Diskrete_Mathematik.aux) ) 
+[21]
+Overfull \hbox (69.1025pt too wide) in paragraph at lines 661--662
+[]\OT1/cmr/m/n/10 Wie ist es nun mit $\U/msb/m/n/10 Q$ \OT1/cmr/m/n/10 und der 
+M^^?achtigkeit? Wir ver-suchen das $[]$. 
+ []
+
+<img/Cantorsches-Diagonalverfahren.png, id=88, 448.67625pt x 242.9075pt>
+File: img/Cantorsches-Diagonalverfahren.png Graphic file (type png)
+
+<use img/Cantorsches-Diagonalverfahren.png>
+Package pdftex.def Info: img/Cantorsches-Diagonalverfahren.png used on input li
+ne 662.
+(pdftex.def)             Requested size: 224.33757pt x 121.45345pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--670
+
+ []
+
+
+Overfull \hbox (23.05745pt too wide) in paragraph at lines 672--672
+\OT1/cmr/bx/n/10 Definition 10. \OT1/cmr/m/it/10 Die Menge $\U/msb/m/n/10 R$ \O
+T1/cmr/m/it/10 ist $[]$ und ihre $[]$. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 679--681
+
+ []
+
+[22 <./img/Cantorsches-Diagonalverfahren.png>] [23] [24]
+(./Diskrete_Mathematik.aux) ) 
 Here is how much of TeX's memory you used:
- 2691 strings out of 493629
- 34731 string characters out of 3143323
- 94927 words of memory out of 3000000
- 5943 multiletter control sequences out of 15000+200000
+ 2705 strings out of 493629
+ 35015 string characters out of 3143323
+ 94991 words of memory out of 3000000
+ 5956 multiletter control sequences out of 15000+200000
  12762 words of font info for 49 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,12n,24p,277b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msam10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on Diskrete_Mathematik.pdf (23 pages, 218085 bytes).
+ 37i,12n,24p,277b,473s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msam10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb>
+Output written on Diskrete_Mathematik.pdf (25 pages, 232131 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
