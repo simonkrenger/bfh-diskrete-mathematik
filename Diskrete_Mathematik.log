@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.29)  21 OCT 2011 23:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.29)  25 OCT 2011 21:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -533,15 +533,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 610--615
 
  []
 
-
-Overfull \hbox (0.31546pt too wide) in paragraph at lines 622--624
-\OT1/cmr/m/n/10 Nach Leonard Eu-ler, Riehen b. Basel, Pe-ters-burg, Berlin, 170
-7 bis 1783. TODO:
- []
+<img/venn-diagramm.png, id=82, 200.75pt x 160.6pt>
+File: img/venn-diagramm.png Graphic file (type png)
+ <use img/venn-diagramm.png>
+Package pdftex.def Info: img/venn-diagramm.png used on input line 623.
+(pdftex.def)             Requested size: 60.22545pt x 48.18036pt.
 
 [20
 
-]
+ <./img/venn-diagramm.png>]
 Overfull \hbox (36.79918pt too wide) in paragraph at lines 629--629
 \OT1/cmr/bx/n/10 Definition 6. \OT1/cmr/m/it/10 Wir nen-nen die An-zahl der El-
 e-mente einer Menge $\OML/cmm/m/it/10 A$ \OT1/cmr/m/it/10 die $[]$. 
@@ -565,7 +565,7 @@ Overfull \hbox (69.1025pt too wide) in paragraph at lines 661--662
 M^^?achtigkeit? Wir ver-suchen das $[]$. 
  []
 
-<img/Cantorsches-Diagonalverfahren.png, id=88, 448.67625pt x 242.9075pt>
+<img/Cantorsches-Diagonalverfahren.png, id=90, 448.67625pt x 242.9075pt>
 File: img/Cantorsches-Diagonalverfahren.png Graphic file (type png)
 
 <use img/Cantorsches-Diagonalverfahren.png>
@@ -588,35 +588,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 679--681
 
  []
 
-[22 <./img/Cantorsches-Diagonalverfahren.png>] [23] [24]
-(./Diskrete_Mathematik.aux) ) 
+[22 <./img/Cantorsches-Diagonalverfahren.png>] [23]
+
+LaTeX Warning: Reference `induktion2' on page 24 undefined on input line 712.
+
+
+Overfull \hbox (18.23808pt too wide) in paragraph at lines 721--722
+\OT1/cmr/m/it/10 Da alle Zahlen $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 2 \U/msb/m
+/n/10 N$ \OT1/cmr/m/it/10 sind, w^^?ahlen wir den $[]$: 
+ []
+
+[24] <img/Set_subsetAofB.png, id=103, 200.75pt x 200.75pt>
+File: img/Set_subsetAofB.png Graphic file (type png)
+
+<use img/Set_subsetAofB.png>
+Package pdftex.def Info: img/Set_subsetAofB.png used on input line 742.
+(pdftex.def)             Requested size: 100.37474pt x 100.37474pt.
+ [25 <./img/Set_subsetAofB.png>]
+Overfull \hbox (25.51486pt too wide) in paragraph at lines 762--762
+\OT1/cmr/bx/n/10 Definition 12. \OT1/cmr/m/it/10 Die Menge aller Teil-men-gen e
+iner Menge A heisst $[]$ 
+ []
+
+[26] (./Diskrete_Mathematik.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2705 strings out of 493629
- 35015 string characters out of 3143323
- 94991 words of memory out of 3000000
- 5956 multiletter control sequences out of 15000+200000
+ 2718 strings out of 493629
+ 35336 string characters out of 3143323
+ 95011 words of memory out of 3000000
+ 5967 multiletter control sequences out of 15000+200000
  12762 words of font info for 49 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,12n,24p,277b,473s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msam10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb>
-Output written on Diskrete_Mathematik.pdf (25 pages, 232131 bytes).
+ 37i,12n,24p,342b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
+ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
+ve/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
+exlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Diskrete_Mathematik.pdf (27 pages, 256107 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 157 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
