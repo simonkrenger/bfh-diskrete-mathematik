@@ -782,5 +782,18 @@ Nun untersuchen wir, wieviele Teilmengen mit genau $k$ Elementen eine Menge $\|A
 3 & 1 & 3 & 3 & 1 & & \\ \hline
 4 & 1 & 4 & 6 & 4 & 1 & \\ \hline
 5 & 1 & 5 & 10 & 10 & 5 & 1\\ \hline\end{tabular}
-\end{center}Wir erhalten das \underline{Pascalsche Dreieck}!
+\end{center}Wir erhalten das \underline{Pascalsche Dreieck} (Blaise Pascal, 1623 bis 1662, Paris).
+
+TODO: IMAGE(Pascalsches Dreieck)
+
+Das 3. Element in der 5. Zeile gibt uns also die Anzahl der Teilmengen mit genau 3 Elementen einer Menge $A$ mit $\|A\| = 5$ an: das sind 10.\\
+Um das Binom $(a+b)^4$ zu berechnen, wählen wir die vierte Zeile und finden dort die \underline{Koeffizienten}:
+\begin{eqnarray}(a+b)^4 & = & 1\quad +4 \quad +6 \quad +4 \quad +1 \\ \nonumber
+\mbox{und weiter} \quad & = & 1a^4 \quad +4a^3 \quad +6a^2 \quad +4a^1 \quad +1a^0 \\ \nonumber
+& = & 1a^4b^0 + 4a^3b^1 + 6a^2b^2 + 4a^1b^3 + 1a^0b^4 \\ \nonumber
+& = & 1a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + 1b^4\end{eqnarray}
+\begin{myexample}Damit können wir auch höhere Binome ausrechnen:
+\begin{eqnarray}(2^x-y)^5 & = & 1(2x)^5 + 5(2x)^4(-y) + 10(2x)^3(-y)^2 + 10(2x)^2(-y)^3 + 5(2x)^1(-y)^4 + 1(-y)^5 \nonumber \\
+& = & 32x^5-80x^4y + 80x^3y^2-40x^2y^3+10xy^4 -y^5\end{eqnarray}\end{myexample}
+\begin{mydef}Die Zahlen im Pascalschen Dreieck werden \underline{Binominalkoeffizienten} genannt. Wir schreiben \end{mydef}
 \end{document}
