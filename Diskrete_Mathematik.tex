@@ -783,9 +783,15 @@ Nun untersuchen wir, wieviele Teilmengen mit genau $k$ Elementen eine Menge $\|A
 4 & 1 & 4 & 6 & 4 & 1 & \\ \hline
 5 & 1 & 5 & 10 & 10 & 5 & 1\\ \hline\end{tabular}
 \end{center}Wir erhalten das \underline{Pascalsche Dreieck} (Blaise Pascal, 1623 bis 1662, Paris).
-
-TODO: IMAGE(Pascalsches Dreieck)
-
+\begin{center}
+\begin{tabular}{rccccccccc}
+$n=0$: & & & & & 1 & & & & \\
+$n=1$: & & & & 1 & & 1 & & & \\
+$n=2$: & & & 1 & & 2 & & 1 & & \\
+$n=3$: & & 1 & & 3 & & 3 & & 1 & \\
+$n=4$: & 1 & & 4 & & 6 & & 4 & & 1%
+\end{tabular}
+\end{center}
 Das 3. Element in der 5. Zeile gibt uns also die Anzahl der Teilmengen mit genau 3 Elementen einer Menge $A$ mit $\|A\| = 5$ an: das sind 10.\\
 Um das Binom $(a+b)^4$ zu berechnen, wählen wir die vierte Zeile und finden dort die \underline{Koeffizienten}:
 \begin{eqnarray}(a+b)^4 & = & 1\quad +4 \quad +6 \quad +4 \quad +1 \\ \nonumber
@@ -795,5 +801,77 @@ Um das Binom $(a+b)^4$ zu berechnen, wählen wir die vierte Zeile und finden dor
 \begin{myexample}Damit können wir auch höhere Binome ausrechnen:
 \begin{eqnarray}(2^x-y)^5 & = & 1(2x)^5 + 5(2x)^4(-y) + 10(2x)^3(-y)^2 + 10(2x)^2(-y)^3 + 5(2x)^1(-y)^4 + 1(-y)^5 \nonumber \\
 & = & 32x^5-80x^4y + 80x^3y^2-40x^2y^3+10xy^4 -y^5\end{eqnarray}\end{myexample}
-\begin{mydef}Die Zahlen im Pascalschen Dreieck werden \underline{Binominalkoeffizienten} genannt. Wir schreiben \end{mydef}
+\begin{mydef}Die Zahlen im Pascalschen Dreieck werden \underline{Binominalkoeffizienten} genannt. Wir schreiben $\binom{n}{k}$ ("$n$ tief $k$") für das k-te Element in der n-ten Zeile.\end{mydef}
+\begin{myexample}\begin{equation}\binom{4}{2} = 6, \binom{70}{1} = 70, \binom{21}{20} = 21, \binom{10}{0} = 1 = \binom{10}{10}\end{equation}\end{myexample}
+Es ist also
+\begin{equation}(a+b)^n = \binom{n}{0}a^n + \binom{n}{1}a^{n-1}b + \binom{n}{2}a^{n-2}b^2 + ... + \binom{n}{k}a^{n-k}b^k + ... + \binom{n}{k}b^n\end{equation}
+was wir den \underline{binomischen Lehrsatz} nennen.
+\subsection{Intervalle}
+\begin{mydef}Wir nennen\begin{itemize}
+\item $[a;b] := \{x \quad | \quad x \in \mathbb{R} \land a \leq x \leq b\}$\\
+ein \underline{abgeschlossenes Intervall}.
+\item $]a;b[ = (a;b) := \{x \quad | \quad x \in \mathbb{R} \land a < x < b\}$\\
+ein \underline{offenes Intervall}.
+\item $[a;b[ := \{x \quad | \quad x \in \mathbb{R} \land a \leq x < b\}$\\
+ein \underline{halboffenes (abgeschloffenes) Intervall}.\end{itemize}\end{mydef}
+\begin{myexample}Beispiele mit Intervallen\begin{enumerate}\item \begin{equation}[5;11] = \{x \quad | \quad x \in \mathbb{R} \land a \leq x \leq b\}\end{equation}
+\item Aber:\begin{equation}\{5, 6, 7, 8, 9, 10, 11\} \neq [5; 11]\end{equation}
+Achtung: Gilt für reelle Zahlen!
+\item Definitionsmenge von $f(x) = \log{(x-3)}$ ist $D_f = ]3; \infty [$
+\item Ist $G = \mathbb{R}$, so ist die Lösungsmenge von
+\begin{enumerate}\item $x^2 < 49$\\
+das Intervall $]-7;7[$
+\item $|x| < 10$\\
+das Intervall $[-10;10]$
+\item \begin{eqnarray}\frac{4}{x^2-1} & > & \frac{1}{5}\nonumber \\
+\frac{4}{x^2-1}-\frac{1}{5} & > & 0\nonumber \\
+\frac{20 - (x^2-1)}{5(x^2-1)} & > & 0\nonumber \\
+\frac{21-x^2}{5x^2-5} & > & 0\end{eqnarray}
+also
+\begin{eqnarray}(21-x^2 > 0 \land 5x^2-5 > 0) & \lor & (21x^2 < 0 \land 5x^2-5<0)\nonumber \\
+(x^2<21 \land x^2>1) & \lor & (x^2 > 21 \land x^2<1)\end{eqnarray}
+und so $L = ]-\sqrt{21} ; -1[ \quad \cup \quad  ]1;\sqrt{21}[$\end{enumerate}
+\end{enumerate}\end{myexample}
+\section{Operationen mit Mengen}
+\subsection{Schnittmenge}
+\begin{center}\includegraphics[scale=0.5]{img/Set_Schnittmenge.png}\\$A \cap B$\end{center}
+\begin{mydef}\begin{equation}A \cap B := \{x \quad | \quad x \in A \land x \in B \}\end{equation}
+heisst \underline{Schnittmenge} (Durchschnittsmenge, Schnitt) von $A$ und $B$.\end{mydef}
+\begin{myexample}\begin{eqnarray}A & = & \{a \quad | \quad -10 \leq a \leq 9 \land a \in \mathbb{Z}\}\nonumber \\
+B & = & \{b \quad | \quad -2 < b \leq 24 \land b \in \mathbb{Z}\} \nonumber \\
+\to A \cap B & = & \{-1, 0, 1, 2, 3, ..., 8\}\end{eqnarray}\end{myexample}
+Wir finden sofort:
+\begin{equation}A \cap \emptyset = \emptyset\end{equation}
+\begin{equation}A \cap A = A\end{equation}
+\begin{equation}A \cap B = B \cap A\end{equation}
+\begin{equation}(A \cap B) \cap C = A \cap (B \cap C)\end{equation}
+\begin{mydef}Ist $A \cap B$ die leere Menge ($A \cap B = \emptyset$), so heissen $A$ und $B$ \underline{disjunkt}.\end{mydef}
+\begin{myexample}\begin{equation}[4 ; 10] \cap [100 ; 150] = \emptyset\end{equation}\end{myexample}
+\subsection{Vereinigungsmenge}
+\begin{center}\includegraphics[scale=0.5]{img/Set_Vereinigungsmenge.png}\\$A \cup B$\end{center}
+\begin{mydef}\begin{equation}A \cup B := \{x \quad | \quad x \in A \lor x \in B\}\end{equation}
+heisst \underline{Vereinigungsmenge} (Verein) von $A$ und $B$.\end{mydef}
+\begin{myexample}\begin{eqnarray}A & = & \{2; 4; 6; ...; 120\}\nonumber \\
+B & = & \{1; 3; 5; ...; 119\} \nonumber \\
+\to A \cup B & = & \{1; 2; 3; 4; ...; 120\}\end{eqnarray}\end{myexample}
+Wir finden sofort:
+\begin{equation}A \cup \emptyset = A\end{equation}
+\begin{equation}A \cup A = A\end{equation}
+\begin{equation}A \cup B = B \cup A\end{equation}
+\begin{equation}(A \cup B) \cup C = A \cup (B \cup C)\end{equation}
+und die Distributivgesetze
+\begin{eqnarray}\forall A,B,C &:& A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\nonumber \\
+\forall A,B,C &:& A \cup (B\cap C) = (A \cup B) \cap (A \cup C)\end{eqnarray}
+Der Beweis kan entweder mit Hilfe der Definitionen oder mit \underline{2 Diagrammen} geführt werden.
+\subsubsection{Beweis mit Hilfe der Definitionen}
+\begin{myproof}\begin{eqnarray}A \cap (B \cup C) & = & \{x \quad | \quad x \in A \land x \in (B \cup C)\} \nonumber \\
+& = & \{x \quad | \quad x \in A \land (x \in B \lor x \in C)\} \nonumber \\
+& = & \{x \quad | \quad (x \in A \land x \in B) \lor (x \in A \land x \in C)\} \nonumber \\
+& = & \{x \quad | \quad x \in A \land x \in B \} \cup \{x \quad | \quad x \in A \land x \in C\} \nonumber \\
+& = & (A \cap B) \cup (A \cap C)\end{eqnarray}\qed
+\end{myproof}
+\subsubsection{Beweis mit 2 Diagrammen}
+\begin{myproof}Wir zeichnen Zwei Diagramme, eines für die linke Seite und eines für die rechte Seite der Behauptung (mit Index).
+%TODO
+\end{myproof}
 \end{document}
