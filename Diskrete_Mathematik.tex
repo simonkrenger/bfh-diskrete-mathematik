@@ -626,38 +626,38 @@ a_nx^n + a_{n-1}x^{n-1} + ... + a_2x^2 + a_1n^1 + a_0\end{equation}
 mit rationalen Koeffizienten $a_i \in \mathbb{Q}$ ($i = 0,1,...n$)\end{quote}
 \begin{quote}\underline{transzendente Zahl}: Nicht-algebraisch, aber irrational. Nach L. Euler: "quod algebrae vires transcendit" (lat. "Was die Kraft der Algebra übersteigt")\\
 $\pi$, $e$ sind transzendente Zahlen.\end{quote}
-\begin{mydef}Wir nennen die Anzahl der Elemente einer Menge $A$ die \underline{Mächtigkeit $\|A\|$}. \end{mydef}
+\begin{mydef}Wir nennen die Anzahl der Elemente einer Menge $A$ die \underline{Mächtigkeit $|A|$}. \end{mydef}
 \begin{myexample}Wir untersuchen die Mächtigkeit der Menge $A$:
 \begin{quote}$A = \{2, 7, 12, ..., 122\}$\\
-$\to \|A\| = 24$\end{quote}\end{myexample}
+$\to |A| = 24$\end{quote}\end{myexample}
 In $\mathbb{N} = \{1, 2, 3, ... \}$ hat es unendlich viele Elemente.
 \begin{mydef} Die \underline{Mächtigkeit von $\mathbb{N}$} ist $\aleph_0$ ("Aleph-null").\end{mydef}
 Welches ist nun die Mächtigkeit von $G = \{2, 4, 6, ...\}$?
-\begin{mydef}Zwei Mengen $A$ und $B$ sind \underline{gleichmächtig} $\|A\| = \|B\|$, wenn \underline{jedem} Element von $A$ genau eines von $B$ zugeordnet werden kann und umgekehrt.\end{mydef}
+\begin{mydef}Zwei Mengen $A$ und $B$ sind \underline{gleichmächtig} $|A| = |B|$, wenn \underline{jedem} Element von $A$ genau eines von $B$ zugeordnet werden kann und umgekehrt.\end{mydef}
 Es muss also eine Funktion von $A$ nach $B$ existieren, wie umkehrbar ist.
-\begin{myexample}Wir versuchen herauszufinden, ob folgende zwei Mengen ($A$ und $B$ gleichmächtig sind:\\
+\begin{myexample}Wir versuchen herauszufinden, ob folgende zwei Mengen ($A$ und $B$ gleichmächtig sind:\begin{center}
 $A = \{4, 7, 10, ..., 94\}$\\
-$B = \{6, 10, 14, ..., 82\}$\\
+$B = \{6, 10, 14, ..., 82\}$\end{center}
 Mit einer Funktion $f$\\
 \begin{center}\begin{tabular}{c | c | c | c | c}4 & 7 & 10 & ... & 94\\ \hline
 6 & 10 & 14 & ... & 82\end{tabular}\end{center}
 muss $f(a) = \frac{4}{3}(a-1)+2$ sein.
-So wird $f(94) = \frac{4}{3}(93)+2 = 4 \cdot 31 + 2 = 126 \neq 82$ und somit ist $\|A\| > \|B\|$.\end{myexample}
+So wird $f(94) = \frac{4}{3}(93)+2 = 4 \cdot 31 + 2 = 126 \neq 82$ und somit ist $|A| > |B|$.\end{myexample}
 Gehen wir nun zurück zu $G = \{2, 4, 6, 8, ...\}$,
 \begin{center}\begin{tabular}{c | c | c | c | c | c}$\mathbb{N}$ & 1 & 2 & 3 & 4 & ...\\ \hline
 $\mathbb{G}$ & 2 & 4 & 6 & 8 & ...\end{tabular}\end{center}
-Mit $f(n) = 2n$ haben wir eine umkehrbare, eindeutige Funktion gefunden. Also ist $\|G\| = \aleph_0$\\
+Mit $f(n) = 2n$ haben wir eine umkehrbare, eindeutige Funktion gefunden. Also ist $|G| = \aleph_0$\\
 Betrachten wir nun
 \begin{equation}\mathbb{Z} = \{..., -2, -1, 0, 1, 2, ...\}\end{equation}
 und versuchen eine Zuweisung mit $\mathbb{N}$ zu bilden.
 \begin{center}\begin{tabular}{c | c | c | c | c | c}$\mathbb{N}$ & 1 & 2 & 3 & 4 & 5\\ \hline
 $\mathbb{Z}$ & 0 & 1 & -1 & 2 & -2\end{tabular}\end{center}
-und finden $\|\mathbb{Z}\| = \aleph_0$ mit
+und finden $|\mathbb{Z}| = \aleph_0$ mit
 \[f(x) = \left\{ 
 \begin{array}{l l}
   \frac{x}{2} & \quad \mbox{wenn $x$ gerade, $x \in \mathbb{N}$}\\
   \frac{-x-1}{2} & \quad \mbox{wenn $x$ ungerade, $x \in \mathbb{N}$}\\ \end{array} \right. \]
-\begin{mydef}Eine Menge $A$ mit $\|A\| = \aleph_0$ besitzt \underline{abzählbar-unendlich} viele Elemente.\end{mydef}
+\begin{mydef}Eine Menge $A$ mit $|A| = \aleph_0$ besitzt \underline{abzählbar-unendlich} viele Elemente.\end{mydef}
 Wie ist es nun mit $\mathbb{Q}$ und der Mächtigkeit? Wir versuchen das \underline{Cantorsche Diagonalverfahren}.
 \begin{center}\includegraphics[scale=0.5]{img/Cantorsches-Diagonalverfahren.png}\end{center}
 Zusätzlich definieren wir als erstes Element in der Menge die Zahl 0. Kommt eine Zahl zum
@@ -665,7 +665,7 @@ Zusätzlich definieren wir als erstes Element in der Menge die Zahl 0. Kommt ein
 \item ersten Mal vor, so zählen wir diese
 \item zweiten Mal vor, so wählen wir diese negativ.
 \item dritten, vierten Mal vor, so überspringen wir diese\end{itemize}
-Die 0 kommt an den Anfang. Also ist $\|\mathbb{Q}\| = \aleph_0$.\\\\
+Die 0 kommt an den Anfang. Also ist $|\mathbb{Q}| = \aleph_0$.\\\\
 Betrachten wir nun $\mathbb{R}$:
 \begin{center}Wir versuchen zu ordnen: $0.1, 0.01, 0.001, ...$\end{center}
 Es gelingt nicht, eine Funktion von $\mathbb{N}$ nach $\mathbb{R}$ zu finden.
@@ -709,7 +709,7 @@ und
 & = & \frac{1}{6} (2n^3 + 9n^2 + 13n + 6)\end{eqnarray}
 \end{myproof}
 \item Nach (\ref{proof:vollstind-ex1-1}) gilt die Behauptung für $n = 1$ und nach (\ref{proof:vollstind-ex1-2}) gilt sie für $n+1$, falls sie für $n$ gilt.\\
-Also gilt sie für $n = 2$ und nach (\ref{induktion2}) für $n+1$, ist 3 usw. Also gilt die Behauptung für alle $n \in \mathbb{N}$.\qed
+Also gilt sie für $n = 2$ und nach (\ref{proof:vollstind-ex1-2}) für $n+1$, ist 3 usw. Also gilt die Behauptung für alle $n \in \mathbb{N}$.\qed
 \end{enumerate}
 \item Wir betrachten die Summe der ungeraden Zahlen bis $n$:
 \begin{eqnarray}1 + 3 & = & 4 \nonumber \\
@@ -749,7 +749,7 @@ $B = \{b \quad | \quad 10 \leq b \leq 50 \land b \in \mathbb{N}\}$\end{center}
 also ist $A \subset B$.
 \begin{center}$C = \{9, 10, 11, ..., 31\}$\end{center}
 also ist $A \subset C$ aber $C \not \subset B$.\end{myexample}
-Wie viele Teilmengen besitzt $A$, wenn $\|A\| = n$?
+Wie viele Teilmengen besitzt $A$, wenn $|A| = n$?
 \begin{enumerate}
 \item $n = 1$: $A = \{x\}$ \\
 Teilmengen: $\{x\}, \emptyset$\\
@@ -758,7 +758,7 @@ Teilmengen: $\{x\}, \emptyset$\\
 Teilmengen: $\emptyset, \{x\}, \{y\}, \{x, y\}$
 \item $n = 3$: $A = \{x, y, z\}$\\
 Teilmengen: $\emptyset, \{x\}, \{y\}, \{z\}, \{x, y\}, \{y, z\}, \{x, z\}, \{x, y, z\}$\end{enumerate}
-Ist $\|A\|=n$, so gibt es $2^n$ Teilmengen, denn für jedes Element von A gibt es zwei Möglichkeiten, zur Teilmenge zu gehören oder nicht.
+Ist $|A|=n$, so gibt es $2^n$ Teilmengen, denn für jedes Element von A gibt es zwei Möglichkeiten, zur Teilmenge zu gehören oder nicht.
 \begin{mydef}Die Menge aller Teilmengen einer Menge A heisst \underline{Potenzmenge $\mathcal{P}(A)$}\end{mydef}
 \begin{myexample}Beispiele zu den Teilmengen:\begin{enumerate}
 \item \begin{equation}M = \{a, b\} \to \mathcal{P}(M) ) \{\emptyset, \{a\}, \{b\}, \{a, b\}\}\end{equation}
@@ -771,7 +771,7 @@ $\{\mathbb{N}\} \subset \mathbb{Q}$ & Falsch \\
 $\{\mathbb{N}\} \in \mathbb{Q} $ & Falsch \\
 $\mathbb{N} \in \mathbb{Q}$ & Falsch\end{tabular}\end{center}
 \end{enumerate}\end{myexample}
-Nun untersuchen wir, wieviele Teilmengen mit genau $k$ Elementen eine Menge $\|A\| = n$ besitzt, wenn $0 \leq k \leq n$ ist.
+Nun untersuchen wir, wieviele Teilmengen mit genau $k$ Elementen eine Menge $|A| = n$ besitzt, wenn $0 \leq k \leq n$ ist.
 \begin{center}
 \begin{tabular}{c|c|c|c|c|c|c|}
 & \multicolumn{6}{|c|}{\bf k=} \\
@@ -792,14 +792,15 @@ $n=3$: & & 1 & & 3 & & 3 & & 1 & \\
 $n=4$: & 1 & & 4 & & 6 & & 4 & & 1%
 \end{tabular}
 \end{center}
-Das 3. Element in der 5. Zeile gibt uns also die Anzahl der Teilmengen mit genau 3 Elementen einer Menge $A$ mit $\|A\| = 5$ an: das sind 10.\\
+Das 3. Element in der 5. Zeile gibt uns also die Anzahl der Teilmengen mit genau 3 Elementen einer Menge $A$ mit $|A| = 5$ an: das sind 10.\\
 Um das Binom $(a+b)^4$ zu berechnen, wählen wir die vierte Zeile und finden dort die \underline{Koeffizienten}:
 \begin{eqnarray}(a+b)^4 & = & 1\quad +4 \quad +6 \quad +4 \quad +1 \\ \nonumber
 \mbox{und weiter} \quad & = & 1a^4 \quad +4a^3 \quad +6a^2 \quad +4a^1 \quad +1a^0 \\ \nonumber
 & = & 1a^4b^0 + 4a^3b^1 + 6a^2b^2 + 4a^1b^3 + 1a^0b^4 \\ \nonumber
 & = & 1a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + 1b^4\end{eqnarray}
 \begin{myexample}Damit können wir auch höhere Binome ausrechnen:
-\begin{eqnarray}(2^x-y)^5 & = & 1(2x)^5 + 5(2x)^4(-y) + 10(2x)^3(-y)^2 + 10(2x)^2(-y)^3 + 5(2x)^1(-y)^4 + 1(-y)^5 \nonumber \\
+\begin{eqnarray}(2^x-y)^5 & = & 1(2x)^5 + 5(2x)^4(-y) + 10(2x)^3(-y)^2\\
+& & + 10(2x)^2(-y)^3 + 5(2x)^1(-y)^4 + 1(-y)^5 \nonumber \\
 & = & 32x^5-80x^4y + 80x^3y^2-40x^2y^3+10xy^4 -y^5\end{eqnarray}\end{myexample}
 \begin{mydef}Die Zahlen im Pascalschen Dreieck werden \underline{Binominalkoeffizienten} genannt. Wir schreiben $\binom{n}{k}$ ("$n$ tief $k$") für das k-te Element in der n-ten Zeile.\end{mydef}
 \begin{myexample}\begin{equation}\binom{4}{2} = 6, \binom{70}{1} = 70, \binom{21}{20} = 21, \binom{10}{0} = 1 = \binom{10}{10}\end{equation}\end{myexample}
@@ -871,7 +872,7 @@ Der Beweis kan entweder mit Hilfe der Definitionen oder mit \underline{2 Diagram
 & = & (A \cap B) \cup (A \cap C)\end{eqnarray}\qed
 \end{myproof}
 \subsubsection{Beweis mit 2 Diagrammen}
-\begin{myproof}Wir zeichnen Zwei Diagramme, eines für die linke Seite und eines für die rechte Seite der Behauptung (mit Index).
+\begin{myproof}Wir zeichnen zwei Diagramme, eines für die linke Seite und eines für die rechte Seite der Behauptung (mit Index).
 %TODO
 \end{myproof}
 \end{document}
