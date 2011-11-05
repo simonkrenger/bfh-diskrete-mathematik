@@ -872,17 +872,24 @@ Der Beweis kan entweder mit Hilfe der Definitionen oder mit \underline{2 Diagram
 & = & (A \cap B) \cup (A \cap C)\end{eqnarray}\qed
 \end{myproof}
 \subsubsection{Beweis mit 2 Diagrammen}
-\begin{myproof}Wir zeichnen zwei Diagramme, eines für die linke Seite und eines für die rechte Seite der Behauptung (mit Index).\\\\TODO\\\\
-%TODO: Bild mit Beweis
+\begin{myproof}Wir zeichnen zwei Diagramme, eines für die linke Seite und eines für die rechte Seite der Behauptung (mit Index).
+\begin{center}
+\begin{tabular}{c c}
+$A \cup (B \cap C)$ & $(A \cup B) \cap (A \cup C)$\\
+TODO & TODO
+%TODO: Zwei Diagramme (Distributivgesetz)
+\end{tabular}
+\end{center}
 \end{myproof}
 und die \underline{Absorbtionsgesetze}
 \begin{equation}\forall a,b : A \cap (B \cup A) = A\end{equation}
 \begin{equation}\forall a,b : A \cup (B \cap A) = A\end{equation}
 Beweis analog.
-
-Im Folgenden sind die von uns betrachteten Mengen $A, B, C$... Teilmengen der \underline{Grundmenge G}.\\\\TODO\\\\
+\subsection{Komplement}
+Im Folgenden sind die von uns betrachteten Mengen $A, B, C$... Teilmengen der \underline{Grundmenge G}.\\\\TODO\\\\ %TODO: Bild mit Grundmenge
 \begin{mydef}\begin{equation}\overline{A} := \{x \quad | \quad x \not \in A\}\end{equation} heisst Komplementärmenge (Komplement) der Menge $A$\end{mydef}
-TODO\\\\
+\begin{center}\includegraphics[scale=0.5]{img/Set_Komplement.png}\\$\overline{A}$ entspricht in diesem Bild $A^c$ in der Grundmenge $U$.\end{center}
+%TODO: Besseres Bild?
 Dann sehen wir, dass
 \begin{equation}A \cap \overline{A} = \emptyset\end{equation}
 und
@@ -890,7 +897,13 @@ und
 Weiter gelten die \underline{Gesetze von De Morgan}:
 \begin{equation}\overline{A \cap B} = \overline{A} \cup \overline{B}\end{equation}
 \begin{equation}\overline{A \cup B} = \overline{A} \cap \overline{B}\end{equation}
-\begin{myproof}TODO\end{myproof}
+\begin{myproof}Wir beweisen mit zwei Diagrammen:
+\begin{center}\begin{tabular}{c c}
+$\overline{A \cup B}$ & $\overline{A} \cap \overline{B}$\\
+TODO & TODO
+%TODO: Zwei Diagramme (De Morgan)
+\end{tabular}
+\end{center}\end{myproof}
 \begin{myexample}Vereinfache:
 \begin{enumerate}
 \item \begin{eqnarray}(A \cap \overline{A \cup B}) \cup B & = & (A \cap \overline{A} \cap \overline{B}) \cup B\\ \nonumber
@@ -901,5 +914,99 @@ Weiter gelten die \underline{Gesetze von De Morgan}:
 & = & (\overline{A} \cup \overline{B}) \cap \overline{A} = \overline{A}
 \end{eqnarray}
 \end{enumerate}\end{myexample}
-TODO\\\\
+\subsection{Differenz}
+\begin{center}\includegraphics[scale=0.5]{img/Set_Differenz.png}\end{center}
+\begin{mydef}\begin{equation}A \setminus B = \{x \quad | \quad x \in A \land x \not \in B\}\end{equation}
+heisst \underline{Differenz} der Mengen $A$ und $B$.\end{mydef}
+\begin{myexample}Ein paar Beispiele zur Differenz:\begin{enumerate}\item \begin{eqnarray}A & = & \{a \quad | \quad 11 \leq a < 30 \land a \in \mathbb{N}\} \\ \nonumber
+B & = & \{b \quad | \quad 25 < b \leq 40 \land b \in \mathbb{N}\} \\ \nonumber
+& \to & A \setminus B = \{11, 12, ..., 25\} \\ \nonumber
+& \mbox{und} & B \setminus A = \{30, 31, ..., 40\}\end{eqnarray}
+also
+\begin{equation}A \setminus B \neq B \setminus A\end{equation}
+\item $A \setminus A = \emptyset$
+\item $A \setminus \emptyset = A$
+\item $A$ und $B$ disjunkt, dann ist
+\begin{center}$A \setminus B = A$\\
+$B \setminus A = B$\end{center}
+\end{enumerate}\end{myexample}
+Wir finden
+\begin{equation}A \setminus B = A \cap \overline{B}\end{equation}
+TODO %TODO: Bild zur obrigen Vereinfachung
+\begin{myexample}Mit dieser Vereinfachung können wir nun versuchen, Gesetze zu finden:
+\begin{enumerate}\item Ist $\forall A,B,C : A \cup (B \setminus C) = (A \cup B) \setminus (A \cup C)$?\\
+Nein, denn
+\begin{enumerate}\item \begin{eqnarray}A \cup (B \setminus C) & = & A \cup (B \cap \overline{C})\\ \nonumber
+& = & (A \cup B) \cap (A \cup \overline{C})\end{eqnarray}
+und
+\item\begin{eqnarray}(A \cup B) \setminus (A \cup C) & = & (A \cup B) \cap (\overline{A \cup C}) \\ \nonumber
+& = & (A \cup B) \cap \overline{A} \cap \overline{C}\end{eqnarray}
+\end{enumerate}
+In der Algebra ist $a(b-c) = ab-ac$ und auch $\frac{a}{b-c} \neq \frac{a}{b} - \frac{a}{c}$, 
+\\
+aber $\frac{(b-c)}{a} = \frac{b}{a} - \frac{c}{a}$.
+\item Ist also eventuell
+\begin{equation}\forall A,B,C : A \setminus (B \cap C) = (A \setminus B) \cap (A \setminus C)\end{equation}
+oder
+\begin{equation}\forall A,B,C : (B \cap C) \setminus A = (B \setminus A) \cap (C \setminus A)\mbox{?}\end{equation}
+\begin{enumerate}\item Versuch des Beweises mit zwei Diagrammen:
+\begin{center}\begin{tabular}{c c}
+$A \setminus (B \cap C)$ & $(A \setminus B) \cap (A \setminus C)$ \\
+TODO & TODO\end{tabular}\end{center}
+also
+\begin{equation}A \setminus (B \cap C) \neq (A \setminus B) \cap (A \setminus C)\end{equation}
+\item Versuchen wir es mit dem zweiten Teil der Vermutung:\begin{equation}(B \cap C) \setminus A = B \cap C \cap \overline{A}\end{equation}
+und
+\begin{eqnarray} (B \setminus A) \cap (C \setminus A) & = & B \cap \overline{A} \cap C \cap \overline{A}\\ \nonumber
+& = & B \cap C \cap \overline{A} \cap \overline{A} \\ \nonumber
+& = & B \cap C \cap \overline{A}\end{eqnarray}
+\end{enumerate}
+Also
+\begin{equation}B \cap (C \setminus A) = (B \setminus A) \cap (C \setminus A)\end{equation}
+Wir sagen, dass die Differenz \underline{rechtsdistributiv} bezüglich des Schnittes ist. Sie ist aber \underline{nicht linksdistributiv} des Schnittes.
+\item Ist die Differenz rechtsdistributiv bezüglich der Vereinigung?
+
+Ist also
+\begin{equation}\forall A,B,C : (B \cup C) \setminus A = (B \setminus A) \cup (C \setminus A) \mbox{?}\end{equation}
+Ja, denn
+\begin{center}\begin{tabular}{c c}
+$(B \cup C) \setminus A$ & $(B \setminus A) \cup (C \setminus A)$ \\
+TODO & TODO\end{tabular}\end{center}%TODO: Beweise
+\item Vereinfache: $A \setminus (A \setminus B)$
+\\\\TODO\\\\%TODO: Beweis Bild
+also
+\begin{equation}A \setminus (A \setminus B) = A \cap B\end{equation}
+\item Vereinfache: $A \cup \overline{A \setminus B}$
+\begin{eqnarray}A \cup \overline{A \setminus B} & = & A \cup \overline{A \cap \overline{B}}\\ \nonumber
+& = & A \cup \overline{A} \cup \overline{\overline{B}} \\ \nonumber
+& = & A \cup \overline{A} \cup B \\ \nonumber
+& = & G \cup B = G\end{eqnarray}
+\end{enumerate}\end{myexample}
+\subsection{Symetrische Differenz}
+\begin{center}\includegraphics[scale=0.5]{img/Set_SymDifferenz.png}\end{center}
+\begin{mydef}\begin{equation}A \Delta B := (A \setminus B) \cup (B \setminus A)\end{equation}
+heisst die \underline{symetrische Differenz} der Mengen $A$ und $B$.\end{mydef}
+\begin{myexample}Vereinfache $(A \cup B) \cap (\overline{B} \cup \overline{A})$:
+\begin{eqnarray}(A \cup B) \cap (\overline{B} \cup \overline{A}) & = & (A \cap \overline{A}) \cup (A \cap \overline{B}) \cup (B \cap \overline{A}) \cup (B \cap \overline{B})\\ \nonumber
+& = & \emptyset \cup (A \cap \overline{B}) \cup (B \cap \overline{A}) \cup \emptyset \\ \nonumber
+& = & (A \cap \overline{B}) \cup (B \cap \overline{A})\\ \nonumber
+& = & (A \setminus B) \cup (B \setminus A)\\ \nonumber
+& = & A \Delta B\end{eqnarray}\end{myexample}
+\section{Kartesisches Produkt}
+Nach René Decartes, 1596 bis 1650, Paris, Stockholm
+\begin{mydef}\begin{equation}A \times B := \{(x/y) \quad | \quad x \in A \land y \in B\}\end{equation}heisst \underline{kartesisches Produkt} der Mengen $A$ und $B$.\end{mydef}
+\begin{myexample}Wir bilden das kartesische Produkt zweier Mengen:\\
+$A = \{4, 7, 8\}$ und $B = {3, 7}$
+\begin{equation}A \times B = \{(4/3), (4/7), (7/3), (7/7), (8/3), (8/7)\}\end{equation}
+und
+\begin{equation}B \times A = \{(3/4), (3/7), (3/8), (7/4), (7/7), (7/8)\}\end{equation}
+\end{myexample}Es ist also
+\begin{equation}A \times B \neq B \times A\end{equation}
+Wir sagen auch, dass $A \times B$ die Menge der geordneten Paare ist. Sind $A, B \in \mathbb{R}$, so können wir $A \times B$ im \underline{kartesischen Koordinatensystem} darstellen.
+\begin{myexample}$A, B \in \mathbb{R}$.\begin{enumerate}\item $A = \{-2, 0, 3\}$, $B = \{-1, 1, 2, 4\}$ \\\\TODO
+\item $[1;5] \times [2;4]$ \\\\TODO
+\item $]1;5[ \times ]2;4[$ \\\\TODO
+\item $([-2 ; 2] \times [-3 ; 3]) \setminus \{(x/y) \quad | \quad x^2 + y^2 \leq 1 \land x,y \in \mathbb{R}\}$\\
+Es ist $x^2 + y^2 = 1$ die \underline{Gleichung eines Kreises} mit Radius 1 und Mittelpunkt im Ursprung.
+\\\\TODO\end{enumerate}\end{myexample}
 \end{document}
