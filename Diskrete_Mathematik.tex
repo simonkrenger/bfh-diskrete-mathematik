@@ -579,7 +579,7 @@ Bei
 \begin{quote}"Es gibt Leute, die bein Torten-Essen gerne einen Kaffee dazu trinken"\end{quote}
 schreiben wir
 \begin{quote}$M = \{ m \quad | \quad m \quad$ ist ein Mensch $\}$\\
-$T(m) : m$ isst ein Stück Torte\\
+$T(m) : m$ isst ein fStück Torte\\
 $K(m) : m$ trinkt Kaffee\end{quote}
 \begin{equation}m \in M : \exists m (T(m) \land K(m))\end{equation}
 und die Negation
@@ -876,8 +876,7 @@ Der Beweis kan entweder mit Hilfe der Definitionen oder mit \underline{2 Diagram
 \begin{center}
 \begin{tabular}{c c}
 $A \cup (B \cap C)$ & $(A \cup B) \cap (A \cup C)$\\
-TODO & TODO
-%TODO: Zwei Diagramme (Distributivgesetz)
+\includegraphics[width=0.4\textwidth]{img/Aunion_BintersectC.pdf} & \includegraphics[width=0.4\textwidth]{img/AunionB_intersect_AunionC.pdf}
 \end{tabular}
 \end{center}
 \end{myproof}
@@ -886,7 +885,8 @@ und die \underline{Absorbtionsgesetze}
 \begin{equation}\forall a,b : A \cup (B \cap A) = A\end{equation}
 Beweis analog.
 \subsection{Komplement}
-Im Folgenden sind die von uns betrachteten Mengen $A, B, C$... Teilmengen der \underline{Grundmenge G}.\\\\TODO\\\\ %TODO: Bild mit Grundmenge
+Im Folgenden sind die von uns betrachteten Mengen $A, B, C$... Teilmengen der \underline{Grundmenge G}.
+$$\includegraphics[width=0.4\textwidth]{img/underlying_set.pdf}$$
 \begin{mydef}\begin{equation}\overline{A} := \{x \quad | \quad x \not \in A\}\end{equation} heisst Komplementärmenge (Komplement) der Menge $A$\end{mydef}
 \begin{center}\includegraphics[scale=0.5]{img/Set_Komplement.png}\\$\overline{A}$ entspricht in diesem Bild $A^c$ in der Grundmenge $U$.\end{center}
 %TODO: Besseres Bild?
@@ -900,7 +900,7 @@ Weiter gelten die \underline{Gesetze von De Morgan}:
 \begin{myproof}Wir beweisen mit zwei Diagrammen:
 \begin{center}\begin{tabular}{c c}
 $\overline{A \cup B}$ & $\overline{A} \cap \overline{B}$\\
-TODO & TODO
+\includegraphics[width=0.4\textwidth]{img/AunionB_complement.pdf} & \includegraphics[width=0.4\textwidth]{img/Acompl_intersect_Bcompl.pdf}
 %TODO: Zwei Diagramme (De Morgan)
 \end{tabular}
 \end{center}\end{myproof}
