@@ -28,13 +28,10 @@ Aussagen bezeichnen wir mit a, b, c, d, …
 \begin{mydef}
 Ist a eine Aussage, somit heisst  \(\lnot\)a die \underline{Negation} von a
 \end{mydef}
-\begin{myexample}a: Xaver isst gerne Kuchen
-\(\lnot\)a: Xaver isst nicht gerne Kuchen\end{myexample}
 
 \section{Konjunktion}
 Wir verbinden zwei Aussagen a, b mit Hilfe von “und” zu einer einzigen Aussage
 \begin{equation}a \land b\end{equation}
-\begin{myexample}Morgen ist Sonntag \underline{und} ich werde ausschlafen\end{myexample}
 
 Die Wahrheitstabelle von a \(\land\) b sind abhängig von denjenigen von a als auch von b. Dies stellen wir in einer \underline{Wahrheitswerttabelle} dar. Wir finden sofort die Regeln
 \begin{equation}a \land \lnot a = falsch\end{equation}
@@ -133,27 +130,7 @@ a & b & a \(\lor\) b & a \(\land\) (a \(\lor\) b) \\
 \begin{equation}\lnot (a \land b) = \lnot a \lor \lnot b\end{equation}
 \begin{equation}\lnot (a \lor b) = \lnot a \land \lnot b\end{equation}
 Wir verwenden die Gesetze, um die Aussagen zu vereinfachen.
-\begin{myexample}Folgende Beispiele zeigen, wie sich Aussagen mittels den oben genannten Gesetzen vereinfachen lassen.
-\begin{enumerate}
-\item $[a \land (b \lor a)] \lor \lnot a$\\
-$= a \lor \lnot a$\\
-$= 1$
-\item $[\lnot (a \land b) \lor \lnot b] \land a$\\
-$= (\lnot a \lor \lnot b \lor \lnot b) \land a$\\
-$= (\lnot a \lor \lnot b) \land a$\\
-$= (\lnot a \land a) \lor (\lnot b \land a)$\\
-$= 0 \lor (\lnot b \land a)$\\
-$= \lnot b \land a$
-\item $(a \land b) \lor \lnot b$\\
-$= (a \lor \lnot b) \land (b \lor \lnot b)$\\
-$= (a \lor \lnot b) \land 1$\\
-$= (a \lor \lnot b)$
-\item $b \land [(a \land b) \lor ( \lnot a \land b)]$\\
-$= b \land [b \land (a \lor \lnot a)]$\\
-$= b \land (b \land 1)$\\
-$= b \land b = b$
-\end{enumerate}
-\end{myexample}
+
 \section{Implikation}
 Mathematische Lehrsätze haben die Form "Wenn ein Dreieck rechtwinklig ist mit Hypothenuse $c$ und Katheten $a$, $b$, dann ist $c^2=a^2+b^2$"\\
 Sie bestehen also aus Voraussetzung(en):
@@ -161,10 +138,10 @@ Sie bestehen also aus Voraussetzung(en):
 und Behauptung
 \begin{quote}Es ist $a^2+b^2=c^2$\end{quote}
 und einem Beweis
-\begin{quote}\begin{proof}[Beweis] Gemäss "Indischer Beweis":
+\begin{myproof}Gemäss "Indischer Beweis":
 \begin{eqnarray}c^2&=&4\frac{ab}{2}+(a-b)^2 \nonumber \\
 c^2&=&2ab+a^2-2ab+b^2\nonumber \\
-c^2&=&a^2+b^2\end{eqnarray}\end{proof}\end{quote}
+c^2&=&a^2+b^2\end{eqnarray}\end{myproof}
 Im obrigen Beispiel haben wir einen direkten Beweis geführt. Von der Voraussetzung durch Rechnung zur Behauptung.\\
 Wenn wir zwei Aussagen a, b mit "wenn a, dann b" oder "wenn a so b" oder "aus a folgt b (a impliziert b)" verknüpfen, so schreiben wir dafür
 \begin{equation}a \to b\end{equation}
@@ -179,56 +156,8 @@ a & b & a \(\to\) b\\
 \end{tabular}\end{center}
 Wir finden sofort, das "aus a folgt b"
 \begin{equation}a \to b = \lnot a \lor b\end{equation}
-\begin{myexample}Vereinfache
-\begin{enumerate}
-\item $(a \to b) \to b$\\
-$= (\lnot a \lor b) \to b = \lnot(\lnot a \lor b) \lor b$\\
-$= (a \land \lnot b) \lor b = (a \lor b) \land (\lnot b \lor b)$\\
-$= (a \lor b) \land 1 = (a \lor b)$
-\item $b \to (a \to b)$\\
-$= b \to (\lnot a \lor b) = \lnot b \lor (\lnot a \lor b)$\\
-$= \lnot b \lor b \lor \lnot a = 1 \lor \lnot a = 1$
-\item $[(a \lor c) \land (c \to a)] \lor (a \land \lnot b) \lor (a \land c) \lor [\lnot a \land (b \to c)]$\\
-$=[(a \lor c) \land (\lnot c \lor a)] \lor (a \land \lnot b) \lor (a \land c) \lor [\lnot a \land (\lnot b \lor c)]$\\
-$=[(a \lor c) \land (\lnot c \lor a)] \lor [a \land (\lnot v \lor c)] \lor [\lnot a \land (\lnot b \lor c)]$\\
-$=[a \lor (c \land \lnot c)] \lor [(\lnot b \lor c) \land (a \lor \lnot a)]$\\
-$=[a \lor 0] \lor [(\lnot b \lor c) \land 1]$\\
-$=a \lor (\lnot v \lor c) = a \lor \lnot b \lor c$\\
-$(=a \lor (b \to c))$
-\end{enumerate}
-\end{myexample}
-Ein mathematischer Satz besteht aus Voraussetzung $a$, Behauptung $b$ und Beweis. Der Satz wird als $a \to b$ formuliert.\\
-Der direkte Beweis ist eine Folge von Implikationen
-\begin{equation}a \to x_1 \to x_2 \to x_3 \to ... \to b\end{equation}
-\begin{myexample}Vereinfache
-\begin{enumerate}
-\item Voraussetzung: Ein Dreieck ABC mit Innenwinkel $\alpha$, $\beta$, $\gamma$\\
-Behauptung: Die Innenwinkelsumme ist $180^{\circ}$, d.h. 
-\begin{equation}\alpha+\beta+\gamma=180^{\circ}\end{equation}
-\begin{proof}[Beweis]Wir beweisen mit einer Zeichnung:\begin{center}
-\includegraphics[scale=0.5]{img/innenwinkel.png}
-\end{center}
-Wähle $p \parallel c$ durch C. Dann ist $\epsilon+\delta+\gamma=180^{\circ}$. Es ist $\alpha_1$= $\alpha_2$: Stufenwinkel an Parallelen und $\alpha_1$= $\alpha_3$: Wechselwinkel an Parallelen, eine weitere Voraussetzung.\\
-Also ist $\alpha = \epsilon$ und $\beta = \delta$
-und somit
-\begin{equation}\alpha+\beta+\gamma=180^{\circ}\end{equation}
-\end{proof}
-\item Voraussetzung: Es ist mit $n \in \mathbb{N}, a \in \mathbb{R}$
-\begin{center}$a^n := a \cdot a \cdot ... \cdot a$ (n Faktoren)\end{center}
-die Potenz definiert.
-Behauptung: \begin{equation}a^m \cdot a^n = a^{m+n}\end{equation}
-\begin{proof}[Beweis]Wir zeigen auf, dass $m$ Faktoren mit $n$ Faktoren multipliziert werden. Durch die grundlegenden Rechengesetze können wir die Klammern wegfallen lassen
-\begin{center}$a^m \cdot a^n$\\
-$= (a \cdot a \cdot a \cdot ... \cdot a)(a \cdot a \cdot ... \cdot a)$\\
-$= a \cdot a \cdot a \cdot a \cdot ... \cdot a$ (m+n Faktoren)\end{center}
-\begin{equation}= a^{m+n} = a^m \cdot a^n\end{equation}
-\end{proof}
-\item \label{item:gegenbeispiel} Voraussetzung: $x, y \in \mathbb{R}$\\
-Behauptung: \begin{equation} x^y = y^x \to x = y\end{equation} 
-Die Behauptung ist falsch. Wollen wir zeigen, dass ein Satz falsch ist, so genügt ein einziges Beispiel, dass wir \underline{Gegenbeispiel} nennen, um die Behauptung zu widerlegen.\\
-Gegenbeispiel: Für \ref{item:gegenbeispiel} ist das Gegenbeispiel $x=2, y=4$, denn $2^4 = 4^2 = 16$, aber $x \neq y$.
-\end{enumerate}
-\end{myexample}
+
+Wollen wir zeigen, dass ein Satz falsch ist, so genügt ein einziges Beispiel, dass wir \underline{Gegenbeispiel} nennen, um die Behauptung zu widerlegen.\\
 
 \subsection{Umkehrung, Kontraposition}
 \begin{mydef}Hat eine Aussage die Form
@@ -293,68 +222,15 @@ also
 \begin{eqnarray}a \veebar b &=& [(a \land b) \lor (\lnot a \land \lnot b)] \nonumber \\
 &=&\lnot(a \land b) \land \lnot (\lnot a \land \lnot b) \nonumber \\
 &=&(\lnot a \lor \lnot b) \land (a \lor b)\end{eqnarray}
-\begin{myexample}Vereinfache
-\begin{enumerate}
-\item $(\lnot a \lor \lnot b) \land (a \lor b)$\\
-$=a \veebar b$ nach obriger Herleitung
-\item $(a \land \lnot b \land \lnot c) \lor (a \land b \land c)$\\
-$= a \land [(\lnot b \land \lnot c) \lor (b \land c)]$\\
-$= a \land (b \iff c)$
-\end{enumerate}
-\end{myexample}
 Wenn wir in der Mathematik einen Satz finden, dessen Umkehrung auch wahr ist, so wählen wir die Formulierung mit
 \begin{quote}"dann und nur dann" oder "genau dann"\end{quote}
 im Englischen
 \begin{quote}"if and only if" oder "iff"\end{quote}
-\begin{myexample}Folgende Beispiele zeigen solche Sätze
-\begin{enumerate}
-\item Zwei Dreiecke $ABC$ und $A_1B_1C_1$ sind \underline{genau dann} ähnlich, \underline{wenn} zwei Winkel gleich sind.
-%TODO: IMAGE
-\item Sind $a$, $b$ reelle Zahlen, so ist das Produkt \underline{dann und nur dann} 0, \underline{wenn} $a$ oder $b$ Null ist.
-\begin{quote}{Voraussetzung}: $a, b \in \mathbb{R}$\end{quote}
-\begin{quote}{Satz}: $(a \cdot b = 0) \iff (a = 0 \lor b = 0)$\end{quote}
-\begin{quote}{Anwendung}:\begin{eqnarray}a^2 - 7x + 12 &=& 0\quad(x \in \mathbb{R}) \nonumber \\
-(x-3)(x-4)&=&0 \nonumber \\
-\to x-3=0 \quad &\lor& \quad x-4=0 \nonumber \\
-x_1 = 3 &\quad& x_2 = 4\end{eqnarray}\end{quote}
-\end{enumerate}
-\end{myexample}
-Wie zeigen wir, dass zwei Terme gleich sind?
-\begin{quote}{Behauptung}: \begin{equation}\sin{2\alpha} = 2\sin{\alpha}\cos{\alpha}\end{equation} \end{quote}
-Wir wählen die linke Seite und formen diese so lange um, bis die rechte Seite entsteht (oder umgekehrt).\\Es ist \underline{falsch}
-\begin{equation}\sin{2\alpha} = 2\sin{\alpha}\cos{\alpha}\end{equation}
-so lange umzuformen, bis eine Identität wie z.B. $1 = 1$ entsteht!
 
-\begin{myexample}Richtig ist
-\begin{eqnarray}\sin{2\alpha} &=& \sin{\alpha + \alpha} \nonumber \\
-\mbox{denn}\quad \sin{\alpha + \beta} &=& \sin{\alpha}\cos{\beta}+\sin{\beta}\cos{\alpha}\nonumber \\
-\sin{\alpha + \alpha} &=& \sin{\alpha}\cos{\alpha}+\sin{\alpha}\cos{\alpha} \nonumber \\
-&=& 2\sin{\alpha}\cos{\alpha}\end{eqnarray} \qed\end{myexample}
 Manchmal gelingt es nicht, die linke Seite in die rechte Seite umzuformen. Dann verwenden wir die Eigenschaft
 \begin{quote}"Wenn $l=x$ und $r=x$, so ist $l=r$\end{quote}
-Wir formen also die linke Seite zuerst einmal um und dann \underline{unabhängig davon} die rechte Seite und hoffen, dass wir beide Male das gleiche Resultat ($x$) erhalten.
-\begin{myexample}Wir versuchen, dieses Konzept anzuwenden:\\\\
-Voraussetzung: \begin{equation}\tan{\delta} = \frac{\sin{\delta}}{\cos{\delta}} \quad\mbox{und}\quad\cot{\delta} = \frac{1}{\tan{\delta}}\end{equation}
-Behauptung: \begin{equation}\tan{\delta} + \cot{\delta} = \frac{2}{\sin{2\delta}}\end{equation}
-Beweis: \begin{enumerate}
-\item \begin{eqnarray}& &\tan{\delta} + \frac{1}{\tan{\delta}}
-=\frac{\sin{\delta}}{\cos{\delta}} + \frac{\cos{\delta}}{\sin{\delta}} \nonumber \\
-&=&\frac{\sin^2{\delta} + \cos^2{\delta}}{\sin{\delta} \cdot \cos{\delta}} 
-=\frac{1}{\sin{\delta} \cdot \cos{\delta}}\end{eqnarray}
-\item \begin{eqnarray}& &\frac{2}{\sin{2\delta}} = \frac{2}{2\sin{\delta} \cdot \cos{\delta}}
-=\frac{1}{\sin{\delta} \cdot \cos{\delta}}\end{eqnarray}\qed
-\end{enumerate}\end{myexample}
+Wir formen also die linke Seite zuerst einmal um und dann \underline{unabhängig davon} die rechte Seite und hoffen, dass wir beide Male das gleiche Resultat ($x$) erhalten.\\\\
 Genau gleich behandeln wir Behauptungen der Logik wenn es um die Aequivalenz zweier Aussagen geht.
-\begin{myexample}\begin{enumerate}
-\item Behauptung: \begin{equation}[\lnot(a \lor b) \land a] \iff [\lnot (a \lor b) \land b]\end{equation}
-Beweis:\begin{enumerate}
-\item \begin{eqnarray}\lnot (a \lor b) \land a &=& \lnot a \land \lnot b \land a \nonumber \\
-= \lnot a \land a \land \lnot b &=& 0 \land \lnot b = 0\end{eqnarray}
-\item \begin{eqnarray}\lnot (a \lor b) \land b &=& \lnot a \land \lnot b \land b \nonumber \\
-= \lnot a \land b \land \lnot b &=& \lnot a \land b = 0\end{eqnarray}\end{enumerate}Beide Terme sind aequivalent\qed
-\item Behauptung: \begin{equation}a \to (b \land c) = (a \to b) \land (a \to c)\end{equation}
-Beweis: \begin{eqnarray}\lnot a \lor (b \land c) &=& (\lnot a \lor b) \land (\lnot a \lor c) \nonumber \\
-&=& (a \to b) \land (a \to c)\end{eqnarray}\end{enumerate}\end{myexample}
 
 \section{Logische Schlüsse}
 Wir gehen aus von verschiedenen \underline{Prämissen} wie
@@ -374,17 +250,7 @@ so lange umgeformt werden, bis erkenntlich ist, ob eine Tautologie vorliegt oder
 und damit liegt ein logischer Schluss vor.\\\\
 In der Logik schreiben wir Prämissen und Konklusion untereinander wie zum Beispiel
 \begin{equation}\frac{a \to b \quad\quad a \land b \to c \quad\quad c}{a}\end{equation}
-\begin{myexample}Handelt es sich hierbei um einen logischen Schluss?\begin{eqnarray}& &[(a \to b) \land \{(a \land b) \to c\} \land c] \to a \nonumber \\
-&=&[(\lnot a \lor b) \land \{\lnot (a \land b) \lor c\} \land c] \to a \nonumber \\
-&=&\lnot [(\lnot a \lor b) \land (\lnot a \lor \lnot b \lor c) \land c] \lor a \nonumber \\
-&=&\lnot [(\lnot a \lor b) \land c] \lor a \nonumber \\
-&=&\lnot [(\lnot a \land c) \lor (b \land c)] \lor a\nonumber \\
-&=&[\lnot (\lnot a \land c) \land \lnot (b \land c)] \lor a \nonumber \\
-&=&[(a \lor \lnot c) \land (\lnot b \lor \lnot c)] \lor a \nonumber \\
-&=&(a \lor \lnot c \lor a) \land (a \lor \lnot b \lor \lnot c) \nonumber \\
-&=&(\lnot c \lor a) \land (\lnot b \lor \lnot c \lor a) \nonumber \\
-&=&(\lnot c \lor a) \land \lnot b\end{eqnarray}
-Also kein logischer Schluss \qed\end{myexample}
+
 Verschiedene bekannte logische Schlüsse besitzen einen Namen, wie zum Beispiel die Folgdenden:
 \begin{enumerate}
 \item \underline{modus ponens} (Abtrennungsregel)
@@ -396,10 +262,6 @@ ist ein logischer Schluss, denn
 &=&\lnot (a \land b) \lor b \nonumber \\
 &=&\lnot a \lor \lnot b \lor b = \lnot a \lor 1 = 1\end{eqnarray}
 Es ist die Art und Weise, wie wir einen mathematischen Satz $a \to b$ anwenden.
-\begin{myexample}Beispielsweise Kosinussatz:\\
-$a \to b$: In einem Dreieck $ABC$ gilt $c^2 = a^2 + b^2 - 2ab \cdot \cos{\gamma}$ \\
-$a$: $a=10, b=7, \gamma = 70$\\
-dann tritt $b$ ein, d.h. c kann nun berechnet werden.\end{myexample}
 \item \underline{modus tollens} (Aufhebende Schlussweise)
 \begin{equation}\frac{a \to b \quad\quad \lnot b}{\lnot a}\end{equation}
 ist ein logischer Schluss, denn
@@ -421,38 +283,6 @@ Wollen wir beweisen, dass ein Satz $s$ wahr ist und gelingt uns dies nicht mit e
 \begin{quote}$\lnot s$ ist wahr\end{quote}
 und zeigen, dass dies zu einem Widerspruch führt wie $\lnot b \land b$ oder $1 = 2$ oder ähnlich.\\\\
 Dann sagt uns die "reductio ad absurdum", dass meine Gegenannahme falsch ist und damit die Aussage $s$ wahr ist.\end{enumerate}
-\begin{myexample}\begin{enumerate}
-\item Satz: "Es gibt unendlich viele Primzahlen"\\
-Beweis mit Gegenannahme (Euklid, ca. 300 v.Chr., Alexandria):
-\begin{quote}"Es gibt nur endlich viele Primzahlen"\end{quote}
-\begin{equation}p_1 < p_2 < p_3 < ... < p_{n-1} < p_n\end{equation}
-wobei $p_n$ die Grösste sei.\\
-Nun bilden wir eine neue Zahl
-\begin{equation}z = p_1 \cdot p_2 \cdot p_3 \cdot ... \cdot p_n + 1\end{equation}
-die sicher keine der Zahlen $p_1, p_2, p_3, ..., p_n$ als Primfaktoren besitzt.\\
-Nun ist $z$ entweder
-\begin{enumerate}\item eine Primzahl, dann ist dies ein Widerspruch
-\item keine Primzahl und damit in Primfaktoren zerlegbar. Es muss also neben $p_1, p_2, ..., p_n$ einen weiteren Primfaktor geben, dies ist ein Widerspruch\end{enumerate}
-zur Gegenannahme.\\
-Also ist die Gegenannahme falsch und damit die ursprüngliche Behauptung wahr. \qed
-
-\item Behauptung: $\sqrt{2}$ ist irrational\\
-Beweis mit Gegenannahme:
-\begin{quote}$\sqrt{2}$ ist rational\end{quote}
-also ist $\sqrt{2} = \frac{p}{q} \land p, q \in \mathbb{N}$ und vollständig gekürzt. Somit
-\begin{eqnarray}2&=&\frac{p^2}{q^2} \nonumber \\
-p^2&=&2q^2 \label{eq:sqrtirrational} \end{eqnarray}
-Also ist $p^2$ eine gerade Zahl und damit auch $p$ (Beweis siehe \ref{eq:nungerade}). Somit ist $p = 2x \land p \in \mathbb{N}$, was eingesetzt in \ref{eq:sqrtirrational} zu
-\begin{equation}(2x)^2 = 2q^2\end{equation}
-führt. Weiter ist
-\begin{eqnarray}4x^2&=&2q^2 \nonumber \\
-2x^2&=&q^2\end{eqnarray}
-Also ist $q^2$ gerade und damit auch q. Somit ist
-\begin{equation}q = 2y \land y \in \mathbb{N}\end{equation}
-WIr haben also gefunden
-\begin{equation}\sqrt{2} = \frac{p}{q} = \frac{2x}{2y}\end{equation}
-und damit erhalten wir einen Widerspruch zu "vollständig gekürzt". Somit ist die Gegenannahme falsch und damit die Behauptung richtig.
-\end{enumerate}\end{myexample}
 Einen Beweis mit Gegenannahme nennen wir auch einen \underline{indirekten Beweis}. Dieses Beweisverfahren können wir auch für logische Schlüsse anwenden.\\\\
 Ist
 \begin{equation}\frac{a \land \lnot b \quad a \to b}{a \lor b}\end{equation}
@@ -471,31 +301,7 @@ sein. Um den Widerspruch zu sehen, machen wir eine Tabelle:
 2) & & & & $a=0, b=0$ \\ \hline
 3) &\underline{$0 \land 1 = 0$} & & & \\ \hline
 \end{tabular}\end{equation}Bei den unterstrichenen Werten haben wir einen Widerspruch hergeführt. Die Gegenannahme ist falsch, also liegt ein logischer Schluss vor.
-\begin{myexample}
-\begin{enumerate}
-\item Ist
-\begin{equation}\frac{a \land \lnot d \quad \lnot a \lor c \quad (b \land \lnot c) \to a}{a \lor c \lor d}\end{equation}ein logischer Schluss?\\\\
-\underline{Gegenannahme}:
-\begin{equation}\{(a \land \lnot d) \land (\lnot a \lor c) \land [(b \land \lnot c) \to a]\} \to (b \lor c \lor d) = 0\end{equation}also
-\begin{equation}\begin{tabular}{c | c | c | c | c | c |}
-& $a \land \lnot d$ & $\lnot a \lor c$ & $(b \land \lnot c) \to a$ & $\to$ & $b \lor c \lor d$ \\ \hline
-1) & 1 & \underline{1} & 1 & & 0 \\ \hline
-2) & & & & & $b=0, c=0, d=0$ \\ \hline
-3) & $a=1$ & & & & \\ \hline
-4) & & \underline{$0 \lor 0 = 0$} & & & \\ \hline
-\end{tabular}\end{equation}Bei den unterstrichenen Werten haben wir einen Widerspruch hergeführt. Die Gegenannahme ist falsch, also liegt ein logischer Schluss vor.
-\item Wir untersuchen, ob
-\begin{equation}\frac{a \to \lnot b \quad \lnot c \to d \quad c \to a \quad e \to b}{b \to (d \lor c)}\end{equation}ein logischer Schluss ist. Gegenannahme:
-\begin{equation}[(a \to \lnot b) \land (\lnot c \to d) \land (c \to a) \land (e \to b)] \to [b \to (d \lor e)] = 0\end{equation}
-also
-\begin{equation}\begin{tabular}{c | c | c | c | c | c | p{1.8cm}|}
-& $a \to \lnot b$ & $\lnot c \to d$ & $c \to a$ & $e \to b$ & $\to$ & $b \to (d \lor e)$ \\ \hline
-1) & 1 & \underline{1} & 1 & 1 & & 0 \\ \hline
-2) & & & & & & \parbox{1.8cm}{$\\1 \to 0,\\b=1,\\d \lor e=0,\\ d=e=0$} \\ \hline
-3) & $a=0$ & & $c=0$ & & & \\ \hline
-4) & & \underline{$1 \to 0 \neq 1$} & & & & \\ \hline
-\end{tabular}\end{equation}Also liegt ein logischer Schluss vor.\end{enumerate}
-\end{myexample}
+
 \section{Prädikatenlogik}
 Einige Aussagen wie
 \begin{itemize}
@@ -513,11 +319,7 @@ WIr brauchen also ein \underline{Prädikat} (Aussage) über Grössen aus einer b
 Wir nennen $\forall$ den \underline{Allquantor}. Damit bedeutet
 \begin{quote}$x \in M: \forall x (P(x))$\\
 (Für alle $x$ gilt $P(x)$")\end{quote}
-dass alle Elemente der Menge $M$ das Prädikat $P$ besitzen.
-\begin{myexample}Prädikatenlogik
-\begin{quote}$M = \{x \quad|\quad x \quad$ ist ein Hund$\}$ \\
-$B(x) : x$ bellt\end{quote}
-und es ist $x \in M : \forall x (B(x))$\end{myexample}
+dass alle Elemente der Menge $M$ das Prädikat $P$ besitzen.\\\\
 Wählen wir
 \begin{quote}$M = \{s \quad|\quad s \quad$ ist Student(in)$\}$ \\
 $q(s): s$ ist in der Klasse I1q\end{quote}
@@ -627,22 +429,12 @@ mit rationalen Koeffizienten $a_i \in \mathbb{Q}$ ($i = 0,1,...n$)\end{quote}
 \begin{quote}\underline{transzendente Zahl}: Nicht-algebraisch, aber irrational. Nach L. Euler: "quod algebrae vires transcendit" (lat. "Was die Kraft der Algebra übersteigt")\\
 $\pi$, $e$ sind transzendente Zahlen.\end{quote}
 \begin{mydef}Wir nennen die Anzahl der Elemente einer Menge $A$ die \underline{Mächtigkeit $|A|$}. \end{mydef}
-\begin{myexample}Wir untersuchen die Mächtigkeit der Menge $A$:
-\begin{quote}$A = \{2, 7, 12, ..., 122\}$\\
-$\to |A| = 24$\end{quote}\end{myexample}
 In $\mathbb{N} = \{1, 2, 3, ... \}$ hat es unendlich viele Elemente.
 \begin{mydef} Die \underline{Mächtigkeit von $\mathbb{N}$} ist $\aleph_0$ ("Aleph-null").\end{mydef}
 Welches ist nun die Mächtigkeit von $G = \{2, 4, 6, ...\}$?
 \begin{mydef}Zwei Mengen $A$ und $B$ sind \underline{gleichmächtig} $|A| = |B|$, wenn \underline{jedem} Element von $A$ genau eines von $B$ zugeordnet werden kann und umgekehrt.\end{mydef}
 Es muss also eine Funktion von $A$ nach $B$ existieren, wie umkehrbar ist.
-\begin{myexample}Wir versuchen herauszufinden, ob folgende zwei Mengen ($A$ und $B$ gleichmächtig sind:\begin{center}
-$A = \{4, 7, 10, ..., 94\}$\\
-$B = \{6, 10, 14, ..., 82\}$\end{center}
-Mit einer Funktion $f$\\
-\begin{center}\begin{tabular}{c | c | c | c | c}4 & 7 & 10 & ... & 94\\ \hline
-6 & 10 & 14 & ... & 82\end{tabular}\end{center}
-muss $f(a) = \frac{4}{3}(a-1)+2$ sein.
-So wird $f(94) = \frac{4}{3}(93)+2 = 4 \cdot 31 + 2 = 126 \neq 82$ und somit ist $|A| > |B|$.\end{myexample}
+\\\\
 Gehen wir nun zurück zu $G = \{2, 4, 6, 8, ...\}$,
 \begin{center}\begin{tabular}{c | c | c | c | c | c}$\mathbb{N}$ & 1 & 2 & 3 & 4 & ...\\ \hline
 $\mathbb{G}$ & 2 & 4 & 6 & 8 & ...\end{tabular}\end{center}
@@ -685,54 +477,6 @@ Die Behauptung stimmt für $n = 1$
 Unter der Voraussetzung, dass die Behauptung für $n$ gilt, ist zu zeigen, dass sie auch für $n+1$ gilt.
 \item Induktionsvererbung (Induktionsschluss)\end{enumerate}
 
-\begin{myexample}Folgende Beispiele zeigen den Beweis mittels vollständiger Induktion\begin{enumerate}
-\item Behauptung: $1^2 + 2^2 + 3^2 + ... + n^2 = \frac{n(n+1)(2n+1)}{6}$\\
-Beweis mit vollständiger Induktion:
-\begin{enumerate}
-\item \label{proof:vollstind-ex1-1} Behauptung ist für $n=1$ richtig, denn 
-\begin{equation}\frac{n(n+1)(2n+1)}{6} \quad \mbox{wird} \quad \frac{1 \cdot (1+1)(2 + 1)}{6} = 1\end{equation} und
-\begin{equation}1^2 = 1\end{equation}
-\item \label{proof:vollstind-ex1-2} Voraussetzung: $s_n = 1^2 + 2^2 + 3^2 + ... + n^2 = \frac{n(n+1)(2n+1)}{6}$\\
-Behauptung: $s_{n+1} = 1^2 + 2^2 + 3^2 + ... + n^2 + (n+1)^2$\\
-damit \begin{equation}\frac{(n+1)((n+1)+1)(2(n+1)+1)}{6} = \frac{(n+1)(n+2)(2n+3)}{6}\end{equation}
-\begin{myproof}
-\begin{eqnarray}s_{n+1} & = & 1^2 + 2^2 + 3^2 + ... + (n+1)^2\nonumber \\
-& = & s_n + (n+1)^2 \nonumber \\
-& = & \frac{1}{6} n (n+1)(2n+1)+(n+1)^2 \nonumber \\
-& = & \frac{1}{6} (n^2 + n)(2n+1) + n^2 + 2n +1 \nonumber \\
-& = & \frac{1}{6} (2n^3 + n^2 + 2n^2 + n) + n^2 + 2n + 1 \nonumber \\
-& = & \frac{1}{6} (2n^3 + 3n^2 + n + 6n^2 + 12n + 6) \nonumber \\
-& = & \frac{1}{6} (2n^3 + 9n^2 + 13n + 6)\end{eqnarray}
-und
-\begin{eqnarray}\frac{(n+1)(n+2)(2n+3)}{6} & = & \frac{1}{6} (n^2 + 3n + 2)(2n + 3) \nonumber \\
-& = & \frac{1}{6} (2n^3 + 6n^2 + 3n^2 + 4n + 9n +6) \nonumber \\
-& = & \frac{1}{6} (2n^3 + 9n^2 + 13n + 6)\end{eqnarray}
-\end{myproof}
-\item Nach (\ref{proof:vollstind-ex1-1}) gilt die Behauptung für $n = 1$ und nach (\ref{proof:vollstind-ex1-2}) gilt sie für $n+1$, falls sie für $n$ gilt.\\
-Also gilt sie für $n = 2$ und nach (\ref{proof:vollstind-ex1-2}) für $n+1$, ist 3 usw. Also gilt die Behauptung für alle $n \in \mathbb{N}$.\qed
-\end{enumerate}
-\item Wir betrachten die Summe der ungeraden Zahlen bis $n$:
-\begin{eqnarray}1 + 3 & = & 4 \nonumber \\
-1 + 3 + 5 & = & 9 \nonumber \\
-1 + 3 + 5 + 7 & = & 16 \nonumber \\
-1 + 3 + 5 + 7 + ... + 21 & = & 11^2 = 121 \nonumber \\
-1 + 3 + 5 + ... + n\end{eqnarray} Wir finden sofort die Formel
-\begin{equation}(\frac{(n-1)}{2} + 1)^2\end{equation}
-\item \underline{Behauptung}: Ist $n \in \mathbb{N}$, so ist $n^3+2n$ durch 3 teilbar.\\
-Da alle Zahlen $n \in \mathbb{N}$ sind, wählen wir den \underline{Beweis mit vollständiger Induktion}: \begin{enumerate}\item \label{proof:vollstind-ex3-1} Ist $n = 1$, so ist
-\begin{equation}n^3+2n = 1^3 + 2 \cdot 1 = 3\end{equation} und
-\begin{equation}3 \mod{3} = 0\end{equation}
-\item \label{proof:vollstind-ex3-2}\underline{Voraussetzung}: $n^3 + 2n$ ist durch 3 teilbar.\\
-\underline{Behauptung}: $(n+1)^3 + 2(n+1)$ ist durch 3 teilbar.\\
-\underline{Beweis}: \begin{eqnarray}(n+1)^3 + 2(n+1) & = & (n+1)[(n+1)^2 + 2] \nonumber \\
-&=&(n+1)(n^2 + 2n + 3) \nonumber \\
-&=&(n+1)[n(n+2)+3] \nonumber \\
-&=&(n+1)n(n+2) + 3(n+1) \nonumber \\
-&=&n(n+1)(n+2) + 3(n+1)\end{eqnarray}
-Da $n \in \mathbb{N}$, sind $n$, $n+1$, $n+2$ drei aufeinanderfolgende Zahlen, also ist eine davon durch 3 teilbar. Auch $3(n+1)$ ist durch 3 teilbar, also lässt sich $n(n+1)(n+2)$ in der Form
-\begin{equation}3xy + 3(n+1) = 3(xy + (n+1)\quad;\quad x,y \in \mathbb{N}\end{equation}
-schreiben. Somit ist $(n+1)^3 + 2(n+1)$ durch 3 teilbar.
-\item Nach (\ref{proof:vollstind-ex3-1}) gilt die Behauptung für $n = 1$ und nach (\ref{proof:vollstind-ex3-2}) gilt sie für $n + 1$, wenn sie für $n$ gilt. Somit gilt die Behauptung für $n = 2$ usw. Also gilt sie für $n \in \mathbb{N}$. \qed\end{enumerate}\end{enumerate}\end{myexample}
 Mit der vollständigen Induktion haben wir die letzte der vier wichtigsten Beweisverfahren in der Mathematik definiert. Im Folgenden nochmals die Beweisverfahren:
 \begin{itemize}\item Direkter Beweis
 \item Indirekter Beweis (Beweis mit Gegenannahme)
@@ -742,13 +486,7 @@ Mit der vollständigen Induktion haben wir die letzte der vier wichtigsten Bewei
 \begin{center}\includegraphics[scale=0.5]{img/Set_subsetAofB.png}\end{center}
 \begin{mydef}$A$ ist eine \underline{Teilmenge} von $B$
 \begin{equation}A \subset B \iff \forall x(x \in A \to x \in B)\end{equation}\end{mydef}
-\begin{myexample}Wir betrachten die folgenden Mengen:
-\begin{center}
-$A = \{ a \quad | \quad 10 \leq a \leq 20 \land a \in \mathbb{N}\}$\\
-$B = \{b \quad | \quad 10 \leq b \leq 50 \land b \in \mathbb{N}\}$\end{center}
-also ist $A \subset B$.
-\begin{center}$C = \{9, 10, 11, ..., 31\}$\end{center}
-also ist $A \subset C$ aber $C \not \subset B$.\end{myexample}
+
 Wie viele Teilmengen besitzt $A$, wenn $|A| = n$?
 \begin{enumerate}
 \item $n = 1$: $A = \{x\}$ \\
@@ -760,17 +498,7 @@ Teilmengen: $\emptyset, \{x\}, \{y\}, \{x, y\}$
 Teilmengen: $\emptyset, \{x\}, \{y\}, \{z\}, \{x, y\}, \{y, z\}, \{x, z\}, \{x, y, z\}$\end{enumerate}
 Ist $|A|=n$, so gibt es $2^n$ Teilmengen, denn für jedes Element von A gibt es zwei Möglichkeiten, zur Teilmenge zu gehören oder nicht.
 \begin{mydef}Die Menge aller Teilmengen einer Menge A heisst \underline{Potenzmenge $\mathcal{P}(A)$}\end{mydef}
-\begin{myexample}Beispiele zu den Teilmengen:\begin{enumerate}
-\item \begin{equation}M = \{a, b\} \to \mathcal{P}(M) ) \{\emptyset, \{a\}, \{b\}, \{a, b\}\}\end{equation}
-das heisst
-\begin{center}$\{a\} \in \mathcal{P}(M)$ ist richtig,\\
-aber $a \in \mathcal{P}(M)$ ist falsch.\end{center}
-\item Wir untersuchen, welche Aussagen richtig sind:
-\begin{center}\begin{tabular}{c c}$\mathbb{N} \subset \mathbb{Q}$ & Richtig \\
-$\{\mathbb{N}\} \subset \mathbb{Q}$ & Falsch \\
-$\{\mathbb{N}\} \in \mathbb{Q} $ & Falsch \\
-$\mathbb{N} \in \mathbb{Q}$ & Falsch\end{tabular}\end{center}
-\end{enumerate}\end{myexample}
+
 Nun untersuchen wir, wieviele Teilmengen mit genau $k$ Elementen eine Menge $|A| = n$ besitzt, wenn $0 \leq k \leq n$ ist.
 \begin{center}
 \begin{tabular}{c|c|c|c|c|c|c|}
@@ -798,12 +526,8 @@ Um das Binom $(a+b)^4$ zu berechnen, wählen wir die vierte Zeile und finden dor
 \mbox{und weiter} \quad & = & 1a^4 \quad +4a^3 \quad +6a^2 \quad +4a^1 \quad +1a^0 \\ \nonumber
 & = & 1a^4b^0 + 4a^3b^1 + 6a^2b^2 + 4a^1b^3 + 1a^0b^4 \\ \nonumber
 & = & 1a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + 1b^4\end{eqnarray}
-\begin{myexample}Damit können wir auch höhere Binome ausrechnen:
-\begin{eqnarray}(2^x-y)^5 & = & 1(2x)^5 + 5(2x)^4(-y) + 10(2x)^3(-y)^2\\
-& & + 10(2x)^2(-y)^3 + 5(2x)^1(-y)^4 + 1(-y)^5 \nonumber \\
-& = & 32x^5-80x^4y + 80x^3y^2-40x^2y^3+10xy^4 -y^5\end{eqnarray}\end{myexample}
+
 \begin{mydef}Die Zahlen im Pascalschen Dreieck werden \underline{Binominalkoeffizienten} genannt. Wir schreiben $\binom{n}{k}$ ("$n$ tief $k$") für das k-te Element in der n-ten Zeile.\end{mydef}
-\begin{myexample}\begin{equation}\binom{4}{2} = 6, \binom{70}{1} = 70, \binom{21}{20} = 21, \binom{10}{0} = 1 = \binom{10}{10}\end{equation}\end{myexample}
 Es ist also
 \begin{equation}(a+b)^n = \binom{n}{0}a^n + \binom{n}{1}a^{n-1}b + \binom{n}{2}a^{n-2}b^2 + ... + \binom{n}{k}a^{n-k}b^k + ... + \binom{n}{k}b^n\end{equation}
 was wir den \underline{binomischen Lehrsatz} nennen.
@@ -815,46 +539,22 @@ ein \underline{abgeschlossenes Intervall}.
 ein \underline{offenes Intervall}.
 \item $[a;b[ := \{x \quad | \quad x \in \mathbb{R} \land a \leq x < b\}$\\
 ein \underline{halboffenes (abgeschloffenes) Intervall}.\end{itemize}\end{mydef}
-\begin{myexample}Beispiele mit Intervallen\begin{enumerate}\item \begin{equation}[5;11] = \{x \quad | \quad x \in \mathbb{R} \land a \leq x \leq b\}\end{equation}
-\item Aber:\begin{equation}\{5, 6, 7, 8, 9, 10, 11\} \neq [5; 11]\end{equation}
-Achtung: Gilt für reelle Zahlen!
-\item Definitionsmenge von $f(x) = \log{(x-3)}$ ist $D_f = ]3; \infty [$
-\item Ist $G = \mathbb{R}$, so ist die Lösungsmenge von
-\begin{enumerate}\item $x^2 < 49$\\
-das Intervall $]-7;7[$
-\item $|x| < 10$\\
-das Intervall $[-10;10]$
-\item \begin{eqnarray}\frac{4}{x^2-1} & > & \frac{1}{5}\nonumber \\
-\frac{4}{x^2-1}-\frac{1}{5} & > & 0\nonumber \\
-\frac{20 - (x^2-1)}{5(x^2-1)} & > & 0\nonumber \\
-\frac{21-x^2}{5x^2-5} & > & 0\end{eqnarray}
-also
-\begin{eqnarray}(21-x^2 > 0 \land 5x^2-5 > 0) & \lor & (21x^2 < 0 \land 5x^2-5<0)\nonumber \\
-(x^2<21 \land x^2>1) & \lor & (x^2 > 21 \land x^2<1)\end{eqnarray}
-und so $L = ]-\sqrt{21} ; -1[ \quad \cup \quad  ]1;\sqrt{21}[$\end{enumerate}
-\end{enumerate}\end{myexample}
+
 \section{Operationen mit Mengen}
 \subsection{Schnittmenge}
 \begin{center}\includegraphics[scale=0.5]{img/Set_Schnittmenge.png}\\$A \cap B$\end{center}
 \begin{mydef}\begin{equation}A \cap B := \{x \quad | \quad x \in A \land x \in B \}\end{equation}
 heisst \underline{Schnittmenge} (Durchschnittsmenge, Schnitt) von $A$ und $B$.\end{mydef}
-\begin{myexample}\begin{eqnarray}A & = & \{a \quad | \quad -10 \leq a \leq 9 \land a \in \mathbb{Z}\}\nonumber \\
-B & = & \{b \quad | \quad -2 < b \leq 24 \land b \in \mathbb{Z}\} \nonumber \\
-\to A \cap B & = & \{-1, 0, 1, 2, 3, ..., 8\}\end{eqnarray}\end{myexample}
 Wir finden sofort:
 \begin{equation}A \cap \emptyset = \emptyset\end{equation}
 \begin{equation}A \cap A = A\end{equation}
 \begin{equation}A \cap B = B \cap A\end{equation}
 \begin{equation}(A \cap B) \cap C = A \cap (B \cap C)\end{equation}
 \begin{mydef}Ist $A \cap B$ die leere Menge ($A \cap B = \emptyset$), so heissen $A$ und $B$ \underline{disjunkt}.\end{mydef}
-\begin{myexample}\begin{equation}[4 ; 10] \cap [100 ; 150] = \emptyset\end{equation}\end{myexample}
 \subsection{Vereinigungsmenge}
 \begin{center}\includegraphics[scale=0.5]{img/Set_Vereinigungsmenge.png}\\$A \cup B$\end{center}
 \begin{mydef}\begin{equation}A \cup B := \{x \quad | \quad x \in A \lor x \in B\}\end{equation}
 heisst \underline{Vereinigungsmenge} (Verein) von $A$ und $B$.\end{mydef}
-\begin{myexample}\begin{eqnarray}A & = & \{2; 4; 6; ...; 120\}\nonumber \\
-B & = & \{1; 3; 5; ...; 119\} \nonumber \\
-\to A \cup B & = & \{1; 2; 3; 4; ...; 120\}\end{eqnarray}\end{myexample}
 Wir finden sofort:
 \begin{equation}A \cup \emptyset = A\end{equation}
 \begin{equation}A \cup A = A\end{equation}
@@ -904,177 +604,26 @@ $\overline{A \cup B}$ & $\overline{A} \cap \overline{B}$\\
 %TODO: Zwei Diagramme (De Morgan)
 \end{tabular}
 \end{center}\end{myproof}
-\begin{myexample}Vereinfache:
-\begin{enumerate}
-\item \begin{eqnarray}(A \cap \overline{A \cup B}) \cup B & = & (A \cap \overline{A} \cap \overline{B}) \cup B\\ \nonumber
-& = & (\emptyset \cap \overline{B}) \cup B \\ \nonumber
-& = & \emptyset \cup B = B
-\end{eqnarray}
-\item \begin{eqnarray}[\overline{A \cap B} \cup (\overline{A} \cap \overline{B})] \cap \overline{A} & = & [\overline{A} \cup \overline{B} \cup (\overline{A} \cap \overline{B})] \cap \overline{A} \\ \nonumber
-& = & (\overline{A} \cup \overline{B}) \cap \overline{A} = \overline{A}
-\end{eqnarray}
-\end{enumerate}\end{myexample}
 \subsection{Differenz}
 \begin{center}\includegraphics[scale=0.5]{img/Set_Differenz.png}\end{center}
 \begin{mydef}\begin{equation}A \setminus B = \{x \quad | \quad x \in A \land x \not \in B\}\end{equation}
 heisst \underline{Differenz} der Mengen $A$ und $B$.\end{mydef}
-\begin{myexample}Ein paar Beispiele zur Differenz:\begin{enumerate}\item \begin{eqnarray}A & = & \{a \quad | \quad 11 \leq a < 30 \land a \in \mathbb{N}\} \\ \nonumber
-B & = & \{b \quad | \quad 25 < b \leq 40 \land b \in \mathbb{N}\} \\ \nonumber
-& \to & A \setminus B = \{11, 12, ..., 25\} \\ \nonumber
-& \mbox{und} & B \setminus A = \{30, 31, ..., 40\}\end{eqnarray}
-also
-\begin{equation}A \setminus B \neq B \setminus A\end{equation}
-\item $A \setminus A = \emptyset$
-\item $A \setminus \emptyset = A$
-\item $A$ und $B$ disjunkt, dann ist
-\begin{center}$A \setminus B = A$\\
-$B \setminus A = B$\end{center}
-\end{enumerate}\end{myexample}
 Wir finden
 \begin{equation}A \setminus B = A \cap \overline{B}\end{equation}
 TODO %TODO: Bild zur obrigen Vereinfachung
-\begin{myexample}Mit dieser Vereinfachung können wir nun versuchen, Gesetze zu finden:
-\begin{enumerate}\item Ist $\forall A,B,C : A \cup (B \setminus C) = (A \cup B) \setminus (A \cup C)$?\\
-Nein, denn
-\begin{enumerate}\item \begin{eqnarray}A \cup (B \setminus C) & = & A \cup (B \cap \overline{C})\\ \nonumber
-& = & (A \cup B) \cap (A \cup \overline{C})\end{eqnarray}
-und
-\item\begin{eqnarray}(A \cup B) \setminus (A \cup C) & = & (A \cup B) \cap (\overline{A \cup C}) \\ \nonumber
-& = & (A \cup B) \cap \overline{A} \cap \overline{C}\end{eqnarray}
-\end{enumerate}
-In der Algebra ist $a(b-c) = ab-ac$ und auch $\frac{a}{b-c} \neq \frac{a}{b} - \frac{a}{c}$, 
-\\
-aber $\frac{(b-c)}{a} = \frac{b}{a} - \frac{c}{a}$.
-\item Ist also eventuell
-\begin{equation}\forall A,B,C : A \setminus (B \cap C) = (A \setminus B) \cap (A \setminus C)\end{equation}
-oder
-\begin{equation}\forall A,B,C : (B \cap C) \setminus A = (B \setminus A) \cap (C \setminus A)\mbox{?}\end{equation}
-\begin{enumerate}\item Versuch des Beweises mit zwei Diagrammen:
-\begin{center}\begin{tabular}{c c}
-$A \setminus (B \cap C)$ & $(A \setminus B) \cap (A \setminus C)$ \\
-TODO & TODO\end{tabular}\end{center}
-also
-\begin{equation}A \setminus (B \cap C) \neq (A \setminus B) \cap (A \setminus C)\end{equation}
-\item Versuchen wir es mit dem zweiten Teil der Vermutung:\begin{equation}(B \cap C) \setminus A = B \cap C \cap \overline{A}\end{equation}
-und
-\begin{eqnarray} (B \setminus A) \cap (C \setminus A) & = & B \cap \overline{A} \cap C \cap \overline{A}\\ \nonumber
-& = & B \cap C \cap \overline{A} \cap \overline{A} \\ \nonumber
-& = & B \cap C \cap \overline{A}\end{eqnarray}
-\end{enumerate}
-Also
 \begin{equation}B \cap (C \setminus A) = (B \setminus A) \cap (C \setminus A)\end{equation}
 Wir sagen, dass die Differenz \underline{rechtsdistributiv} bezüglich des Schnittes ist. Sie ist aber \underline{nicht linksdistributiv} des Schnittes.
-\item Ist die Differenz rechtsdistributiv bezüglich der Vereinigung?
-
-Ist also
-\begin{equation}\forall A,B,C : (B \cup C) \setminus A = (B \setminus A) \cup (C \setminus A) \mbox{?}\end{equation}
-Ja, denn
-\begin{center}\begin{tabular}{c c}
-$(B \cup C) \setminus A$ & $(B \setminus A) \cup (C \setminus A)$ \\
-TODO & TODO\end{tabular}\end{center}%TODO: Beweise
-\item Vereinfache: $A \setminus (A \setminus B)$
-\\\\TODO\\\\%TODO: Beweis Bild
-also
-\begin{equation}A \setminus (A \setminus B) = A \cap B\end{equation}
-\item Vereinfache: $A \cup \overline{A \setminus B}$
-\begin{eqnarray}A \cup \overline{A \setminus B} & = & A \cup \overline{A \cap \overline{B}}\\ \nonumber
-& = & A \cup \overline{A} \cup \overline{\overline{B}} \\ \nonumber
-& = & A \cup \overline{A} \cup B \\ \nonumber
-& = & G \cup B = G\end{eqnarray}
-\end{enumerate}\end{myexample}
 \subsection{Symetrische Differenz}
 \begin{center}\includegraphics[scale=0.5]{img/Set_SymDifferenz.png}\end{center}
 \begin{mydef}\begin{equation}A \Delta B := (A \setminus B) \cup (B \setminus A)\end{equation}
 heisst die \underline{symetrische Differenz} der Mengen $A$ und $B$.\end{mydef}
-\begin{myexample}Vereinfache $(A \cup B) \cap (\overline{B} \cup \overline{A})$:
-\begin{eqnarray}(A \cup B) \cap (\overline{B} \cup \overline{A}) & = & (A \cap \overline{A}) \cup (A \cap \overline{B}) \cup (B \cap \overline{A}) \cup (B \cap \overline{B})\\ \nonumber
-& = & \emptyset \cup (A \cap \overline{B}) \cup (B \cap \overline{A}) \cup \emptyset \\ \nonumber
-& = & (A \cap \overline{B}) \cup (B \cap \overline{A})\\ \nonumber
-& = & (A \setminus B) \cup (B \setminus A)\\ \nonumber
-& = & A \Delta B\end{eqnarray}\end{myexample}
 \section{Kartesisches Produkt}
 Nach René Decartes, 1596 bis 1650, Paris, Stockholm
 \begin{mydef}\begin{equation}A \times B := \{(x/y) \quad | \quad x \in A \land y \in B\}\end{equation}heisst \underline{kartesisches Produkt} der Mengen $A$ und $B$.\end{mydef}
-\begin{myexample}Wir bilden das kartesische Produkt zweier Mengen:\\
-$A = \{4, 7, 8\}$ und $B = {3, 7}$
-\begin{equation}A \times B = \{(4/3), (4/7), (7/3), (7/7), (8/3), (8/7)\}\end{equation}
-und
-\begin{equation}B \times A = \{(3/4), (3/7), (3/8), (7/4), (7/7), (7/8)\}\end{equation}
-\end{myexample}Es ist also
+Es ist also
 \begin{equation}A \times B \neq B \times A\end{equation}
 Wir sagen auch, dass $A \times B$ die Menge der geordneten Paare ist. Sind $A, B \in \mathbb{R}$, so können wir $A \times B$ im \underline{kartesischen Koordinatensystem} darstellen.
-\begin{myexample}$A, B \in \mathbb{R}$.\begin{enumerate}\item $A = \{-2, 0, 3\}$, $B = \{-1, 1, 2, 4\}$ \\\\TODO
-\item $[1;5] \times [2;4]$ \\\\TODO
-\item $]1;5[ \times ]2;4[$ \\\\TODO
-\item $([-2 ; 2] \times [-3 ; 3]) \setminus \{(x/y) \quad | \quad x^2 + y^2 \leq 1 \land x,y \in \mathbb{R}\}$\\
-Es ist $x^2 + y^2 = 1$ die \underline{Gleichung eines Kreises} mit Radius 1 und Mittelpunkt im Ursprung.
-\\\\TODO\end{enumerate}\end{myexample}
 \begin{mydef}Für $n \in \mathbb{N}$ ist
 \begin{equation}A^n := A \times A \times A \times ... \times A \quad \mbox{(n Faktoren)}\end{equation}\end{mydef}
-\begin{myexample}Wir zeigen die Potenz an weiteren Beispielen:
-\begin{enumerate}
-\item $A = \{1, 2, 3\}$
-\begin{eqnarray}\to A^3 & = &  A^2 \times A\\ \nonumber
-& = & \{(1/1), (1/2), ..., (3/2), (3/3)\} \times A\\ \nonumber
-& = & \{((1/1),1), ((1/1),2), ...\}\end{eqnarray}
-wofür wir
-\begin{equation}A^3 = \{(1/1/1), (1/1/2), ...\}\end{equation}
-schreiben. Die Elemente von $A^3$ heissen \underline{(Zahlen-)Tripel}.
-\\\\TODO
-\item $M = \{m_1, m_2, m_3\}$
-\begin{equation}\to M^4 = \{(m_1/m_1/m_1/m_1), (m_1/m_1/m_1/m_2), ..., (m_3/m_3/m_3/m_3)\}\end{equation}
-Die Elemente von $M^4$ heissen \underline{Quadrupel}. Fahren wir so fort, so erhalten wir Quintupel, Sextupel, ..., \underline{n-Tupel} ($n \in \mathbb{N}$).
-\item Zeichnen wir $\mathbb{Z}^2$ im Koordinatensystem
-\\\\TODO\\\\
-so erhalten wir das \underline{ganzzahlige Gitter (Zahlengitter)}.
-\item Zeichnen wir $\mathbb{R}^2$,
-\\\\TODO\\\\
-so erhalten wir den \underline{zweidimensionalen Raum}.
-\item Die Grundmenge eines Gleichungssystems mit zwei Variablen ist $\mathbb{R}^2$
-\begin{enumerate}
-\item $(x/y) \in \mathbb{R}^2$:
-%TODO: Equation system
-\begin{eqnarray}2x + y & = & 8 \\ x -3y & = & 1\end{eqnarray}
-Mit dem Gauss-Algorithmus (Additionsmethode) finden wir
-\begin{eqnarray}6x + 3y & = & 24 \\ x - 3y & = & 1 \label{eqn:gauss2}\end{eqnarray}
-Darauf folgt
-\begin{eqnarray}\to 7x & = & 25 \nonumber \\
-x & = & \frac{25}{7}\end{eqnarray}
-Eingesetzt in \ref{eqn:gauss2}:
-\begin{eqnarray}\frac{25}{7} - 3y & = & 1 \nonumber \\
-25 - 21y & = & 7\nonumber \\
-18 & = & 21y \nonumber \\
-y & = & \frac{18}{21} = \frac{6}{7}\end{eqnarray}
-und so ist $(\frac{25}{7} / \frac{6}{7})$ die Lösung. Das ist auch $\in$ von $\mathbb{R}^2$, womit die Lösung in der Grundmenge liegt.
-\item %TODO: Equation system
-\begin{eqnarray}\frac{3}{x} + \frac{2}{y} & = & 1 \\ \frac{4}{x} - \frac{1}{y} & = & 2\end{eqnarray}
-Die Grundmenge ist $\mathbb{R}^2$, so ist die Definitionsmenge \\$D = \mathbb{R}^2 \setminus \{(x/y) | x=0 \lor y=0\}$. Mit "(1) + 2(2)" erhalten wir
-\begin{eqnarray}\frac{11}{x} & = & 5 \nonumber \\
-x & = & \frac{11}{5}\end{eqnarray}
-Mit "4(1) - 3(2)" wird
-\begin{eqnarray}\frac{11}{y} & = & -2 \nonumber \\
-y & = & -\frac{11}{2}\end{eqnarray}
-und so ist $L = \{(\frac{11}{5} / -\frac{11}{2})\}$
-\item %TODO: Equation system
-\begin{eqnarray}x^2 + y^2 & = & 16\label{eqn:x2+y2eq16} \\ 2x -y & = & 1\label{eqn:2x-yeq1}\end{eqnarray}
-\\\\TODO\\\\ %TODO: Image
-Wir berechnen also die Schnittpunkte einer Geraden mit einem Kreis.\\
-Mit \ref{eqn:2x-yeq1} wird $y=2x-1$, was eingesetzt in \ref{eqn:x2+y2eq16} zu
-\begin{equation}x^2 + (2x-1)^2 = 16\end{equation}
-führt. Also
-\begin{eqnarray}x^2 + 4x^2 - 4x + 1 & = & 16\nonumber \\
-5x^2 - 4x -15 & = & 0\nonumber \\
-x_{1,2} & = & \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} = \frac{4 \pm \sqrt{16 - 4 \cdot 5 \cdot (-15)}}{10}\nonumber \\
-&=& \frac{4 \pm \sqrt{316}}{10} = \frac{4 \pm \sqrt{4 \cdot 79}}{10}\nonumber \\
-&=& \frac{4 \pm 2 \sqrt{79}}{10} = \frac{2 \pm \sqrt{79}}{5}\end{eqnarray}
-Mit $x_1 = \frac{2 + \sqrt{79}}{5}$ wird $y_1 = \frac{4 + 2 \sqrt{79}}{5}-1$:
-\begin{equation}y_1 = \frac{4 + 2 \sqrt{79} -5}{5} = \frac{2 \sqrt{79} -1}{5}\end{equation}
-und mit $x_2 = \frac{2 - \sqrt{79}}{5}$ wird $y_2 = \frac{2-2\sqrt{79}-5}{5} = \frac{-2 \sqrt{79}-3}{5}$.\\
-Also sind die Schnittpunkte
-\begin{equation}S_1(\frac{2+\sqrt{79}}{5}/\frac{2 \sqrt{79}-1}{5})\end{equation}
-und
-\begin{equation}S_2(\frac{2-\sqrt{79}}{5}/\frac{-2 \sqrt{79}-3}{5})\end{equation}
-\end{enumerate}
-\end{enumerate}
-\end{myexample}
+
 \end{document}
