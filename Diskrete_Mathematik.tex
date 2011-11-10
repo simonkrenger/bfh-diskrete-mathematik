@@ -1009,4 +1009,72 @@ Wir sagen auch, dass $A \times B$ die Menge der geordneten Paare ist. Sind $A, B
 \item $([-2 ; 2] \times [-3 ; 3]) \setminus \{(x/y) \quad | \quad x^2 + y^2 \leq 1 \land x,y \in \mathbb{R}\}$\\
 Es ist $x^2 + y^2 = 1$ die \underline{Gleichung eines Kreises} mit Radius 1 und Mittelpunkt im Ursprung.
 \\\\TODO\end{enumerate}\end{myexample}
+\begin{mydef}Für $n \in \mathbb{N}$ ist
+\begin{equation}A^n := A \times A \times A \times ... \times A \quad \mbox{(n Faktoren)}\end{equation}\end{mydef}
+\begin{myexample}Wir zeigen die Potenz an weiteren Beispielen:
+\begin{enumerate}
+\item $A = \{1, 2, 3\}$
+\begin{eqnarray}\to A^3 & = &  A^2 \times A\\ \nonumber
+& = & \{(1/1), (1/2), ..., (3/2), (3/3)\} \times A\\ \nonumber
+& = & \{((1/1),1), ((1/1),2), ...\}\end{eqnarray}
+wofür wir
+\begin{equation}A^3 = \{(1/1/1), (1/1/2), ...\}\end{equation}
+schreiben. Die Elemente von $A^3$ heissen \underline{(Zahlen-)Tripel}.
+\\\\TODO
+\item $M = \{m_1, m_2, m_3\}$
+\begin{equation}\to M^4 = \{(m_1/m_1/m_1/m_1), (m_1/m_1/m_1/m_2), ..., (m_3/m_3/m_3/m_3)\}\end{equation}
+Die Elemente von $M^4$ heissen \underline{Quadrupel}. Fahren wir so fort, so erhalten wir Quintupel, Sextupel, ..., \underline{n-Tupel} ($n \in \mathbb{N}$).
+\item Zeichnen wir $\mathbb{Z}^2$ im Koordinatensystem
+\\\\TODO\\\\
+so erhalten wir das \underline{ganzzahlige Gitter (Zahlengitter)}.
+\item Zeichnen wir $\mathbb{R}^2$,
+\\\\TODO\\\\
+so erhalten wir den \underline{zweidimensionalen Raum}.
+\item Die Grundmenge eines Gleichungssystems mit zwei Variablen ist $\mathbb{R}^2$
+\begin{enumerate}
+\item $(x/y) \in \mathbb{R}^2$:
+%TODO: Equation system
+\begin{eqnarray}2x + y & = & 8 \\ x -3y & = & 1\end{eqnarray}
+Mit dem Gauss-Algorithmus (Additionsmethode) finden wir
+\begin{eqnarray}6x + 3y & = & 24 \\ x - 3y & = & 1 \label{eqn:gauss2}\end{eqnarray}
+Darauf folgt
+\begin{eqnarray}\to 7x & = & 25 \nonumber \\
+x & = & \frac{25}{7}\end{eqnarray}
+Eingesetzt in \ref{eqn:gauss2}:
+\begin{eqnarray}\frac{25}{7} - 3y & = & 1 \nonumber \\
+25 - 21y & = & 7\nonumber \\
+18 & = & 21y \nonumber \\
+y & = & \frac{18}{21} = \frac{6}{7}\end{eqnarray}
+und so ist $(\frac{25}{7} / \frac{6}{7})$ die Lösung. Das ist auch $\in$ von $\mathbb{R}^2$, womit die Lösung in der Grundmenge liegt.
+\item %TODO: Equation system
+\begin{eqnarray}\frac{3}{x} + \frac{2}{y} & = & 1 \\ \frac{4}{x} - \frac{1}{y} & = & 2\end{eqnarray}
+Die Grundmenge ist $\mathbb{R}^2$, so ist die Definitionsmenge \\$D = \mathbb{R}^2 \setminus \{(x/y) | x=0 \lor y=0\}$. Mit "(1) + 2(2)" erhalten wir
+\begin{eqnarray}\frac{11}{x} & = & 5 \nonumber \\
+x & = & \frac{11}{5}\end{eqnarray}
+Mit "4(1) - 3(2)" wird
+\begin{eqnarray}\frac{11}{y} & = & -2 \nonumber \\
+y & = & -\frac{11}{2}\end{eqnarray}
+und so ist $L = \{(\frac{11}{5} / -\frac{11}{2})\}$
+\item %TODO: Equation system
+\begin{eqnarray}x^2 + y^2 & = & 16\label{eqn:x2+y2eq16} \\ 2x -y & = & 1\label{eqn:2x-yeq1}\end{eqnarray}
+\\\\TODO\\\\ %TODO: Image
+Wir berechnen also die Schnittpunkte einer Geraden mit einem Kreis.\\
+Mit \ref{eqn:2x-yeq1} wird $y=2x-1$, was eingesetzt in \ref{eqn:x2+y2eq16} zu
+\begin{equation}x^2 + (2x-1)^2 = 16\end{equation}
+führt. Also
+\begin{eqnarray}x^2 + 4x^2 - 4x + 1 & = & 16\nonumber \\
+5x^2 - 4x -15 & = & 0\nonumber \\
+x_{1,2} & = & \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} = \frac{4 \pm \sqrt{16 - 4 \cdot 5 \cdot (-15)}}{10}\nonumber \\
+&=& \frac{4 \pm \sqrt{316}}{10} = \frac{4 \pm \sqrt{4 \cdot 79}}{10}\nonumber \\
+&=& \frac{4 \pm 2 \sqrt{79}}{10} = \frac{2 \pm \sqrt{79}}{5}\end{eqnarray}
+Mit $x_1 = \frac{2 + \sqrt{79}}{5}$ wird $y_1 = \frac{4 + 2 \sqrt{79}}{5}-1$:
+\begin{equation}y_1 = \frac{4 + 2 \sqrt{79} -5}{5} = \frac{2 \sqrt{79} -1}{5}\end{equation}
+und mit $x_2 = \frac{2 - \sqrt{79}}{5}$ wird $y_2 = \frac{2-2\sqrt{79}-5}{5} = \frac{-2 \sqrt{79}-3}{5}$.\\
+Also sind die Schnittpunkte
+\begin{equation}S_1(\frac{2+\sqrt{79}}{5}/\frac{2 \sqrt{79}-1}{5})\end{equation}
+und
+\begin{equation}S_2(\frac{2-\sqrt{79}}{5}/\frac{-2 \sqrt{79}-3}{5})\end{equation}
+\end{enumerate}
+\end{enumerate}
+\end{myexample}
 \end{document}
