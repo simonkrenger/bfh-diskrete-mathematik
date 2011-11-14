@@ -471,11 +471,12 @@ Peano hat gezeigt, dass die natürlichen Zahlen auf den Axiomen
 beruhen (\underline{Peano-Axiome} genannt).\\\\
 Axiom (\ref{PeanoAxiom3}) führt uns zum \underline{Beweis mit vollständiger Induktion}. Dieser Beweis besteht aus drei Teilen.
 \begin{enumerate}
-\item Induktionsverankerung (Induktionsanfang)\\
+\item Induktionsverankerung (Induktionsanfang) \label{induktion:verankerung}\\
 Die Behauptung stimmt für $n = 1$
-\item Induktionsschritt\\
+\item Induktionsschritt\label{induktion:schritt}\\
 Unter der Voraussetzung, dass die Behauptung für $n$ gilt, ist zu zeigen, dass sie auch für $n+1$ gilt.
-\item Induktionsvererbung (Induktionsschluss)\end{enumerate}
+\item Induktionsvererbung (Induktionsschluss)\\
+Nach (\ref{induktion:verankerung}) gilt die Behauptung für $n=1$ und nach (\ref{induktion:schritt}) gilt sie für $n+1$, wenn sie für $n$ gilt. Somit gilt die Behauptung für $n=2$ usw. Also gilt sie für $n \in \mathbb{N}$.\end{enumerate}
 
 Mit der vollständigen Induktion haben wir die letzte der vier wichtigsten Beweisverfahren in der Mathematik definiert. Im Folgenden nochmals die Beweisverfahren:
 \begin{itemize}\item Direkter Beweis
