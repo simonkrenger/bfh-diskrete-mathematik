@@ -1196,5 +1196,38 @@ schliessen wir, dass $4x + 3 = 2x - 7$. Bei der Gleichheitsrelation verwenden wi
 \begin{equation}(a = b \land b = c) \to (a = c)\end{equation}\end{myexample}
 \begin{mydef}Eine Relation $R \subset M^2$ heisst \underline{transitiv}, wenn
 \begin{equation}a,b,c \in M: \forall a,b,c [(a R b \land b R c) \to (a R c)]\end{equation}\end{mydef}
-
+\begin{myexample}Welche Eigenschaften besitzen die Relationen? \label{relation:examples-properties}
+\begin{enumerate}\item TODO
+\item TODO
+\item TODO\end{enumerate}
+\end{myexample}
+\begin{mydef}Eine Relation R aus $M \times M$ heisst \underline{Ordnungsrelation}, wenn R reflexiv, antisymetrisch und transitiv ist.\end{mydef}
+\begin{myexample}Im Folgenden Beispiele für Ordnungsrelationen\begin{enumerate}
+\item $a \geq b$ in $\mathbb{R}$, siehe Beispiel \ref{relation:examples-properties}
+\item $a,b \in \mathbb{N}: a R b \iff (a | b)$\\Wir definieren
+\begin{equation}x \in \mathbb{N}: a | b \iff \exists x (b = ax)\end{equation}
+Sagen also, dass $b$ ein Vielfaches von $a$ ist.\\
+\underline{reflexiv}: $\forall a ( a | a)$, denn $a = 1 \cdot a$, also ist $x = 1$ in $\exists x (a = ax)$ zu wählen.
+\underline{antisymmetrisch}:
+\begin{eqnarray}\forall a,b ( a | b  &\land & b | a) \nonumber \\
+\to \exists x,y ( b=ax & \land & a = by)\end{eqnarray}
+\begin{eqnarray}
+\to a & = & (ax) \cdot y \nonumber \\
+a & = & (xy) \cdot a \nonumber \\
+\to xy & = & 1 \nonumber \\
+\to x=1 & \land & y = 1 \quad \mbox{(weil } \mathbb{N} \mbox{)} \nonumber \\
+\to b & = & 1 \cdot a \nonumber \\
+\to b & = & a\end{eqnarray}
+also ist R antisymmetrisch in $\mathbb{N})$.\\
+\underline{transitiv}: \begin{eqnarray}\forall a,b,c ( a | b & \land & b | c ) \nonumber \\
+\to \exists x,y (b = ax & \land & c = by) \nonumber \\
+\to c = (x \cdot y) \cdot a & \land & xy \in \mathbb{N} \nonumber \\
+\to a & | & c\end{eqnarray}
+$c$ ist damit ein Vielfaches von $a$, daraus folgt dass $a$ die Zahl $c$ teilt.
+\end{enumerate}\end{myexample}
+Ordnungsrelationen in endlichen Mengen können in einem Hasse-Diagramm (Helmut Hasse, 1898–1979) dargestellt werden.\\\\
+Nehmen wir $M = \{2,3,4,5,12,13,25\}$ und die Relation $a | b$:
+\\\\TODO\\\\
+Die Relation $A \subset B$ in $\mathcal{P}(A)$, wenn $M = \{x,y,z\}$
+\begin{center}\includegraphics[scale=0.3]{img/Hasse_diagram_of_powerset_of_3.png}\end{center}
 \end{document}
