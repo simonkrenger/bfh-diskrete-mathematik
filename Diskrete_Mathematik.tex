@@ -932,7 +932,7 @@ $B \setminus A = B$\end{center}
 \end{enumerate}\end{myexample}
 Wir finden
 \begin{equation}A \setminus B = A \cap \overline{B}\end{equation}
-TODO %TODO: Bild zur obrigen Vereinfachung
+$$\includegraphics[width=0.4\textwidth]{img/A_intersect_Bcompl.pdf}$$
 \begin{myexample}Mit dieser Vereinfachung können wir nun versuchen, Gesetze zu finden:
 \begin{enumerate}\item Ist $\forall A,B,C : A \cup (B \setminus C) = (A \cup B) \setminus (A \cup C)$?\\
 Nein, denn
@@ -952,7 +952,8 @@ oder
 \begin{enumerate}\item Versuch des Beweises mit zwei Diagrammen:
 \begin{center}\begin{tabular}{c c}
 $A \setminus (B \cap C)$ & $(A \setminus B) \cap (A \setminus C)$ \\
-TODO & TODO\end{tabular}\end{center}
+\includegraphics[width=0.4\textwidth]{img/A_minus_BintersectC.pdf} & \includegraphics[width=0.4\textwidth]{img/AminusB_intersect_AminusC.pdf}
+\end{tabular}\end{center}
 also
 \begin{equation}A \setminus (B \cap C) \neq (A \setminus B) \cap (A \setminus C)\end{equation}
 \item Versuchen wir es mit dem zweiten Teil der Vermutung:\begin{equation}(B \cap C) \setminus A = B \cap C \cap \overline{A}\end{equation}
@@ -971,9 +972,10 @@ Ist also
 Ja, denn
 \begin{center}\begin{tabular}{c c}
 $(B \cup C) \setminus A$ & $(B \setminus A) \cup (C \setminus A)$ \\
-TODO & TODO\end{tabular}\end{center}%TODO: Beweise
+\includegraphics[width=0.4\textwidth]{img/BunionC_minus_A.pdf} & \includegraphics[width=0.4\textwidth]{img/BminusA_union_CminusA.pdf}
+\end{tabular}\end{center}%TODO: Beweise
 \item Vereinfache: $A \setminus (A \setminus B)$
-\\\\TODO\\\\%TODO: Beweis Bild
+$$\includegraphics[width=0.4\textwidth]{img/A_minus_AminusB.pdf}$$
 also
 \begin{equation}A \setminus (A \setminus B) = A \cap B\end{equation}
 \item Vereinfache: $A \cup \overline{A \setminus B}$
