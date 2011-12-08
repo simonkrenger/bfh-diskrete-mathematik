@@ -1236,4 +1236,178 @@ Nehmen wir $M = \{2,3,4,5,12,13,25\}$ und die Relation $a | b$:
 \\\\TODO\\\\
 Die Relation $A \subset B$ in $\mathcal{P}(A)$, wenn $M = \{x,y,z\}$
 \begin{center}\includegraphics[scale=0.3]{img/Hasse_diagram_of_powerset_of_3.png}\end{center}
+\begin{mydef}Eine Relation R aus $M \times M$ heisst \underline{Aequivalenzrelation}, wenn sie reflexiv, symetrisch und transitiv ist.\end{mydef}
+\begin{myexample}Wir untersuchen, ob es sich um eine Aequivalenzrelation handelt.
+\begin{enumerate}\item $x,y \in \mathbb{R} : x R y \iff x = y$
+\item \label{example:aequivalenzklassen-ex2}
+TODO: Example, Image\\\\
+Wählen wir $a \in \mathbb{Z}$ beliebig und suchen alle $b \in \mathbb{Z}$, so dass $a R b$ steht, so entstehen zwei Teilmengen von $\mathbb{Z}$, welche disjunkt sind.
+\item \label{example:aequivalenzklasse-ex3}$a, b \in E^3$ sind Pfeile im dreidimensionalen euklidischen Raum.
+\begin{quote}$a R b \iff $ "a und b haben gleiche Länge und gleiche Richtung"\end{quote}
+ist eine Aequivalenzrelation.\\\\
+Suchen wir wiederum alle Pfeile, die zu einem vorgegebenen Pfeil in Relation stehen, so erhalten wir eine Anzahl von Teilmengen, die \underline{paarweise disjunkt} sind.\\\\
+Wir haben so eine \underline{Partition} von $E^3$ erhalten.
+\begin{mydef}Ist R eine Aequivalenzrelation in M, so wird M durch $a \in M$ in paarweise disjunkte Teilmengen unterteilt, die wir \underline{Aequivalenzklassen} $K_M$ nennen.\end{mydef}
+In Beispiel \ref{example:aequivalenzklassen-ex2} gibt es zwei Aequivalenzklassen
+\begin{eqnarray}K_1 & = & \{..., 1,3,5,7,...\} \nonumber \\
+K_2 & = & \{..., -2, 0, 2, 4, ...\}\end{eqnarray}
+In Beispiel \ref{example:aequivalenzklasse-ex3} gibt es überabzählbar unendlich viele Aequivalenzklassen, die wir \underline{Vektoren} nennen.
+\item In $\mathbb{Q}$ definieren wir
+\begin{equation}\frac{a}{b} R \frac{c}{d} \iff ad = bc\end{equation}
+und finden, dass R eine Aequivalenzrelation ist.\\
+TODO: Eigenschaften, Bild\\\\
+Eine Klasse enthält damit alle Brüche, die vollständig gekürzt den gleichen Wert ergeben. Müssen wir zum Beispiel
+\begin{equation}\frac{2}{3} + \frac{4}{5}\end{equation}
+rechnen, so rechnen wir
+\begin{equation}\frac{10}{15} + \frac{12}{15}\end{equation}
+wählen also einerseits ein anderes Element in der Klasse $K_\frac{2}{3}$ und andererseits eine anderes Element in der Klasse $K_\frac{4}{5}$. Dies nennen wir die \underline{freie Wahl des Repräsentanten}.
+\end{enumerate}\end{myexample}
+
+\section{Restklassen}
+Wir untersuchen die Operation
+\begin{equation} a \mod{m}\end{equation}
+für $a \in \mathbb{Z}$, $m \in \mathbb{N} \setminus \{1\}$. Dabei heisst $m$ der \underline{Modul}.
+\begin{myexample}\item $34 \mod{4} = 4$, weil $34 : 5 = 6$ mit Rest 4
+\item $77 \mod{11} = 0$
+\item $-13 \mod{4} = 3$, weil $-13 = (-4) \cdot 4 + 3$ ist\end{myexample}
+Wir können also
+\begin{equation}a \mod{m} = r \iff \exists x (a = mx + r)\end{equation}
+mit $a \in \mathbb{Z}$, $m \in \mathbb{N} \setminus \{1\}$, $0 \leq r < m$, $x \in \mathbb{Z}$ schreiben.\\
+Wir überlegen, ob
+\begin{equation}(a + b) \mod{m} = a \mod{m} + b \mod {m}\end{equation}
+ist. Ist $a = 21, b=18, m=4$, so ist
+\begin{equation}(a+b) \mod{m} = 39 \mod{4} = 3\end{equation}
+und
+\begin{eqnarray}a \mod{m} & = & 21 \mod{4} = 1 \nonumber \\
+b \mod{m} & = & 18 \mod{4} = 2\end{eqnarray}
+aber mit $a = 35$, $b = 17$, $m = 6$ wird
+\begin{eqnarray}(a + b) \mod{m} & = & 52 \mod{6} \nonumber \\
+a \mod{m} & = & 35 \mod{6} = 5 \nonumber \\
+b \mod{m} & = & 17 \mod{6} = 5\end{eqnarray}
+Es ist also
+\begin{eqnarray}(a+b) \mod{m} & = & (a \mod{m} + b \mod{m}) \mod{m} \nonumber \\
+(ab) \mod{m} & = & (a \mod{m} \cdot b \mod{m}) \mod{m}\end{eqnarray}
+wie wir mit obriger Definition zeigen können.
+\begin{myexample}Welches ist die letzte Ziffer von $3^{25}$?
+\begin{eqnarray}3^{25} \mod{10} & = & (3^2)^{12} \cdot 3 \mod{10} \nonumber \\
+& = & ((3^2)^{12} \mod{10} \cdot 3 \mod{10}) \mod{10} \nonumber \\
+& = & ((9^{12} \mod{10}) \cdot 3 \mod{10}) \mod{10}
+\end{eqnarray}
+Da $-1 \mod{10}$ auch $9$ ist, erhalten wir
+\begin{eqnarray}& &((-1)^{12} \mod{10} \cdot 3 \mod{10}) \mod{10} \nonumber \\
+& = & (1 \mod{10} \cdot 3 \mod{10}) \mod{10} \nonumber \\
+& = & (1 \cdot 3) \mod{10} = 3\end{eqnarray}\end{myexample}
+\begin{myexample}An welchem Wochentag war der 10. Januar 1986?\\
+Wir gehen davon aus, dass
+\begin{quote}1. Januar 1900 war ein Montag\end{quote}
+und berechnen die Anzahl Tage bis zum gesuchten Tag. Es ist $365 \mod{7} = 1$, also wird pro Jahr (ohne Schaltjahr) alles um einen Wochentag verschoben.\\
+Für die Monate finden wir eine Verschiebung gemäss folgender Tabelle:
+\begin{center}\begin{tabular}{c | c}Monat & Verschiebung \\
+\hline
+Januar & 0 Tage \\
+Februar & 3 Tagen \\
+März & 3 Tagen \\
+April & 6 Tagen \\
+Mai & 1 Tag \\
+Juni & 4 Tage \\
+Juli & 6 Tage \\
+August & 2 Tage \\
+September & 5 Tage \\
+Oktober & 0 Tage \\
+November & 3 Tage \\
+Dezember & 5 Tage
+\end{tabular}\end{center}
+Im Februar haben wir eine Verschiebung von 3 Tagen, da $31 \mod{7} = 3$ und der Januar eben 31 Tage hat. Der Mai hat eine Verschiebung von 1 Tag, da der April 30 Tage hat und $30 \mod{7} = 2$ ist und $6 + 2 = 8$, aber $8 \mod{7} = 1$.\end{myexample}
+Betrachten wir die Schaltjahre, so müssen wir
+\begin{equation}[\frac{Jahre}{4}] = \mbox{floor(Jahre / 4)}\end{equation}
+berechnen. $[x]$ heisst Gauss'sche Klammer.\\
+So finden wir für den 10. Januar 1986
+\begin{center}\begin{tabular}{l l}
+Jahr: & $86 \mod{7} = 2$ \\
+Schaltjahre: & $[\frac{86}{4}] = 21 \mod{7} = 0$ \\
+Monat: & Januar = 0 \\
+Tag: & $10 \mod{7} = 3$ \\
+Summe: & 5\end{tabular}\end{center}
+1 ist Montag, 2 ist Dienstag usw. Also war der 10. Januar 1989 an einem Samstag. Für den 2. Dezember 2011 finden wir
+\begin{center}\begin{tabular}{l l}
+Jahr: & $111 \mod{7} = 6$ \\
+Schaltjahre: & $[\frac{111}{4}] = 27$ und $27 \mod{7} = 6$ \\
+Monat: & Dezember = 5 (gemäss Tabelle) \\
+Tag: & 2 \\
+Summe: & 19 und $19 \mod{7} = 5$, also Freitag\end{tabular}\end{center}
+\subsection{Die Relation $a \equiv b$ ($\mod{m}$)}
+Für ganze Zahlen $a, b$ und $n \in \mathbb{N} \setminus \{1\}$ untersuchen wir, wann $a$ und $b$ bei Division durch $m$ denselben Rest besitzen. Dann sagen wir
+\begin{quote}"a kongruent b modulo n"\end{quote}
+Somit gibt es $x, y \in \mathbb{Z}$, so dass
+\begin{equation}a = mx + r \land b = my + r\end{equation}
+mit $0 \leq r < m$ gilt. Weiter ist dann
+\begin{eqnarray}a - b & = & mx + r - (my + r) \nonumber \\
+a - b & = & mx - my \nonumber \\
+a - b & = & m(x - y)\end{eqnarray}
+also ist $a-b$ ein Vielfaches von $m$, was das Gleiche bedeutet wie "m teilt $a-b$". Wir haben also die Relation
+\begin{equation}a, b \in \mathbb{Z}, m \in \mathbb{N} \setminus \{1\}: a \equiv b (\mod{m}) \iff a | a - b\end{equation}
+Ist z.B. $m = 5$, so ist
+\begin{eqnarray}32 & \equiv & 17 (\mod{5}) \\
+44 & \equiv & 9 (\mod{5}) \\
+-4 & \equiv & 11 (\mod{5}) \\
+-8 & \equiv & -13 (\mod{5})\end{eqnarray}
+Die Relation ist \underline{reflexiv}, denn
+\begin{equation}a \equiv a (\mod{m}) \to m | a - a \to m | 0\end{equation}
+was für alle $m \in \mathbb{N} \setminus \{1\}$ wahr ist.\\
+\underline{symmetrische}, denn
+\begin{eqnarray}a \equiv b (\mod{m}) & \to & m | a - b \nonumber \\
+& \to & m | (-1)(a-b) \to m | b-a \to b \equiv a (\mod{m})\end{eqnarray}
+\underline{transitiv}, denn
+\begin{eqnarray}& & a \equiv b (\mod{m}) \land b \equiv c (\mod{m}) \nonumber \\
+& \to & m | a - b \land m | b - c\nonumber \\
+& \to & m | (a - b) + (b - c)\nonumber \\
+& \to & m | a - c\nonumber \\\
+& \to & a \equiv c (\mod{m})\end{eqnarray}
+Somit ist $a \equiv b (\mod{m})$ eine Aequivalenzrelation. Ist z.B. $m = 5$ der Modul, so sind die Aequivalenzklassen
+\\\\TODO\\\\
+\begin{mydef}Die durch $a \equiv b (\mod{m})$ entstehenden Aequivalenzklassen heissen \underline{Restklassen}.\end{mydef}
+Ist der Modul $m=5$, so sind
+\begin{eqnarray}\overline{0} & = & \{..., -10, -5, 0, 5, 10, ...\} \nonumber \\
+\overline{1} & = & \{..., -9, -4, 1, 6, 11, ...\} \nonumber \\
+\overline{2} & = & \{..., -8, -3, 2, 7, 12, ...\}\nonumber \\
+\overline{3} & = & \{..., -7, -2, 3, 8, 13, ...\}\nonumber \\
+\overline{4} & = & \{..., -6, -1, 4, 9, 14, ...\}\end{eqnarray}
+die Restklassen.
+\begin{mydef}Wir nennen
+\begin{equation}\mathbb{Z}_5 := \{\overline{0}, \overline{1}, \overline{2}, \overline{3}, \overline{4}\}\end{equation} ein \underline{vollständiges Restsystem}.\end{mydef}
+Nun rechnen wir mit diesen Restklassen und überlegen dass
+\begin{equation}\overline{4} + \overline{3}\end{equation}
+bedeutet, dass $a \in \overline{4}$, $b \in \overline{3}$ beliebig gewählt werden darf und diejenige Klasse gesucht ist, die $a + b$ enthält.
+\begin{myexample}$\overline{4} + \overline{3} = 7 \mod{5} = \overline{2}$\end{myexample}
+Alle möglichen Additionen stellen wir ein einer \underline{Verknüpfungstabelle} dar (Der Strich ist weggelassen).
+\begin{center}\begin{tabular}{c | c c c c c}
+$+$ & 0 & 1 & 2 & 3 & 4 \\
+\hline
+0 & 0 & 1 & 2 & 3 & 4 \\
+1 & 1 & 2 & 3 & 4 & 0 \\
+2 & 2 & 3 & 4 & 0 & 1 \\
+3 & 3 & 4 & 0 & 1 & 2 \\
+4 & 4 & 0 & 1 & 2 & 3\end{tabular}\\(Linke Seite zuerst)\end{center}
+Dann erstellen wir die Verknüpfungstafel für die Multiplikation in $\mathbb{Z}_5 \setminus \{0\}$
+\begin{center}\begin{tabular}{c | c c c c}
+$\cdot$ & 1 & 2 & 3 & 4 \\
+\hline
+1 & 1 & 2 & 3 & 4 \\
+2 & 2 & 4 & 1 & 3 \\
+3 & 3 & 1 & 4 & 2 \\
+4 & 4 & 3 & 2 &1\end{tabular}\\(Linke Seite zuerst)\end{center}
+\begin{mydef}Ist in einer Menge M eine Operation * so definiert, dass
+\begin{equation}\forall a, b : a * b \in M\end{equation}
+so heisst $< M; * >$ eine \underline{algebraische Struktur}.\end{mydef}
+\begin{myexample}Wir untersuchen:
+\begin{enumerate}\item $<\mathbb{N} ; + >$ ist eine algebraische Struktur
+\item $<\mathbb{R} ; \cdot >$ ist eine algebraische Struktur
+\item $<\mathbb{Z} ; / >$ ist keine algebraische Struktur
+\item $< V^3 ; + >$ ist eine algebraische Struktur
+\item $< V^3 ; \cdot >$ ist keine algebraische Struktur,\\
+denn $\vec{a} \cdot \vec{b}$ ist ein Skalar (eine reelle Zahl).
+\item $< \mathbb{Z}_5 ; + >$ ist eine algebraische Struktur\end{enumerate}\end{myexample}
+Nun untersuchen wir, welche Gesetze in einer algebraischen Struktur erfüllt sind.
+Es ist $< M ; * >$ eine algebraische Struktur
+
 \end{document}
