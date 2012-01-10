@@ -610,64 +610,9 @@ $\overline{A \cup B}$ & $\overline{A} \cap \overline{B}$\\
 heisst \underline{Differenz} der Mengen $A$ und $B$.\end{mydef}
 Wir finden
 \begin{equation}A \setminus B = A \cap \overline{B}\end{equation}
-<<<<<<< HEAD
-TODO %TODO: Bild zur obrigen Vereinfachung
 \begin{equation}B \cap (C \setminus A) = (B \setminus A) \cap (C \setminus A)\end{equation}
 Wir sagen, dass die Differenz \underline{rechtsdistributiv} bezüglich des Schnittes ist. Sie ist aber \underline{nicht linksdistributiv} des Schnittes.
-=======
 $$\includegraphics[width=0.4\textwidth]{img/A_intersect_Bcompl.pdf}$$
-\begin{myexample}Mit dieser Vereinfachung können wir nun versuchen, Gesetze zu finden:
-\begin{enumerate}\item Ist $\forall A,B,C : A \cup (B \setminus C) = (A \cup B) \setminus (A \cup C)$?\\
-Nein, denn
-\begin{enumerate}\item \begin{eqnarray}A \cup (B \setminus C) & = & A \cup (B \cap \overline{C})\\ \nonumber
-& = & (A \cup B) \cap (A \cup \overline{C})\end{eqnarray}
-und
-\item\begin{eqnarray}(A \cup B) \setminus (A \cup C) & = & (A \cup B) \cap (\overline{A \cup C}) \\ \nonumber
-& = & (A \cup B) \cap \overline{A} \cap \overline{C}\end{eqnarray}
-\end{enumerate}
-In der Algebra ist $a(b-c) = ab-ac$ und auch $\frac{a}{b-c} \neq \frac{a}{b} - \frac{a}{c}$, 
-\\
-aber $\frac{(b-c)}{a} = \frac{b}{a} - \frac{c}{a}$.
-\item Ist also eventuell
-\begin{equation}\forall A,B,C : A \setminus (B \cap C) = (A \setminus B) \cap (A \setminus C)\end{equation}
-oder
-\begin{equation}\forall A,B,C : (B \cap C) \setminus A = (B \setminus A) \cap (C \setminus A)\mbox{?}\end{equation}
-\begin{enumerate}\item Versuch des Beweises mit zwei Diagrammen:
-\begin{center}\begin{tabular}{c c}
-$A \setminus (B \cap C)$ & $(A \setminus B) \cap (A \setminus C)$ \\
-\includegraphics[width=0.4\textwidth]{img/A_minus_BintersectC.pdf} & \includegraphics[width=0.4\textwidth]{img/AminusB_intersect_AminusC.pdf}
-\end{tabular}\end{center}
-also
-\begin{equation}A \setminus (B \cap C) \neq (A \setminus B) \cap (A \setminus C)\end{equation}
-\item Versuchen wir es mit dem zweiten Teil der Vermutung:\begin{equation}(B \cap C) \setminus A = B \cap C \cap \overline{A}\end{equation}
-und
-\begin{eqnarray} (B \setminus A) \cap (C \setminus A) & = & B \cap \overline{A} \cap C \cap \overline{A}\\ \nonumber
-& = & B \cap C \cap \overline{A} \cap \overline{A} \\ \nonumber
-& = & B \cap C \cap \overline{A}\end{eqnarray}
-\end{enumerate}
-Also
-\begin{equation}B \cap (C \setminus A) = (B \setminus A) \cap (C \setminus A)\end{equation}
-Wir sagen, dass die Differenz \underline{rechtsdistributiv} bezüglich des Schnittes ist. Sie ist aber \underline{nicht linksdistributiv} des Schnittes.
-\item Ist die Differenz rechtsdistributiv bezüglich der Vereinigung?
-
-Ist also
-\begin{equation}\forall A,B,C : (B \cup C) \setminus A = (B \setminus A) \cup (C \setminus A) \mbox{?}\end{equation}
-Ja, denn
-\begin{center}\begin{tabular}{c c}
-$(B \cup C) \setminus A$ & $(B \setminus A) \cup (C \setminus A)$ \\
-\includegraphics[width=0.4\textwidth]{img/BunionC_minus_A.pdf} & \includegraphics[width=0.4\textwidth]{img/BminusA_union_CminusA.pdf}
-\end{tabular}\end{center}
-\item Vereinfache: $A \setminus (A \setminus B)$
-$$\includegraphics[width=0.4\textwidth]{img/A_minus_AminusB.pdf}$$
-also
-\begin{equation}A \setminus (A \setminus B) = A \cap B\end{equation}
-\item Vereinfache: $A \cup \overline{A \setminus B}$
-\begin{eqnarray}A \cup \overline{A \setminus B} & = & A \cup \overline{A \cap \overline{B}}\\ \nonumber
-& = & A \cup \overline{A} \cup \overline{\overline{B}} \\ \nonumber
-& = & A \cup \overline{A} \cup B \\ \nonumber
-& = & G \cup B = G\end{eqnarray}
-\end{enumerate}\end{myexample}
->>>>>>> master
 \subsection{Symetrische Differenz}
 \begin{center}\includegraphics[scale=0.5]{img/Set_SymDifferenz.png}\end{center}
 \begin{mydef}\begin{equation}A \Delta B := (A \setminus B) \cup (B \setminus A)\end{equation}
@@ -678,90 +623,10 @@ Nach René Decartes, 1596 bis 1650, Paris, Stockholm
 Es ist also
 \begin{equation}A \times B \neq B \times A\end{equation}
 Wir sagen auch, dass $A \times B$ die Menge der geordneten Paare ist. Sind $A, B \in \mathbb{R}$, so können wir $A \times B$ im \underline{kartesischen Koordinatensystem} darstellen.
-<<<<<<< HEAD
 \begin{mydef}Für $n \in \mathbb{N}$ ist
 \begin{equation}A^n := A \times A \times A \times ... \times A \quad \mbox{(n Faktoren)}\end{equation}\end{mydef}
-=======
-\begin{myexample}$A, B \in \mathbb{R}$.\begin{enumerate}\item $A = \{-2, 0, 3\}$, $B = \{-1, 1, 2, 4\}$
-\begin{center}\includegraphics[scale=0.25]{img/2_5-example-1.eps}\end{center}
-\item $[1;5] \times [2;4]$
-\begin{center}\includegraphics[scale=0.25]{img/2_5-example-2.eps}\end{center}
-\item $]1;5[ \times ]2;4[$
-\begin{center}\includegraphics[scale=0.25]{img/2_5-example-3.eps}\end{center}
-\item $([-2 ; 2] \times [-3 ; 3]) \setminus \{(x/y) \quad | \quad x^2 + y^2 \leq 1 \land x,y \in \mathbb{R}\}$\\
-Es ist $x^2 + y^2 = 1$ die \underline{Gleichung eines Kreises} mit Radius 1 und Mittelpunkt im Ursprung.
-\begin{center}\includegraphics[scale=0.25]{img/2_5-example-4.eps}\end{center}
-\end{enumerate}\end{myexample}
 \begin{mydef}Für $n \in \mathbb{N}$ ist
 \begin{equation}A^n := A \times A \times A \times ... \times A \quad \mbox{(n Faktoren)}\end{equation}\end{mydef}
-\begin{myexample}Wir zeigen die Potenz an weiteren Beispielen:
-\begin{enumerate}
-\item $A = \{1, 2, 3\}$
-\begin{eqnarray}\to A^3 & = &  A^2 \times A\\ \nonumber
-& = & \{(1/1), (1/2), ..., (3/2), (3/3)\} \times A\\ \nonumber
-& = & \{((1/1),1), ((1/1),2), ...\}\end{eqnarray}
-wofür wir
-\begin{equation}A^3 = \{(1/1/1), (1/1/2), ...\}\end{equation}
-schreiben. Die Elemente von $A^3$ heissen \underline{(Zahlen-)Tripel}.
-\begin{center}\includegraphics[scale=0.25]{img/2_5-zahlentripel.eps}\end{center}
-\item $M = \{m_1, m_2, m_3\}$
-\begin{equation}\to M^4 = \{(m_1/m_1/m_1/m_1), (m_1/m_1/m_1/m_2), ..., (m_3/m_3/m_3/m_3)\}\end{equation}
-Die Elemente von $M^4$ heissen \underline{Quadrupel}. Fahren wir so fort, so erhalten wir Quintupel, Sextupel, ..., \underline{n-Tupel} ($n \in \mathbb{N}$).
-\item Zeichnen wir $\mathbb{Z}^2$ im Koordinatensystem
-\begin{center}\includegraphics[scale=0.25]{img/2_5-z-squared.eps}\end{center}
-so erhalten wir das \underline{ganzzahlige Gitter (Zahlengitter)}.
-\item Zeichnen wir $\mathbb{R}^2$,
-\begin{center}\includegraphics[scale=0.3]{img/2_5-r-plane.eps}\end{center}
-so erhalten wir den \underline{zweidimensionalen Raum}.
-\item Die Grundmenge eines Gleichungssystems mit zwei Variablen ist $\mathbb{R}^2$
-\begin{enumerate}
-\item $(x/y) \in \mathbb{R}^2$:
-\begin{center}$\left|\begin{array}{rcr}
-2x + y & = & 8\\
-x -3y & = & 1\end{array}\right|$\end{center}
-Mit dem Gauss-Algorithmus (Additionsmethode) finden wir
-\begin{center}$\left|\begin{array}{rcr}
-6x + 3y & = & 24 \\ x - 3y & = & 1 \label{eqn:gauss2} \end{array}\right|$\end{center}
-Darauf folgt
-\begin{eqnarray}\to 7x & = & 25 \nonumber \\
-x & = & \frac{25}{7}\end{eqnarray}
-Eingesetzt in \ref{eqn:gauss2}:
-\begin{eqnarray}\frac{25}{7} - 3y & = & 1 \nonumber \\
-25 - 21y & = & 7\nonumber \\
-18 & = & 21y \nonumber \\
-y & = & \frac{18}{21} = \frac{6}{7}\end{eqnarray}
-und so ist $(\frac{25}{7} / \frac{6}{7})$ die Lösung. Das ist auch $\in$ von $\mathbb{R}^2$, womit die Lösung in der Grundmenge liegt.
-\item Gegeben ist folgendes Gleichungssystem:
-\begin{center}$\left|\begin{array}{rcr}\frac{3}{x} + \frac{2}{y} & = & 1 \\ \frac{4}{x} - \frac{1}{y} & = & 2\end{array}\right|$\end{center}
-Die Grundmenge ist $\mathbb{R}^2$, so ist die Definitionsmenge \\$D = \mathbb{R}^2 \setminus \{(x/y) | x=0 \lor y=0\}$. Mit "(1) + 2(2)" erhalten wir
-\begin{eqnarray}\frac{11}{x} & = & 5 \nonumber \\
-x & = & \frac{11}{5}\end{eqnarray}
-Mit "4(1) - 3(2)" wird
-\begin{eqnarray}\frac{11}{y} & = & -2 \nonumber \\
-y & = & -\frac{11}{2}\end{eqnarray}
-und so ist $L = \{(\frac{11}{5} / -\frac{11}{2})\}$
-\item Gegeben ist folgendes Gleichungssystem:
-\begin{center}$\left|\begin{array}{rcr}x^2 + y^2 & = & 16\label{eqn:x2+y2eq16} \\ 2x -y & = & 1\label{eqn:2x-yeq1}\end{array}\right|$\end{center}
-\begin{center}\includegraphics[scale=0.25]{img/2_5-circle-cart-grid.eps}\end{center}
-Wir berechnen also die Schnittpunkte einer Geraden mit einem Kreis.\\
-Mit \ref{eqn:2x-yeq1} wird $y=2x-1$, was eingesetzt in \ref{eqn:x2+y2eq16} zu
-\begin{equation}x^2 + (2x-1)^2 = 16\end{equation}
-führt. Also
-\begin{eqnarray}x^2 + 4x^2 - 4x + 1 & = & 16\nonumber \\
-5x^2 - 4x -15 & = & 0\nonumber \\
-x_{1,2} & = & \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} = \frac{4 \pm \sqrt{16 - 4 \cdot 5 \cdot (-15)}}{10}\nonumber \\
-&=& \frac{4 \pm \sqrt{316}}{10} = \frac{4 \pm \sqrt{4 \cdot 79}}{10}\nonumber \\
-&=& \frac{4 \pm 2 \sqrt{79}}{10} = \frac{2 \pm \sqrt{79}}{5}\end{eqnarray}
-Mit $x_1 = \frac{2 + \sqrt{79}}{5}$ wird $y_1 = \frac{4 + 2 \sqrt{79}}{5}-1$:
-\begin{equation}y_1 = \frac{4 + 2 \sqrt{79} -5}{5} = \frac{2 \sqrt{79} -1}{5}\end{equation}
-und mit $x_2 = \frac{2 - \sqrt{79}}{5}$ wird $y_2 = \frac{2-2\sqrt{79}-5}{5} = \frac{-2 \sqrt{79}-3}{5}$.\\
-Also sind die Schnittpunkte
-\begin{equation}S_1(\frac{2+\sqrt{79}}{5}/\frac{2 \sqrt{79}-1}{5})\end{equation}
-und
-\begin{equation}S_2(\frac{2-\sqrt{79}}{5}/\frac{-2 \sqrt{79}-3}{5})\end{equation}
-\end{enumerate}
-\end{enumerate}
-\end{myexample}
 
 \chapter{Relationen}
 \section{Darstellung}
@@ -777,12 +642,6 @@ So erhalten wir Paare, welche die Relation (Beziehung) erfüllen:
 \begin{equation}(B,A),(B,C),(C,B),(C,A)\end{equation}
 Fassen wir diese Paare in einer Menge zusammen, so erhalten wir eine Teilmenge von $M^2$ (das kartesische Produkt).
 \begin{mydef}Eine Relation $R$ in einer Menge $M$ ist eine Teilmenge von $M^2: R \subset M^2$\end{mydef}
-\begin{myexample}$\mathbb{N}$ mit der Relation "$a$ teil $b$"\\
-wofür wir
-\begin{equation}a,b \in \mathbb{N}: a R b \iff a | b\end{equation}
-schreiben. Dann ist
-\begin{equation}R = \{(2,4),(2,6),(4,8),(7,14),(9,27),...\}\end{equation}
-Beachte, dass die Relation als deutscher Satz gleich heisst wie die Menge!\end{myexample}
 Relationen können wir im kartesischen Koordinatensystem darstellen.
 \begin{equation}\mbox{Ist} x,y \in \mathbb{R}: x R y \iff x = y^2\end{equation}
 so finden wir einige Paare:
@@ -790,14 +649,6 @@ so finden wir einige Paare:
 und damit
 \begin{center}\includegraphics[scale=0.25]{img/3-relation-not-function.eps}\end{center}
 Das ist \underline{nicht} der Graph einer Funktion, da wir für einen x-Wert mehrere y-Werte erhalten.
-\begin{myexample}Wir suchen die Relationen\begin{enumerate}
-\item $M = \{2, 5, 7, 10\}$\\
-\begin{equation}a,b \in M : a R b \iff b = 2a\end{equation}
-$\to R = \{(5/10)\}$
-\item $M = \{3,4,8,10\}$\\
-\begin{equation}a,b \in M : a R b \iff a < b\end{equation}
-Also
-$\to R = \{(3/4),(3/8),(3/10),(4/8),(4/10),(8/10)\}$\end{enumerate}\end{myexample}
 Im Koordinatensystem
 \begin{center}\includegraphics[scale=0.25]{img/3-r-in-cartesian-grid.eps}\end{center}
 Eine andere Möglichkeit ist die Darstellung mit einem Graphen.
@@ -807,11 +658,6 @@ Also zum Beispiel
 \begin{center}\includegraphics[scale=0.25]{img/3-r-as-graph-example-1.eps}\end{center}
 Bei den Relationen müssen wir im Graphen angeben, ob $a$ mit $b$ oder $b$ mit $a$ in Relation steht. So erhalten wir einen \underline{gerichteten Graphen}.
 \begin{center}\includegraphics[scale=0.25]{img/3-r-as-graph-example-2.eps}\end{center}
-\begin{myexample}Zeichne den Graphen der Relation, wenn\\
-$M = \{1, 2, 3\}$\\
-und $a,b \in M: a R b \iff a \geq b$
-\begin{center}\includegraphics[scale=0.25]{img/3-r-as-graph-example-3.eps}\end{center}
-\end{myexample}
 Der Graph enthält \underline{Schlingen}.\\
 Wir können auch eine Tabelle mit Wahrheitswerten wählen, um eine Relation darzustellen. Für obige Relation erhalten wir
 \begin{center}\begin{tabular}{c | c | c | c |}
@@ -824,130 +670,29 @@ Damit finden wir die \underline{Adjazenzmatrix}
 1 & 0 & 0 \\
 1 & 1 & 0 \\
 1 & 1 & 1\end{array}\right]\end{equation}
-\begin{myexample}Bestimme einige Elemente der Relation R, wenn\\
-$M = \{1, 2, 3, 4, 5\}$ und
-\begin{equation}a,b \in M: a R b \iff a - b \mbox{ist gerade}\end{equation}
-Zeichne dann R im Koordinatensystem, Zeichne den Graphen und suche die Adjazenzmatrix.\\
-$\to R = \{..., (2/2), ..., (3/1), ..., (5/3), ...\}$
-Koordinatensystem:
-\begin{center}\includegraphics[scale=0.25]{img/3_1-r-cartesian-grid.eps}\end{center}
-Graph:
-\begin{center}\includegraphics[scale=0.25]{img/3_1-r-as-graph.eps}\end{center}
-Adjazenzmatrix:
-\begin{center}
-\begin{tabular}{c c c}
-\begin{tabular}{c | c | c | c | c | c |}
-& 1 & 2 & 3 & 4 & 5\\ \hline
-1 & 1 & 0 & 1 & 0 & 1\\ \hline
-2 & 0 & 1 & 0 & 1 & 0\\ \hline
-3 & 1 & 0 & 1 & 0 & 1\\ \hline
-4 & 0 & 1 & 0 & 1 & 0\\ \hline
-5 & 1 & 0 & 1 & 0 & 1\\ \hline\end{tabular} & also &
-$A = \left[\begin{array}{rrrrr}
-1 & 0 & 1 & 0 & 1 \\
-0 & 1 & 0 & 1 & 0\\
-1 & 0 & 1 & 0 & 1\\
-0 & 1 & 0 & 1 & 0\\
-1 & 0 & 1 & 0 & 1\end{array}\right]$
-\end{tabular}
-\end{center}
-\end{myexample}
 \newpage
 \section{Eigenschaften}
 \begin{mydef}Eine Relation $R \subset M^2$ heisst \underline{reflexiv}, wenn
 \begin{equation}a \in M: \forall a ( a R a)\end{equation}\end{mydef}
-\begin{myexample}$M = \{10, 11, 12, 13\}$ und
-\begin{equation}a,b \in M: a R b \iff a | b\end{equation}
-ist reflexiv, da $\forall a ( a | a)$ erfüllt ist.\end{myexample}
 Bei einer reflexiven Relation besitzt im Graphen jede Ecke eine Schlinge.
 \begin{mydef}Eine Relation $R \subset M^2$ heisst \underline{symetrisch}, wenn
 \begin{equation}a,b \in M: \forall a,b ( a R b \to b R a)\end{equation}\end{mydef}
-\begin{myexample}$G = \{g \quad | \quad \mbox{g ist eine Gerade in } R^2\}$
-\begin{equation}g, h \in M: g R h \iff g \bot h\end{equation}
-TODO\\\\
-R ist eine symetrische Relation, denn
-\begin{equation}\forall g,h ( g \bot h \to h \bot g)\end{equation}\end{myexample}
 \begin{mydef}Eine Relation $R \subset M^2$ heisst \underline{antisymetrisch}, wenn
 \begin{equation}a,b \in M: \forall a,b [(a R b) \land (b R a) \to (a = b)]\end{equation}\end{mydef}
-\begin{myexample}\begin{enumerate}\item $a \geq b$ in $\mathbb{R}$ ist antisymetrisch, denn\\
-$(a \geq b \land b \geq a) \to (a = b)$
-\item $(A \subset B \land B \subset A) \to (A = B)$\end{enumerate}
-\item Beim Lösen dieses Gleichungssystems in $R^2$
-\begin{center}$\left|\begin{array}{rcr}
-4x + 3 & = & y\\
-2x - 7 & = & y\end{array}\right|$\end{center}
-schliessen wir, dass $4x + 3 = 2x - 7$. Bei der Gleichheitsrelation verwenden wir
-\begin{equation}(a = b \land b = c) \to (a = c)\end{equation}\end{myexample}
 \begin{mydef}Eine Relation $R \subset M^2$ heisst \underline{transitiv}, wenn
 \begin{equation}a,b,c \in M: \forall a,b,c [(a R b \land b R c) \to (a R c)]\end{equation}\end{mydef}
-\begin{myexample}Welche Eigenschaften besitzen die Relationen? \label{relation:examples-properties}
-\begin{enumerate}\item TODO
-\item TODO
-\item TODO\end{enumerate}
-\end{myexample}
 \begin{mydef}Eine Relation R aus $M \times M$ heisst \underline{Ordnungsrelation}, wenn R reflexiv, antisymetrisch und transitiv ist.\end{mydef}
-\begin{myexample}Im Folgenden Beispiele für Ordnungsrelationen\begin{enumerate}
-\item $a \geq b$ in $\mathbb{R}$, siehe Beispiel \ref{relation:examples-properties}
-\item $a,b \in \mathbb{N}: a R b \iff (a | b)$\\Wir definieren
-\begin{equation}x \in \mathbb{N}: a | b \iff \exists x (b = ax)\end{equation}
-Sagen also, dass $b$ ein Vielfaches von $a$ ist.\\
-\underline{reflexiv}: $\forall a ( a | a)$, denn $a = 1 \cdot a$, also ist $x = 1$ in $\exists x (a = ax)$ zu wählen.
-\underline{antisymmetrisch}:
-\begin{eqnarray}\forall a,b ( a | b  &\land & b | a) \nonumber \\
-\to \exists x,y ( b=ax & \land & a = by)\end{eqnarray}
-\begin{eqnarray}
-\to a & = & (ax) \cdot y \nonumber \\
-a & = & (xy) \cdot a \nonumber \\
-\to xy & = & 1 \nonumber \\
-\to x=1 & \land & y = 1 \quad \mbox{(weil } \mathbb{N} \mbox{)} \nonumber \\
-\to b & = & 1 \cdot a \nonumber \\
-\to b & = & a\end{eqnarray}
-also ist R antisymmetrisch in $\mathbb{N})$.\\
-\underline{transitiv}: \begin{eqnarray}\forall a,b,c ( a | b & \land & b | c ) \nonumber \\
-\to \exists x,y (b = ax & \land & c = by) \nonumber \\
-\to c = (x \cdot y) \cdot a & \land & xy \in \mathbb{N} \nonumber \\
-\to a & | & c\end{eqnarray}
-$c$ ist damit ein Vielfaches von $a$, daraus folgt dass $a$ die Zahl $c$ teilt.
-\end{enumerate}\end{myexample}
 Ordnungsrelationen in endlichen Mengen können in einem Hasse-Diagramm (Helmut Hasse, 1898–1979) dargestellt werden.\\\\
 Nehmen wir $M = \{2,3,4,5,12,13,25\}$ und die Relation $a | b$:
 \\\\TODO\\\\
 Die Relation $A \subset B$ in $\mathcal{P}(A)$, wenn $M = \{x,y,z\}$
 \begin{center}\includegraphics[scale=0.3]{img/Hasse_diagram_of_powerset_of_3.png}\end{center}
 \begin{mydef}Eine Relation R aus $M \times M$ heisst \underline{Aequivalenzrelation}, wenn sie reflexiv, symetrisch und transitiv ist.\end{mydef}
-\begin{myexample}Wir untersuchen, ob es sich um eine Aequivalenzrelation handelt.
-\begin{enumerate}\item $x,y \in \mathbb{R} : x R y \iff x = y$
-\item \label{example:aequivalenzklassen-ex2}
-TODO: Example, Image\\\\
-Wählen wir $a \in \mathbb{Z}$ beliebig und suchen alle $b \in \mathbb{Z}$, so dass $a R b$ steht, so entstehen zwei Teilmengen von $\mathbb{Z}$, welche disjunkt sind.
-\item \label{example:aequivalenzklasse-ex3}$a, b \in E^3$ sind Pfeile im dreidimensionalen euklidischen Raum.
-\begin{quote}$a R b \iff $ "a und b haben gleiche Länge und gleiche Richtung"\end{quote}
-ist eine Aequivalenzrelation.\\\\
-Suchen wir wiederum alle Pfeile, die zu einem vorgegebenen Pfeil in Relation stehen, so erhalten wir eine Anzahl von Teilmengen, die \underline{paarweise disjunkt} sind.\\\\
-Wir haben so eine \underline{Partition} von $E^3$ erhalten.
-\begin{mydef}Ist R eine Aequivalenzrelation in M, so wird M durch $a \in M$ in paarweise disjunkte Teilmengen unterteilt, die wir \underline{Aequivalenzklassen} $K_M$ nennen.\end{mydef}
-In Beispiel \ref{example:aequivalenzklassen-ex2} gibt es zwei Aequivalenzklassen
-\begin{eqnarray}K_1 & = & \{..., 1,3,5,7,...\} \nonumber \\
-K_2 & = & \{..., -2, 0, 2, 4, ...\}\end{eqnarray}
-In Beispiel \ref{example:aequivalenzklasse-ex3} gibt es überabzählbar unendlich viele Aequivalenzklassen, die wir \underline{Vektoren} nennen.
-\item In $\mathbb{Q}$ definieren wir
-\begin{equation}\frac{a}{b} R \frac{c}{d} \iff ad = bc\end{equation}
-und finden, dass R eine Aequivalenzrelation ist.\\
-TODO: Eigenschaften, Bild\\\\
-Eine Klasse enthält damit alle Brüche, die vollständig gekürzt den gleichen Wert ergeben. Müssen wir zum Beispiel
-\begin{equation}\frac{2}{3} + \frac{4}{5}\end{equation}
-rechnen, so rechnen wir
-\begin{equation}\frac{10}{15} + \frac{12}{15}\end{equation}
-wählen also einerseits ein anderes Element in der Klasse $K_\frac{2}{3}$ und andererseits eine anderes Element in der Klasse $K_\frac{4}{5}$. Dies nennen wir die \underline{freie Wahl des Repräsentanten}.
-\end{enumerate}\end{myexample}
 
 \section{Restklassen}
 Wir untersuchen die Operation
 \begin{equation} a \mod{m}\end{equation}
 für $a \in \mathbb{Z}$, $m \in \mathbb{N} \setminus \{1\}$. Dabei heisst $m$ der \underline{Modul}.
-\begin{myexample}\item $34 \mod{4} = 4$, weil $34 : 5 = 6$ mit Rest 4
-\item $77 \mod{11} = 0$
-\item $-13 \mod{4} = 3$, weil $-13 = (-4) \cdot 4 + 3$ ist\end{myexample}
 Wir können also
 \begin{equation}a \mod{m} = r \iff \exists x (a = mx + r)\end{equation}
 mit $a \in \mathbb{Z}$, $m \in \mathbb{N} \setminus \{1\}$, $0 \leq r < m$, $x \in \mathbb{Z}$ schreiben.\\
@@ -1056,7 +801,6 @@ die Restklassen.
 Nun rechnen wir mit diesen Restklassen und überlegen dass
 \begin{equation}\overline{4} + \overline{3}\end{equation}
 bedeutet, dass $a \in \overline{4}$, $b \in \overline{3}$ beliebig gewählt werden darf und diejenige Klasse gesucht ist, die $a + b$ enthält.
-\begin{myexample}$\overline{4} + \overline{3} = 7 \mod{5} = \overline{2}$\end{myexample}
 Alle möglichen Additionen stellen wir ein einer \underline{Verknüpfungstabelle} dar (Der Strich ist weggelassen).
 \begin{center}\begin{tabular}{c | c c c c c}
 $+$ & 0 & 1 & 2 & 3 & 4 \\
@@ -1077,14 +821,6 @@ $\cdot$ & 1 & 2 & 3 & 4 \\
 \begin{mydef}Ist in einer Menge M eine Operation * so definiert, dass
 \begin{equation}\forall a, b : a * b \in M\end{equation}
 so heisst $< M; * >$ eine \underline{algebraische Struktur}.\end{mydef}
-\begin{myexample}Wir untersuchen:
-\begin{enumerate}\item $<\mathbb{N} ; + >$ ist eine algebraische Struktur
-\item $<\mathbb{R} ; \cdot >$ ist eine algebraische Struktur
-\item $<\mathbb{Z} ; / >$ ist keine algebraische Struktur
-\item $< V^3 ; + >$ ist eine algebraische Struktur
-\item $< V^3 ; \cdot >$ ist keine algebraische Struktur,\\
-denn $\vec{a} \cdot \vec{b}$ ist ein Skalar (eine reelle Zahl).
-\item $< \mathbb{Z}_5 ; + >$ ist eine algebraische Struktur\end{enumerate}\end{myexample}
 Nun untersuchen wir, welche Gesetze in einer algebraischen Struktur erfüllt sind.
 Es ist $< M ; * >$ eine algebraische Struktur
 \begin{quote}\underline{Kommutativgesetz}: $a,b \in M : \forall a,b (a * b = b * a)$\\
@@ -1109,30 +845,7 @@ Untersuchen wir $< \mathbb{Z}_5 \setminus \{0\} ; \cdot >$, so gelten (K) und (A
 2 ist zu 3 invers, ...\\
 4 ist zu 4 invers, da $4 \cdot 4 = 1$\\
 1 ist zu 1 inver, da $1 \cdot 1 = 1$\end{quote}
-\begin{myexample} Nun können wir Gleichungen lösen (in $\mathbb{Z}_5$):
-\begin{enumerate}
-\item \begin{eqnarray}3x + 2 & = & 3\nonumber \\
-(3x + 2) + 3 & = & 3 + 3\nonumber \\
-3x + (2 + 3) & = & 1\nonumber \\
-3x + 0 & = & 1\nonumber \\
-3x & = & 1\nonumber \\
-2 (3x) & = & 2 \cdot 1\nonumber \\
-(2 \cdot 3) x & = & 2\nonumber \\
-x & = & 2\end{eqnarray}
-\item \begin{eqnarray}x^2 + 3x + 2 & = & 0\nonumber \\
-(x+2)(x+1) = 0\nonumber \\
-x + 2 = 0 & \lor & x + 1 = 0\nonumber \\
-x_1 = 3 & & x_2 = 4\end{eqnarray}
-\end{enumerate}
-\end{myexample}
 \begin{mydef}Gelten in einer algebraischen Struktur $< M ; * >$ das Assoziativgesetz, das Kommutativgesetz und existieren ein neutrales Element und existiert zu jedem $a \in M$ ein inverses Element, so heisst $< M ; * >$ eine \underline{abelsche Gruppe} (Niels Henrik Abel, 1802 bis 1829, Oslo).\end{mydef}
-\begin{myexample}Wir untersuchen, ob folgende algebraische Strukturen abelsche Gruppen sind
-\begin{enumerate}
-\item $< \mathbb{Z}; \cdot >$ ist keine abelsche Gruppe
-\item $< \mathbb{Z} \setminus \{0\} ; \cdot >$ ist eine abelsche Gruppe
-\item $<\mathbb{Q}; \cdot>$ ist keine abelsche Gruppe, da zu 0 kein inverses Element existiert
-\item $< \mathbb{R}; + >$ ist eine abelsche Gruppe\end{enumerate}
-\end{myexample}
 Wie wir gesehen haben, genügen diese vier Eigenschaften, um Gleichungen zu lösen. Wollen wir
 \begin{equation}x^2 + 2x + 2 = 0 \quad \mbox{in} \quad \mathbb{Z}_5\end{equation}
 lösen, so können wir nicht in Faktoren zerlegen. Wir wählen deshalb \underline{andere Repräsentanten}.
@@ -1186,37 +899,6 @@ usw. Wir sagen, dass $\mathbb{Z}_8$ \underline{Nullteiler} besitzt (Zahlen, die 
 4x & = & 0 \to x = 0\end{eqnarray}
 So müssen wir die Nullteiler berücksichtigen und finden
 \begin{quote}$x_2 = 2, x_3=4, x_4 = 6$\end{quote}
-\begin{myexample}Wir lösen
-\begin{enumerate}
-\item \begin{equation}x^2 + 2x + 5 = 0 \quad \mbox{in} \quad \mathbb{Z}_8\end{equation}
-Wählen wir andere Repräsentanten
-\begin{eqnarray}x^2 + 2x - 3 & = & 0\nonumber \\
-(x + 3)(x - 1) & = & 0\end{eqnarray}
-So müssen wir alle Fälle
-\begin{eqnarray}x + 3 = 0 & \land & x - 1 = 0\nonumber \\
-x + 3 = 2 & \land & x - 1 = 4\nonumber \\
-x + 3 = 4 & \land & x - 1 = 2\nonumber \\
-x + 3 = 4 & \land & x - 1 = 4\end{eqnarray}
-etc. untersuchen. Wir formen deshalb so um, dass ein \underline{Binom} entsteht. In $\mathbb{R}$:
-\begin{eqnarray}x^2 + 6x - 2 & = & 0\nonumber \\
-x^2 + 6x & = & 2\nonumber \\
-x^2 + 6x + 9 & = & 2 + 9\end{eqnarray}
-Wir nennen "+9" die \underline{quadratische Ergänzung}. So erhalten wir
-\begin{eqnarray}(x + 3)^2 & = & 11\nonumber \\
-x + 3 & = & \pm \sqrt{11}\nonumber \\
-x_1 & = & \sqrt{11} - 3\nonumber \\
-x_2 & = & -\sqrt{11} - 3\end{eqnarray}
-In $\mathbb{Z}_8$:
-\begin{eqnarray}x^2 + 2x + 5 & = & 0\nonumber \\
-x^2 + 2x & = & 3\nonumber \\
-x^2 + 2x + 1 & = & 3 + 1 \nonumber \\
-(x + 1)^2 & = & 4 \nonumber \\
-x + 1 = 2 & \lor & x + 1 = 6 \nonumber \\
-x_1 = 1 & & x_2 = 5 \end{eqnarray}
-\item \begin{eqnarray}x^2 + 6x + 7 & = & 0 \quad \mbox{in} \quad \mathbb{Z}_8\nonumber \\
-x^2 + 6x + 9 & = & 1\nonumber \\
-(x + 3)^2 & = & 2 \to L = \emptyset \end{eqnarray}
-\end{enumerate}\end{myexample}
 Wollen wir
 \begin{equation}x^2 + 5x + 4 = 0  \quad \mbox{in} \quad \mathbb{Z}_{10} \end{equation}
 lösen, so finden wir keine quadratische Ergänzung zu
@@ -1236,35 +918,6 @@ x = 1 & \land & x = 1 \to x_3 = 1\end{eqnarray}
 Um nicht alle Fälle durchrechnen zu müssen, überlegen wir, dass $x + 4$ und $x + 1$ um $3$ unterscheiden. Also müssen wir nur noch $8 \cdot 5 = 0$ betrachten.
 \begin{equation}x + 4 = 8 \land x + 1 = 5\end{equation}
 finden wir $x_4 = 4$. Somit ist $L = \{1, 4, 6, 9\}$ die Lösungsmenge.
-\begin{myexample}\begin{equation}x^2 + 9x + 2 = 0 \quad \mbox{in} \quad \mathbb{Z}_{12} \end{equation}
-Wahl eines anderen Repräsentanten:
-\begin{eqnarray}x^2 + 9x + 14 & = & 0\nonumber \\
-(x + 7) (x + 2) & = & 0\nonumber \\
-x + 7 = 0 & \lor & x + 2 = 0\nonumber \\
-x_1 = 5 & & x_2 = 10\end{eqnarray}
-Dann fragen wir uns, was sind die Nullteiler? In $\mathbb{Z}_{12}$
-\begin{quote}ist $2 \cdot 6 = 4 \cdot 6 = 6 \cdot 6 = 8 \cdot 6 = 10 \cdot 6 = 0$\\
-und $3 \cdot 4 = 6 \cdot 4 = 9 \cdot 4 = 0$\\
-und $3 \cdot 8 = 9 \cdot 8 = 0$ \end{quote}
-Die Differenz der Lösungen muss 5 sein, also kommt nur
-\begin{quote}$9 \cdot 4 = 3 \cdot 8 = 0$ \end{quote}
-in Frage. Mit
-\begin{quote}$x + 7 = 9 \land x + 2 = 4$\end{quote} wird $x_3 = 2$ und wenn
-\begin{quote}$x + 7 = 8 \land x + 2 = 3$\end{quote} wird $x_4 = 1$. Also ist $L=\{1, 2, 5, 10\}$.
-\section{Inverse Restklassen}
-Die Gleichung
-\begin{equation}ax = 1 \quad \mbox{in} \quad \mathbb{Z}_m \end{equation}
-lässt sich auch als
-\begin{equation}ax \equiv (\mod{m})\end{equation}
-schreiben. Also haben $ax$ und $1$ bei der Division durch $m$ den gleichen Rest $r$. Somit
-\begin{equation}\exists v, w \in \mathbb{Z} ( ax \equiv vm + r \land 1 = wm + r )\end{equation}
-also
-\begin{eqnarray}ax - 1 & = & vm + r - (wm + r)\nonumber \\
-ax - 1 & = & vm -wm\nonumber \\
-ax - 1 & = & (v -w)m\end{eqnarray}
-Schreiben wir y für $v-w$, so ist also
-\begin{eqnarray}ax - 1 & = & ym\nonumber \\
-ax - ym & = & 1\end{eqnarray}\end{myexample}
 Wir müssen also \underline{eine} Gleichung mit \underline{zwei Unbekannten} $x, y$ so lösen, dass $x ,y$ ganze Zahlen werden.
 \begin{mydef}Gleichungen der Form
 \begin{equation}ax + by = c\end{equation}
@@ -1302,10 +955,6 @@ Dieses Verfahren (euklidischer Algorithmus + rückwärts) nennen wir den
 \\\underline{erweiterten Euklidischen Algorithmus}. Damit haben wir gezeigt, dass die diophantische Gleichung
 \begin{equation}ax + by = c\end{equation}
 lösbar ist, wenn $c = ggT(a, b)$. Da jede Gleichung mit $k \neq 0$ multipliziert werden kann, darf $c$ auch ein Vielfaches des $ggT$ sein.
-\begin{myexample}Wir untersuchen, ob folgende Gleichungen lösbar sind:\begin{enumerate}
-\item $5x + 9y = 12$ ist lösbar, denn $ggT(5, 9) = 1$ und 12 ist ein Vielfaches von $1$.
-\item $15x + 10y = 12$ ist nicht lösbar, denn $ggT(12, 10) = 5$ und $12$ ist kein Vielfaches von $5$.
-\end{enumerate}\end{myexample}
 Wir wollen ja die Gleichung
 \begin{equation}ax = 1 \quad \mbox{in} \quad \mathbb{Z}_m \end{equation}
 lösen. Dies führt bekanntlich zu
@@ -1331,7 +980,6 @@ was wir in \ref{eqn:diophant-4} einsetzen:
 Somit ist $x = -8$ in $\mathbb{Z}_{19}$ und die kleinste positive Zahl ist
 \begin{equation}-8 + 19 = 11\end{equation}
 also hat $7x = 1$ in $\mathbb{Z}_{19}$ die Lösung $x = 11$.
-%TODO: Examples
 \section{Satz von Euler-Fermat}
 (Pierre du Fermat, 1607 bis 1655, Orleans, Toulouse)\\
 Wir betrachten $a^2, a^3, ..., a^{m-1}$ in $\mathbb{Z}_m$
@@ -1396,31 +1044,9 @@ gibt lauter verschiedene Werte für $a$ aus $\mathbb{Z}_p$. Also ist
 a^{p-1} \cdot 1 \cdot 2 \cdot 3 \cdot ... \cdot (p-1) & = &1 \cdot 2 \cdot 3 \cdot 4 \cdot ... \cdot (p-1)\nonumber \\
 a^{p-1} & = & 1\end{eqnarray}
 \end{myproof}
-\begin{myexample}Wir nutzen diese Eigenschaft aus:\begin{enumerate}
-\item $23^{109} (\mod{37})$\\
-Mit $a^{36} = 1 (\mod{37})$ nach Fermat überlegen wir
-\begin{equation}23^{109} = 23^{108} \cdot 23 = (23^{36})^3 \cdot 23\end{equation}
-also
-\begin{equation}23^{109} (\mod{37}) = [23^{36} (\mod{37})]^3 \cdot 23 (\mod 37) = 1^3 \cdot 23 = 23\end{equation}
-\item $9x = 1 \quad \mbox{in} \quad \mathbb{Z}_{11}$\\
-Mit dem Satz von Fermat ist $a^{10} \equiv 1 (\mod{11})$ rechnen wir
-\begin{eqnarray}9^9 \cdot (9x) & = & 9^9 \cdot 1\nonumber \\
-x & = & 9^9 (\mod{11}) = (-2)^0 \mod{11} \nonumber \\
-& = & -512 (\mod{11}) = 5 \end{eqnarray}
-\end{enumerate}\end{myexample}
 Wie ist es nun in $\mathbb{Z}_m$, wenn $m$ keine Primzahl ist? Dann brauchen wir die \underline{Euler-Phi-Funktion}:
 Wir zählen, wie viele Zahlen es gibt, die kleiner als $m$ und zu $m$ teilerfremd sind sind.
 \begin{mydef}Ist $m \in \mathbb{N}$, so heisst
 \begin{equation}\phi (m) := |\{a | ggT(a,m) = 1 \land a < m\}|\end{equation}
 die \underline{Euler-Phi-Funktion} von $m$.\end{mydef}
-\begin{myexample}Wir verwenden die Euler-Phi-Funktion in den folgenden Beispielen:\begin{enumerate}
-\item $8^{18} (\mod{21})$\\
-Nach Euler-Fermat ist $8^{\phi(21)} \equiv 1 (\mod{21})$ und $\phi(21) = 12$. Mit
-\begin{equation}8^{18} = 8^{12} \cdot 8^6\end{equation}
-wird
-%TODO
-\end{enumerate}\end{myexample}
-
->>>>>>> master
-
 \end{document}
