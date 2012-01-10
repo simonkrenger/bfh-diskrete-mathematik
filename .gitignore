@@ -2,3 +2,4 @@
 *.aux
 *.log
 *.synctex.gz
+*-converted-to.pdf
